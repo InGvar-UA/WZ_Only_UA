@@ -91,35 +91,49 @@
         const translatedClass = translations[wpn.class] || wpn.class;
         let cleanAttachments = [];
 
-        // Перебираем сырые строки из JSON
-        wpn.attachments.forEach(att => {
-            let clean = typeof att === 'string' ? att.replace(/^- /, "").trim() : "";
-            if (!clean) return;
+        if (wpn.attachments && Array.isArray(wpn.attachments)) {
+            wpn.attachments.forEach(att => {
+                let clean = "";
+                
+                // Проверяем формат данных (объект или строка)
+                if (att && typeof att === 'object' && att.name) {
+                    // Если парсер отдал объект, превращаем его в строку для единого разбора
+                    clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
+                } else if (typeof att === 'string') {
+                    clean = att.replace(/^- /, "").trim();
+                }
 
-            // Если это просто одиночное слово категории без названия модуля — удаляем этот дубль!
-            let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
-            if (isPureCategory) return;
+                if (!clean) return;
 
-            let category = "";
-            let name = clean;
+                // Если строка — это просто одиночное название категории (дубликат с сайта) — пропускаем её
+                let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
+                if (isPureCategory) return;
 
-            // Ищем, начинается ли строка с известной категории (например, "Muzzle ")
-            let foundCat = Object.keys(translations).find(cat => clean.startsWith(cat + " "));
-            
-            if (foundCat) {
-                category = foundCat;
-                name = clean.substring(foundCat.length).trim();
-            }
+                let category = "";
+                let name = clean;
 
-            if (category) {
-                let translatedCategory = translations[category] || category;
-                cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
-            } else {
-                cleanAttachments.push(`<li>🔧 ${name}</li>`);
-            }
-        });
+                // Используем регулярное выражение, чтобы найти категорию, за которой следует ЛЮБОЙ пробельный символ (\s+)
+                let foundCat = Object.keys(translations).find(cat => {
+                    let regex = new RegExp("^" + cat + "\\s+", "i");
+                    return regex.test(clean);
+                });
+                
+                if (foundCat) {
+                    category = foundCat;
+                    // Отрезаем категорию и любые пробелы после неё, оставляя только чистое название модуля
+                    name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
+                }
 
-        // Убираем возможные дубликаты строк и берем ровно 5 модулей
+                if (category) {
+                    let translatedCategory = translations[category] || category;
+                    cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+                } else {
+                    cleanAttachments.push(`<li>🔧 ${name}</li>`);
+                }
+            });
+        }
+
+        // Убираем дубликаты строк и берем строго до 5 модулей для оружия
         let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
 
         card.innerHTML = `
@@ -136,6 +150,7 @@
         grid.appendChild(card);
     });
 }
+
 
 
     // 4. Логика быстрого поиска по названию или классу
