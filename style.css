@@ -13,26 +13,32 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    -webkit-text-size-adjust: 100%; /* Фикс масштаба текста на iOS */
 }
 
 header {
     background: linear-gradient(180deg, rgba(0,87,183,0.15) 0%, rgba(15,16,21,0) 100%);
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 15px;
     border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--accent-color);
 }
 
 header p {
     color: var(--text-muted);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.search-box {
+    padding: 0 10px;
 }
 
 .search-box input {
@@ -46,6 +52,7 @@ header p {
     font-size: 16px;
     outline: none;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .search-box input:focus {
@@ -53,31 +60,36 @@ header p {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
-/* СТИЛИ ДЛЯ КНОПОК КАТЕГОРИЙ ОРУЖИЯ */
+/* КАТЕГОРИИ ОРУЖИЯ */
 .categories-filter {
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
-    padding: 5px 10px 15px 10px;
-    overflow-x: auto; /* Скролл пальцем в Telegram на смартфонах */
+    justify-content: flex-start; /* На телефонах выравниваем по левому краю для удобства скролла */
+    gap: 10px;
+    margin-top: 20px;
+    padding: 5px 15px 15px 15px;
+    overflow-x: auto; /* Включает прокрутку пальцем */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Прячем горизонтальный скроллбар */
-.categories-filter::-webkit-scrollbar {
-    display: none;
+/* На больших экранах центрируем категории */
+@media (min-width: 768px) {
+    .categories-filter {
+        justify-content: center;
+    }
 }
 
-/* Обычные неактивные кнопки под дизайн карточек */
+.categories-filter::-webkit-scrollbar {
+    display: none; /* Прячем полосу прокрутки */
+}
+
 .filter-btn {
     background-color: var(--card-bg);
     color: var(--text-muted);
     border: 1px solid var(--border-color);
-    padding: 10px 20px;
-    border-radius: 25px;       /* Красивая форма капсулы */
-    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -87,24 +99,22 @@ header p {
 .filter-btn:hover {
     border-color: var(--accent-color);
     color: #ffffff;
-    background-color: #222433;
 }
 
-/* Активная кнопка: полностью золотая в цвет модулей */
 .filter-btn.active {
     background-color: var(--accent-color);
-    color: #0f1015; /* Темный текст для идеальной читаемости на золотом */
+    color: #0f1015;
     border-color: var(--accent-color);
     font-weight: 700;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Эффект свечения */
-    transform: scale(1.03); /* Легкое интерактивное увеличение */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
+/* КОНТЕЙНЕР КАРТОЧЕК */
 .meta-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 40px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 25px 15px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -119,7 +129,7 @@ header p {
 }
 
 .weapon-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: var(--blue-color);
 }
 
@@ -127,35 +137,35 @@ header p {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
     color: var(--accent-color);
 }
 
 .weapon-name {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0 0 10px 0;
     max-width: 80%;
 }
 
 .tags {
     display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 6px;
+    margin-bottom: 15px;
 }
 
 .tag {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 6px;
+    padding: 3px 8px;
+    border-radius: 5px;
     text-transform: uppercase;
 }
 
 .game-tag {
-    background-color: rgba(0, 87, 183, 0.2);
+    background-color: rgba(0, 87, 183, 0.15);
     color: #60a5fa;
-    border: 1px solid rgba(0, 87, 183, 0.4);
+    border: 1px solid rgba(0, 87, 183, 0.3);
 }
 
 .class-tag {
@@ -170,9 +180,9 @@ header p {
 }
 
 .attachments-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    font-size: 14px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 13.5px;
     color: #e2e8f0;
 }
 
@@ -180,23 +190,60 @@ header p {
     border-bottom: none;
 }
 
+.attachments-list li span {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: 13px;
     border-top: 1px solid var(--border-color);
 }
 
 .loading, .error, .no-results {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-muted);
-    padding: 40px;
+    padding: 30px;
 }
 
-.attachments-list li span {
-    color: var(--accent-color);
-    font-weight: 600;
+/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ (ДЛЯ TELEGRAM MINI APP) */
+@media (max-width: 600px) {
+    header {
+        padding: 20px 10px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    header p {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .meta-container {
+        /* Принудительно выстраиваем карточки строго по одной в ряд на всю ширину экрана */
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .weapon-card {
+        padding: 15px;
+    }
+
+    .weapon-name {
+        font-size: 18px;
+    }
+
+    .rank {
+        font-size: 18px;
+        top: 12px;
+        right: 15px;
+    }
 }
