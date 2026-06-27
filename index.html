@@ -8,13 +8,27 @@
 </head>
 <body>
 
-    <header>
+        <header>
         <div class="logo">Warzone Only UA</div>
         <p>Актуальні збірки та мета зброї Call of Duty: Warzone</p>
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Пошук зброї за назвою (напр. Carbon)...">
         </div>
+        
+        <!-- НОВЫЙ БЛОК: Кнопки фильтрации категорий -->
+        <div class="categories-filter" id="categories-tags">
+            <button class="filter-btn active" data-class="all">Усі класи</button>
+            <button class="filter-btn" data-class="AR">Штурмові</button>
+            <button class="filter-btn" data-class="SMG">ПП (SMG)</button>
+            <button class="filter-btn" data-class="Sniper">Снайперські</button>
+            <button class="filter-btn" data-class="LMG">Кулемети</button>
+            <button class="filter-btn" data-class="Marksman Rifle">Піхотні</button>
+            <button class="filter-btn" data-class="Battle Rifle">Бойові</button>
+            <button class="filter-btn" data-class="Shotgun">Дробовики</button>
+            <button class="filter-btn" data-class="Pistol">Пістолети</button>
+        </div>
     </header>
+
 
     <main class="meta-container" id="meta-grid">
         <!-- Карточки оружия будут добавляться сюда автоматически через JavaScript -->
@@ -75,96 +89,112 @@
     };
 
     // 3. Функция вывода карточек оружия на экран
+        // 3. Функция вывода карточек оружия (с жесткой очисткой дубликатов)
     function displayWeapons(weapons) {
-    const grid = document.getElementById('meta-grid');
-    grid.innerHTML = '';
+        const grid = document.getElementById('meta-grid');
+        grid.innerHTML = '';
 
-    if (!weapons || weapons.length === 0) {
-        grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
-        return;
-    }
-
-    weapons.forEach(wpn => {
-        const card = document.createElement('div');
-        card.className = 'weapon-card';
-        
-        const translatedClass = translations[wpn.class] || wpn.class;
-        let cleanAttachments = [];
-
-        if (wpn.attachments && Array.isArray(wpn.attachments)) {
-            wpn.attachments.forEach(att => {
-                let clean = "";
-                
-                // Проверяем формат данных (объект или строка)
-                if (att && typeof att === 'object' && att.name) {
-                    // Если парсер отдал объект, превращаем его в строку для единого разбора
-                    clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
-                } else if (typeof att === 'string') {
-                    clean = att.replace(/^- /, "").trim();
-                }
-
-                if (!clean) return;
-
-                // Если строка — это просто одиночное название категории (дубликат с сайта) — пропускаем её
-                let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
-                if (isPureCategory) return;
-
-                let category = "";
-                let name = clean;
-
-                // Используем регулярное выражение, чтобы найти категорию, за которой следует ЛЮБОЙ пробельный символ (\s+)
-                let foundCat = Object.keys(translations).find(cat => {
-                    let regex = new RegExp("^" + cat + "\\s+", "i");
-                    return regex.test(clean);
-                });
-                
-                if (foundCat) {
-                    category = foundCat;
-                    // Отрезаем категорию и любые пробелы после неё, оставляя только чистое название модуля
-                    name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
-                }
-
-                if (category) {
-                    let translatedCategory = translations[category] || category;
-                    cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
-                } else {
-                    cleanAttachments.push(`<li>🔧 ${name}</li>`);
-                }
-            });
+        if (!weapons || weapons.length === 0) {
+            grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+            return;
         }
 
-        // Убираем дубликаты строк и берем строго до 5 модулей для оружия
-        let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+        weapons.forEach(wpn => {
+            const card = document.createElement('div');
+            card.className = 'weapon-card';
+            
+            const translatedClass = translations[wpn.class] || wpn.class;
+            let cleanAttachments = [];
 
-        card.innerHTML = `
-            <div class="rank">#${wpn.rank}</div>
-            <h2 class="weapon-name">${wpn.name}</h2>
-            <div class="tags">
-                <span class="tag game-tag">${wpn.game}</span>
-                <span class="tag class-tag">${translatedClass}</span>
-            </div>
-            <ul class="attachments-list">
-                ${uniqueList}
-            </ul>
-        `;
-        grid.appendChild(card);
-    });
-}
+            if (wpn.attachments && Array.isArray(wpn.attachments)) {
+                wpn.attachments.forEach(att => {
+                    let clean = "";
+                    
+                    if (att && typeof att === 'object' && att.name) {
+                        clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
+                    } else if (typeof att === 'string') {
+                        clean = att.replace(/^- /, "").trim();
+                    }
 
+                    if (!clean) return;
 
+                    let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
+                    if (isPureCategory) return;
 
-    // 4. Логика быстрого поиска по названию или классу
-    document.getElementById('search-input').addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
-        const filtered = allWeapons.filter(wpn => 
-            wpn.name.toLowerCase().includes(query) || 
-            wpn.class.toLowerCase().includes(query)
-        );
+                    let category = "";
+                    let name = clean;
+
+                    let foundCat = Object.keys(translations).find(cat => {
+                        let regex = new RegExp("^" + cat + "\\s+", "i");
+                        return regex.test(clean);
+                    });
+                    
+                    if (foundCat) {
+                        category = foundCat;
+                        name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
+                    }
+
+                    if (category) {
+                        let translatedCategory = translations[category] || category;
+                        cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+                    } else {
+                        cleanAttachments.push(`<li>🔧 ${name}</li>`);
+                    }
+                });
+            }
+
+            // Склеиваем очищенные модули (строго до 5 штук)
+            let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+
+            card.innerHTML = `
+                <div class="rank">#${wpn.rank}</div>
+                <h2 class="weapon-name">${wpn.name}</h2>
+                <div class="tags">
+                    <span class="tag game-tag">${wpn.game}</span>
+                    <span class="tag class-tag">${translatedClass}</span>
+                </div>
+                <ul class="attachments-list">
+                    ${uniqueList}
+                </ul>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    // 4. Логика фильтрации по поиску и кнопкам категорий
+    let currentCategory = 'all';
+
+    function filterWeapons() {
+        const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+        
+        const filtered = allWeapons.filter(wpn => {
+            const matchesSearch = wpn.name.toLowerCase().includes(searchQuery) || 
+                                  wpn.class.toLowerCase().includes(searchQuery);
+            
+            const matchesCategory = (currentCategory === 'all') || (wpn.class === currentCategory);
+            
+            return matchesSearch && matchesCategory;
+        });
+        
         displayWeapons(filtered);
+    }
+
+    // Слушатели событий для поиска и кнопок
+    document.getElementById('search-input').addEventListener('input', filterWeapons);
+
+    document.getElementById('categories-tags').addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-btn')) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+            
+            currentCategory = e.target.getAttribute('data-class');
+            filterWeapons();
+        }
     });
 
     document.addEventListener('DOMContentLoaded', loadMeta);
 </script>
+
 
 
 
