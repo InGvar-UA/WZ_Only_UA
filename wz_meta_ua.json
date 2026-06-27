@@ -1,0 +1,3611 @@
+[
+    {
+        "rank": 1,
+        "name": "Carbon 57",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "LTI Stentorian Brake",
+            "Barrel",
+            "14\" Rockleigh Barrel",
+            "Underbarrel",
+            "Sapper Guard Handstop",
+            "Magazine",
+            "MFS Renown Plus Mag",
+            "Fire Mods",
+            "Accelerated Recoil System"
+        ]
+    },
+    {
+        "rank": 2,
+        "name": "AK-27",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "17.6\" Vandal Heavy Barrel",
+            "Magazine",
+            "Saber Pack Heavy Drum",
+            "Stock",
+            "Pugil Heavy Stock"
+        ]
+    },
+    {
+        "rank": 3,
+        "name": "Dravec 45",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Bowen .45 Suppressor",
+            "Barrel",
+            "19\" EAM Horizon Barrel",
+            "Laser",
+            "MFS Agile Laser Pro",
+            "Magazine",
+            "Gator Extended Mag",
+            "Fire Mods",
+            "Bolt Carrier Group"
+        ]
+    },
+    {
+        "rank": 4,
+        "name": "MXR-17",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "17\" Greaves Scourge Barrel",
+            "Magazine",
+            "Rhodes Drum Mag",
+            "Stock",
+            "Winch Stock"
+        ]
+    },
+    {
+        "rank": 5,
+        "name": "DS20 Mirage",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "17.1\" Abdicator Barrel",
+            "Magazine",
+            "Griffon Reserve Extended Ii",
+            "Stock",
+            "Weighted Stock"
+        ]
+    },
+    {
+        "rank": 6,
+        "name": "Strider 300",
+        "game": "BO7",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "25\" Bowen Grooved Barrel",
+            "Magazine",
+            "Carnation Fast Mag",
+            "Rear Grip",
+            "Hatch Quick Grip",
+            "Fire Mods",
+            ".300 WM Overpressured"
+        ]
+    },
+    {
+        "rank": 7,
+        "name": "MK35 ISR",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "16.5\" Greaves Bellum Barrel",
+            "Underbarrel",
+            "VAS Convergence Foregrip",
+            "Magazine",
+            "Bowen Siren Drum"
+        ]
+    },
+    {
+        "rank": 8,
+        "name": "Hawker HX",
+        "game": "BO7",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "23.7\" Composite-11 Barrel",
+            "Magazine",
+            "Flatload Speed Mag",
+            "Rear Grip",
+            "Auroral Light Grip",
+            "Fire Mods",
+            ".338 LM Overpressured"
+        ]
+    },
+    {
+        "rank": 9,
+        "name": "VX Compact",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Redwell Shade-X Suppressor",
+            "Barrel",
+            "14.3\" Redwell Ascent",
+            "Magazine",
+            "Inclination Extended Mag",
+            "Stock",
+            "Lactic Light Stock"
+        ]
+    },
+    {
+        "rank": 10,
+        "name": "VST",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Hawker Series 45",
+            "Barrel",
+            "14\" LTI Expedition Barrel",
+            "Underbarrel",
+            "VAS Convergence Foregrip",
+            "Magazine",
+            "Avarice Extended Mag II",
+            "Stock",
+            "Hawker Cub-55 Pad"
+        ]
+    },
+    {
+        "rank": 11,
+        "name": "VS Recon",
+        "game": "BO7",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "23\" G-Force Barrel",
+            "Underbarrel",
+            "MFS R-Stop Handguard",
+            "Rear Grip",
+            "R-1 Shelf Grip",
+            "Fire Mods",
+            "7.62 NATO Overpressured"
+        ]
+    },
+    {
+        "rank": 12,
+        "name": "AN-94",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "15\" Benthic Barrel",
+            "Underbarrel",
+            "VAS Convergence Foregrip",
+            "Magazine",
+            "Rexford Extended II"
+        ]
+    },
+    {
+        "rank": 13,
+        "name": "Kogot-7",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Hawker Ported Comp",
+            "Barrel",
+            "13.5\" Canis-05 Barrel",
+            "Underbarrel",
+            "EAM Steady-90 Grip",
+            "Magazine",
+            "Vex Expanse Mag",
+            "Fire Mods",
+            "Buffer Spring"
+        ]
+    },
+    {
+        "rank": 14,
+        "name": "REV-46",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Lethal Tools ELO",
+            "Muzzle",
+            "Hawker Series 45",
+            "Barrel",
+            "Caudal Target Barrel",
+            "Magazine",
+            "Komodo Drum Mag",
+            "Fire Mods",
+            "Recoil Sync Unit"
+        ]
+    },
+    {
+        "rank": 15,
+        "name": "MPC-25",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "14.5\" VAS Ashe Barrel",
+            "Underbarrel",
+            "Flowguard Foregrip",
+            "Magazine",
+            "MPC Overload Drum",
+            "Rear Grip",
+            "Magnate Grip",
+            "Stock",
+            "Viper Wire Stock"
+        ]
+    },
+    {
+        "rank": 16,
+        "name": "EGRT-17",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "EAM Ibis Suppressor",
+            "Barrel",
+            "19.1\" XR-Compulsion Barrel",
+            "Magazine",
+            "EAM Acute Mag",
+            "Rear Grip",
+            "Nanite Grip",
+            "Fire Mods",
+            "Buffer Springs"
+        ]
+    },
+    {
+        "rank": 17,
+        "name": "Voyak KT-3",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "Redwell 30-S 2x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "17.6\" LTI Grav-4 Barrel",
+            "Magazine",
+            "SK-Garrison Drum",
+            "Stock",
+            "V-Last Control Pad"
+        ]
+    },
+    {
+        "rank": 18,
+        "name": "Peacekeeper Mk1",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Redwell Shade-X Suppressor",
+            "Barrel",
+            "19.4\" Stimulus Barrel",
+            "Magazine",
+            "Vulcan Reach Extension",
+            "Stock",
+            "MFS Counterforce-C1 Stock"
+        ]
+    },
+    {
+        "rank": 19,
+        "name": "CBRS-3",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Lethal Tools ELO",
+            "Muzzle",
+            "Bowen 9mm Suppressor",
+            "Barrel",
+            "15\" Redwell Parlay Barrel",
+            "Magazine",
+            "MFS Carrousel Fast Mag",
+            "Stock",
+            "Slipway Stock"
+        ]
+    },
+    {
+        "rank": 20,
+        "name": "Ryden 45K",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Lethal Tools ELO",
+            "Barrel",
+            "12\" Vienna Barrel",
+            "Magazine",
+            "Forward Breach Mag",
+            "Rear Grip",
+            "Eruption Grip",
+            "Stock",
+            "MFS Full Stock+"
+        ]
+    },
+    {
+        "rank": 21,
+        "name": "M15 Mod 0",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "VAS 5.56 Suppressor",
+            "Underbarrel",
+            "EAM Steady-90 Grip",
+            "Magazine",
+            "Mayday Extended Mag",
+            "Rear Grip",
+            "Hexcut Grip",
+            "Stock",
+            "Telescopic Stock"
+        ]
+    },
+    {
+        "rank": 22,
+        "name": "Sturmwolf 45",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "14.8\" Perigee Barrel",
+            "Underbarrel",
+            "Envoy Foregrip",
+            "Magazine",
+            "B-45 Roar Drum",
+            "Rear Grip",
+            "Selene Rover Grip",
+            "Stock",
+            "Itinerant Light Stock"
+        ]
+    },
+    {
+        "rank": 23,
+        "name": "X9 Maverick",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "16\" OS-Density Barrel",
+            "Rear Grip",
+            "Pillory Grip",
+            "Fire Mods",
+            "4.73 Caseless Overpressured"
+        ]
+    },
+    {
+        "rank": 24,
+        "name": "Razor 9mm",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Lethal Tools ELO",
+            "Muzzle",
+            "H-9mm Precision Comp",
+            "Barrel",
+            "12\" MFS Sidewinder Barrel",
+            "Magazine",
+            "Zealot Extended Mag II",
+            "Stock",
+            "Serpent Pad"
+        ]
+    },
+    {
+        "rank": 25,
+        "name": "Sokol 545",
+        "game": "BO7",
+        "class": "LMG",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "18.2\" Parlous Heavy Barrel",
+            "Stock",
+            "Taction Control Stock",
+            "Fire Mods",
+            "Buffer Spring"
+        ]
+    },
+    {
+        "rank": 26,
+        "name": "XR-3 Ion",
+        "game": "BO7",
+        "class": "Sniper",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "LTI Triad Suppressor",
+            "Barrel",
+            "20\" Ion Trinity Barrel",
+            "Underbarrel",
+            "Zero-S Handguard",
+            "Fire Mods",
+            "7.62 NATO Overpressured"
+        ]
+    },
+    {
+        "rank": 27,
+        "name": "M8A1",
+        "game": "BO7",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "VAS 5.56 Suppressor",
+            "Barrel",
+            "M8A1 Autostrike-X8 Conversion",
+            "Magazine",
+            "Redline Capacity Drum",
+            "Rear Grip",
+            "K&S Raze Grip",
+            "Stock",
+            "MFS Striker Tactical Stock"
+        ]
+    },
+    {
+        "rank": 28,
+        "name": "MK.78",
+        "game": "BO7",
+        "class": "LMG",
+        "attachments": [
+            "Redwell 30-S 2x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "22\" Impulse HB-762 Barrel",
+            "Stock",
+            "Shock Shield Stock",
+            "Fire Mods",
+            "7.62 NATO Overpressured"
+        ]
+    },
+    {
+        "rank": 29,
+        "name": "Maddox RFB",
+        "game": "BO7",
+        "class": "AR",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Redwell Shade-X Suppressor",
+            "Barrel",
+            "21\" Turbine Booster Barrel",
+            "Magazine",
+            "Billing Extended Mag",
+            "Rear Grip",
+            "VAS Spire Grip"
+        ]
+    },
+    {
+        "rank": 30,
+        "name": "HDR",
+        "game": "BO6",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Lighweight Bipod",
+            "Rear Grip",
+            "Quickdraw Grip",
+            "Fire Mods",
+            "108mm Overpressured"
+        ]
+    },
+    {
+        "rank": 31,
+        "name": "Swordfish A1",
+        "game": "BO7",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "16.5\" Gar-xL Barrel",
+            "Rear Grip",
+            "Trevally Shock Grip",
+            "Stock",
+            "Amber-J Stock",
+            "Fire Mods",
+            "MFS Penta Burst Mod"
+        ]
+    },
+    {
+        "rank": 32,
+        "name": "Akita",
+        "game": "BO7",
+        "class": "Shotgun",
+        "attachments": [
+            "Fang Modified Choke",
+            "Barrel",
+            "14\" Retriever Hunt Barrel",
+            "Laser",
+            "EAM ScatterLine Laser",
+            "Magazine",
+            "Bulk Feed Extended II",
+            "Rear Grip",
+            "Paradise Gen-4 Grip"
+        ]
+    },
+    {
+        "rank": 33,
+        "name": "KILO 141",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Reinforced Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 34,
+        "name": "Merrick 556",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 35,
+        "name": "Victus XMR",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "XTEN Intlas AS-7",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor XL",
+            "Barrel",
+            "Mack 8 33.5 Super",
+            "Ammunition",
+            ".50 CAL High Velocity",
+            "Stock",
+            "XRK Rise 50"
+        ]
+    },
+    {
+        "rank": 36,
+        "name": "RK-9",
+        "game": "BO7",
+        "class": "SMG",
+        "attachments": [
+            "Hawker Series 45",
+            "Barrel",
+            "13.6\" Mercurial Barrel",
+            "Magazine",
+            "Ascot Drum Mag",
+            "Rear Grip",
+            "Raft Ready Grip",
+            "Fire Mods",
+            "Accelerated Recoil System"
+        ]
+    },
+    {
+        "rank": 37,
+        "name": "Kar98k",
+        "game": "MW3",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "XTEN Intlas AS-7",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "Präzisionsgewehr 762 Long Barrel",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Ammunition",
+            "7.92 High Grain Rounds"
+        ]
+    },
+    {
+        "rank": 38,
+        "name": "KRS-762",
+        "game": "BO7",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Redwell 30-S 2x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "14.7\" KGS Hartha Barrel",
+            "Magazine",
+            "Satiate Extended Mag",
+            "Comb",
+            "Percy-V Riser"
+        ]
+    },
+    {
+        "rank": 39,
+        "name": "SG-12",
+        "game": "BO7",
+        "class": "Shotgun",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "20\" Hawker Reach Barrel",
+            "Laser",
+            "Convergence Box Laser",
+            "Rear Grip",
+            "LTI DawnVoid Grip",
+            "Fire Mods",
+            "LW Trigger"
+        ]
+    },
+    {
+        "rank": 40,
+        "name": "Warden 308",
+        "game": "BO7",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "LTI-LM Brake",
+            "Barrel",
+            "16.2\" Artemis-01 Barrel",
+            "Rear Grip",
+            "Partition Grip",
+            "Fire Mods",
+            "Buffer Spring"
+        ]
+    },
+    {
+        "rank": 41,
+        "name": "XM325",
+        "game": "BO7",
+        "class": "LMG",
+        "attachments": [
+            "FANG HoverPoint ELO",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "19.3\" R-556 Chief Barrel",
+            "Rear Grip",
+            "L1-Command Grip",
+            "Stock",
+            "RX-7 Shock Stock"
+        ]
+    },
+    {
+        "rank": 42,
+        "name": "1911",
+        "game": "BO7",
+        "class": "Pistol",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "6.4\" Long Slide Barrel",
+            "Magazine",
+            "Sirius Extended Mag",
+            "Rear Grip",
+            "Interlock Advanced Grip",
+            "Fire Mods",
+            "Sear Fast Trigger"
+        ]
+    },
+    {
+        "rank": 43,
+        "name": "LC10",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Fire Mods",
+            "9x19mm Parabellum Overpressured"
+        ]
+    },
+    {
+        "rank": 44,
+        "name": "Velox 5.7",
+        "game": "BO7",
+        "class": "Pistol",
+        "attachments": [
+            "Greaves Multi-Port Compensator",
+            "Barrel",
+            "4\" MFS Celeste Barrel",
+            "Laser",
+            "Vector Sync Laser",
+            "Magazine",
+            "Draco Reserve Extended II",
+            "Stock",
+            "Akimbo Velox 5.7"
+        ]
+    },
+    {
+        "rank": 45,
+        "name": "KATT-AMR",
+        "game": "MW3",
+        "class": "Sniper",
+        "attachments": [
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "ZANG-34",
+            "Ammunition",
+            ".50 CAL High Velocity",
+            "Bolt",
+            "Ephemeral Quickbolt",
+            "Stock",
+            "Tactical Stock Pad"
+        ]
+    },
+    {
+        "rank": 46,
+        "name": "FJX Imperium",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "SP-X 80 6.6X",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Fahrenheit 29\"",
+            "Ammunition",
+            ".408 High Velocity",
+            "Rear Grip",
+            "Skull-40"
+        ]
+    },
+    {
+        "rank": 47,
+        "name": "KSV",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Reinforced Barrel",
+            "Underbarrel",
+            "Ranger Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Stock",
+            "Balanced Stock"
+        ]
+    },
+    {
+        "rank": 48,
+        "name": "CR-56 Amax",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 49,
+        "name": "GPR 91",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 50,
+        "name": "KOMPAKT 92",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag III",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 51,
+        "name": "M10 Breacher",
+        "game": "BO7",
+        "class": "Shotgun",
+        "attachments": [
+            "M10 CQB Choke",
+            "Barrel",
+            "17.4\" Redwell-5K Barrel",
+            "Laser",
+            "Convergence Box Laser",
+            "Underbarrel",
+            "Force Stabilizer Handstop",
+            "Fire Mods",
+            "Buffer Spring"
+        ]
+    },
+    {
+        "rank": 52,
+        "name": "JACKAL PDW",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Ranger Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 53,
+        "name": "Striker",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Slate Reflector",
+            "Muzzle",
+            "Bruen Pendulum",
+            "Underbarrel",
+            "XRK Bowbreaker",
+            "Magazine",
+            "48 Round Mag",
+            "Stock",
+            "Lachmann MK2 Light Stock"
+        ]
+    },
+    {
+        "rank": 54,
+        "name": "M34 Novaline",
+        "game": "BO7",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Greaves AccuSpot 3x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "15\" Cyclops-03 Barrel",
+            "Magazine",
+            "Bowen 762 Extended Mag",
+            "Fire Mods",
+            "7.62 NATO Overpressured"
+        ]
+    },
+    {
+        "rank": 55,
+        "name": "AMES 85",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 56,
+        "name": "Echo 12",
+        "game": "BO7",
+        "class": "Shotgun",
+        "attachments": [
+            "Binary Echo Choke",
+            "Barrel",
+            "18.7\" Magellan Dual Barrel",
+            "Laser",
+            "Convergence Box Laser",
+            "Ammunition",
+            "12 Gauge Dragon's Breath",
+            "Rear Grip",
+            "Traverse Grip"
+        ]
+    },
+    {
+        "rank": 57,
+        "name": "MX9",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Shadowstrike Suppressor",
+            "Barrel",
+            "16.5\" Bruen S901",
+            "Magazine",
+            "Extended Mag",
+            "Rear Grip",
+            "Bruen Q900 Grip"
+        ]
+    },
+    {
+        "rank": 58,
+        "name": "SWAT 5.56",
+        "game": "BO6",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Ranger Foregrip",
+            "Magazine",
+            "Full-Auto Extended Mag",
+            "Rear Grip",
+            "Ergonomic Grip",
+            "Stock",
+            "Balanced Stock",
+            "Fire Mods",
+            "SWAT 5.56 Grau Conversion"
+        ]
+    },
+    {
+        "rank": 59,
+        "name": "Dresden 9mm",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Kepler Microflex",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Long Barrel",
+            "Magazine",
+            "Extended Mag II",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 60,
+        "name": "C9",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Stock",
+            "Balanced Stock"
+        ]
+    },
+    {
+        "rank": 61,
+        "name": "Cypher 091",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 62,
+        "name": "XM4",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Magazine",
+            "Extended Mag III",
+            "Stock",
+            "Buffer Weight Stock"
+        ]
+    },
+    {
+        "rank": 63,
+        "name": "Ladra",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag I",
+            "Stock",
+            "Balanced Stock"
+        ]
+    },
+    {
+        "rank": 64,
+        "name": "ABR A1",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 65,
+        "name": "FFAR 1",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Kepler Microflex",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Reinforced Barrel",
+            "Underbarrel",
+            "G-Grip",
+            "Magazine",
+            "Extended Mag I"
+        ]
+    },
+    {
+        "rank": 66,
+        "name": "Vaznev-9k",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "KAS-1 254mm",
+            "Underbarrel",
+            "JAK Slash",
+            "Magazine",
+            "45 Round Mag",
+            "Rear Grip",
+            "True-Tac Grip",
+            "Stock",
+            "Markeev R7 Stock"
+        ]
+    },
+    {
+        "rank": 67,
+        "name": "TR2",
+        "game": "BO6",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Compensator",
+            "Underbarrel",
+            "Ranger Foregrip",
+            "Magazine",
+            "Full-Auto Extended Mag",
+            "Rear Grip",
+            "Ergonomic Grip",
+            "Fire Mods",
+            "TR2 CQB Auto Conversion"
+        ]
+    },
+    {
+        "rank": 68,
+        "name": "SAUG",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Stock",
+            "Balanced Stock"
+        ]
+    },
+    {
+        "rank": 69,
+        "name": "PDSW 528",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "XRK Sandstorm",
+            "Barrel",
+            "FTAC Series IX 14.5\"",
+            "Stock",
+            "Hollow Extended Stock",
+            "Comb",
+            "TV Taccomb",
+            "Rail",
+            "Integrated Reflex Rail"
+        ]
+    },
+    {
+        "rank": 70,
+        "name": "PPSh-41",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Suppressor",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 71,
+        "name": "HRM-9",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Barrel",
+            "Thorn-90 Barrel",
+            "Underbarrel",
+            "JAK Slash",
+            "Magazine",
+            "50 Round Drum",
+            "Stock",
+            "Folding Stock"
+        ]
+    },
+    {
+        "rank": 72,
+        "name": "AS VAL",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Supressed Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II",
+            "Stock",
+            "Balanced Stock",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 73,
+        "name": "XMG",
+        "game": "BO6",
+        "class": "LMG",
+        "attachments": [
+            "Volzhskiy Reflex",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Stock",
+            "Buffer Weight Stock"
+        ]
+    },
+    {
+        "rank": 74,
+        "name": "AK-74",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Volzhskiy Reflex",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 75,
+        "name": "Jäger 45",
+        "game": "BO7",
+        "class": "Pistol",
+        "attachments": [
+            "H-45 Precision Comp",
+            "Barrel",
+            "8.7\" EAM Voyager Barrel",
+            "Magazine",
+            "Goliath-X Extended+",
+            "Rear Grip",
+            "VX-Shift Grip",
+            "Fire Mods",
+            "Pistol Recoil Spring"
+        ]
+    },
+    {
+        "rank": 76,
+        "name": "MODEL L",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Jason Armory 2x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 77,
+        "name": "Shadow SK",
+        "game": "BO7",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "22.4\" Strand Barrel",
+            "Laser",
+            "3mW Motion Strike Laser",
+            "Rear Grip",
+            "E-3 Billet Skeleton Grip",
+            "Fire Mods",
+            ".300 WM Overpressured"
+        ]
+    },
+    {
+        "rank": 78,
+        "name": "CODA 9",
+        "game": "BO7",
+        "class": "Pistol",
+        "attachments": [
+            "H-9mm Precision Comp",
+            "Barrel",
+            "6.3\" Greaves Halberd Barrel",
+            "Magazine",
+            "Hellgate Stick Mag",
+            "Rear Grip",
+            "ST3-Gloria Grip",
+            "Fire Mods",
+            "Recoil Sync Unit"
+        ]
+    },
+    {
+        "rank": 79,
+        "name": "VEL 46",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Underbarrel",
+            "Paracord Grip",
+            "Magazine",
+            "50 Round Mag",
+            "Rear Grip",
+            "Schlager Soldier Grip",
+            "Stock",
+            "Demo RXT Stock"
+        ]
+    },
+    {
+        "rank": 80,
+        "name": "LW3A1 Frostline",
+        "game": "BO6",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "Long Barrel",
+            "Stock Pad",
+            "Lightweight Pad",
+            "Comb",
+            "Quickdraw Riser",
+            "Fire Mods",
+            "7.62 NATO Overpressured"
+        ]
+    },
+    {
+        "rank": 81,
+        "name": "Bas-P",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Laser",
+            "VLK LZR 7MW",
+            "Ammunition",
+            "9MM Hollow Point",
+            "Magazine",
+            "50 Round Drum",
+            "Rear Grip",
+            "D37 grip"
+        ]
+    },
+    {
+        "rank": 82,
+        "name": "LR 7.62",
+        "game": "BO6",
+        "class": "Sniper",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Precision Handguard",
+            "Rear Grip",
+            "Quickdraw Grip",
+            "Fire Mods",
+            "7.62 NATO Overpressured"
+        ]
+    },
+    {
+        "rank": 83,
+        "name": "KRIG C",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Jason Armory 2x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 84,
+        "name": "MCW",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "16.5\" MCW Cyclone Long Barrel",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Magazine",
+            "60 Round Drum"
+        ]
+    },
+    {
+        "rank": 85,
+        "name": "MARINE SP",
+        "game": "BO6",
+        "class": "Shotgun",
+        "attachments": [
+            "Modified Choke",
+            "Barrel",
+            "Long Barrel",
+            "Laser",
+            "Tactical Laser",
+            "Stock",
+            "Combat Stock",
+            "Fire Mods",
+            "Rapid Fire"
+        ]
+    },
+    {
+        "rank": 86,
+        "name": "M4",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Komodo Heavy",
+            "Barrel",
+            "Hightower 20\" Barrel",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 87,
+        "name": "Sirin 9mm",
+        "game": "BO6",
+        "class": "Special",
+        "attachments": [
+            "Iron Sight",
+            "Muzzle",
+            "Suppressor",
+            "Barrel",
+            "Long Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag I"
+        ]
+    },
+    {
+        "rank": 88,
+        "name": "Superi 46",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Barrel",
+            "Bore 99 Short Barrel",
+            "Underbarrel",
+            "XRK Bowbreaker",
+            "Magazine",
+            "40 Round Mag",
+            "Stock",
+            "Rescue-9 Stock"
+        ]
+    },
+    {
+        "rank": 89,
+        "name": "Goblin Mk2",
+        "game": "BO6",
+        "class": "AR",
+        "attachments": [
+            "Jason Armory 2x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 90,
+        "name": "Grekhova",
+        "game": "BO6",
+        "class": "Pistol",
+        "attachments": [
+            "Monolithic Suppressor",
+            "Barrel",
+            "Long Barrel",
+            "Magazine",
+            "Extended Mag II",
+            "Rear Grip",
+            "Ergonomic Grip",
+            "Stock",
+            "Weighted Stock"
+        ]
+    },
+    {
+        "rank": 91,
+        "name": "Reclaimer 18",
+        "game": "MW3",
+        "class": "Shotgun",
+        "attachments": [
+            "Flash Twist-90",
+            "Barrel",
+            "Discourager 900 Heavy Barrel",
+            "Laser",
+            "Kimura RYL33 Laser Light",
+            "Rear Grip",
+            "Haste XV Grip Tape",
+            "Stock",
+            "No Stock"
+        ]
+    },
+    {
+        "rank": 92,
+        "name": "PML 5.56",
+        "game": "BO6",
+        "class": "LMG",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 93,
+        "name": "Feng 82",
+        "game": "BO6",
+        "class": "LMG",
+        "attachments": [
+            "Volzhskiy Reflex",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 94,
+        "name": "PP-919",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Rear Grip",
+            "Ergonomic Grip",
+            "Stock",
+            "Balanced Stock",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 95,
+        "name": "TAQ-56",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "17.5\" Tundra Pro Barrel",
+            "Ammunition",
+            "5.56 NATO High Grain Rounds",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 96,
+        "name": "STG44",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "Bruen Acrux Heavy Barrel",
+            "Magazine",
+            "50 Round Drum",
+            "Stock",
+            "DR79 Combo Stock"
+        ]
+    },
+    {
+        "rank": 97,
+        "name": "MTZ-556",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "MTZ Drifter Heavy Long",
+            "Magazine",
+            "50 Round Drum",
+            "Stock",
+            "MTZ Marauder Stock"
+        ]
+    },
+    {
+        "rank": 98,
+        "name": "WSP-9",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "MK. 3 Reflector",
+            "Muzzle",
+            "Shadowstrike Suppressor S",
+            "Barrel",
+            "Hiss Short Light Barrel",
+            "Underbarrel",
+            "JAK Slash",
+            "Magazine",
+            "40 Round Mag"
+        ]
+    },
+    {
+        "rank": 99,
+        "name": "MX Guardian",
+        "game": "MW2",
+        "class": "Shotgun",
+        "attachments": [
+            "MX-G Mobile",
+            "Laser",
+            "Kimura RYL33 Laser Light",
+            "Underbarrel",
+            "Bruen Heavy Support Grip",
+            "Rear Grip",
+            "Stream-SK",
+            "Trigger Action",
+            "Burst-Fire Trigger"
+        ]
+    },
+    {
+        "rank": 100,
+        "name": "DM-10",
+        "game": "BO6",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Weighted Handguard",
+            "Stock",
+            "Buffer Weight Stock"
+        ]
+    },
+    {
+        "rank": 101,
+        "name": "ISO Hemlock",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "Fielder-T50",
+            "Ammunition",
+            "5.56 NATO High Grain Rounds",
+            "Magazine",
+            "45 Round Mag"
+        ]
+    },
+    {
+        "rank": 102,
+        "name": "MORS",
+        "game": "MW3",
+        "class": "Sniper",
+        "attachments": [
+            "Tonne Heavy Barrel",
+            "Laser",
+            "Corio LAZ-44 V3",
+            "Ammunition",
+            "HVP Anti-Materiel Slug",
+            "Bolt",
+            "Quick Bolt",
+            "Stock",
+            "Icarus Light Stock"
+        ]
+    },
+    {
+        "rank": 103,
+        "name": "AMR Mod 4",
+        "game": "BO6",
+        "class": "Sniper",
+        "attachments": [
+            "R&K Multizoom",
+            "Muzzle",
+            "Muzzle Brake",
+            "Barrel",
+            "Long Barrel",
+            "Laser",
+            "Target Laser",
+            "Fire Mods",
+            ".50 BMG Overpressured"
+        ]
+    },
+    {
+        "rank": 104,
+        "name": "Riveter",
+        "game": "MW3",
+        "class": "Shotgun",
+        "attachments": [
+            "SL Razorhawk Laser Light",
+            "Underbarrel",
+            "Paracord Grip",
+            "Ammunition",
+            ".410 Gauge Ball",
+            "Rear Grip",
+            "XTEN Grip",
+            "Stock",
+            "DAV15 Light Tactical"
+        ]
+    },
+    {
+        "rank": 105,
+        "name": "M13B",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Magazine",
+            "60 Round Mag",
+            "Stock",
+            "M13C Factory"
+        ]
+    },
+    {
+        "rank": 106,
+        "name": "Holger 556",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Chrios-6 Match",
+            "Ammunition",
+            "5.56 NATO High Grain",
+            "Magazine",
+            "50 Round Mag"
+        ]
+    },
+    {
+        "rank": 107,
+        "name": "Essex Model 07",
+        "game": "BO6",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Jason Armory 2x",
+            "Barrel",
+            "Reinforced Barrel",
+            "Underbarrel",
+            "Lightweight Handguard",
+            "Fire Mods",
+            "7.62 NATO Overpressured",
+            "Lever",
+            "Quickdraw Lever"
+        ]
+    },
+    {
+        "rank": 108,
+        "name": "BAL-27",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "Casus Brake",
+            "Barrel",
+            "Crown-H3 Barrel",
+            "Ammunition",
+            "5.7x28mm High Grain Rounds",
+            "Magazine",
+            "60 Round Mag",
+            "Stock",
+            "Ardent Tac Stock"
+        ]
+    },
+    {
+        "rank": 109,
+        "name": "KV Broadside",
+        "game": "MW2",
+        "class": "Shotgun",
+        "attachments": [
+            "Range Twelve",
+            "Laser",
+            "Kimura RYL33 Laser Light",
+            "Magazine",
+            "12 Round Mag",
+            "Bolt",
+            "Dashbolt 60",
+            "Stock",
+            "VLK Stockless"
+        ]
+    },
+    {
+        "rank": 110,
+        "name": "Sakin MG38",
+        "game": "MW2",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "20\" Bruen Silver Series Barrel",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            "7.62 High Velocity"
+        ]
+    },
+    {
+        "rank": 111,
+        "name": "AEK-973",
+        "game": "BO6",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Volzhskiy Reflex",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Magazine",
+            "5.45 Extended Mag I",
+            "Fire Mods",
+            "Full Auto Mod"
+        ]
+    },
+    {
+        "rank": 112,
+        "name": "FJX Horus",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Nydar Model 2023",
+            "Barrel",
+            "Martis Heavy Barrel",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "60 Round Drum",
+            "Stock",
+            "Modus 30 Stock"
+        ]
+    },
+    {
+        "rank": 113,
+        "name": "PU-21",
+        "game": "BO6",
+        "class": "LMG",
+        "attachments": [
+            "Volzhskiy Reflex",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Gain-Twist Barrel",
+            "Underbarrel",
+            "Precision Foregrip",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 114,
+        "name": "RAM-9",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Barrel",
+            "Armistice Light Barrel",
+            "Underbarrel",
+            "JAK Slash",
+            "Magazine",
+            "50 Round Mag",
+            "Comb",
+            "Recon Comb"
+        ]
+    },
+    {
+        "rank": 115,
+        "name": "Tempus Razorback",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "16\" Tankr-V",
+            "Underbarrel",
+            "DM Proto-Grip",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 116,
+        "name": "SVA 545",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "Sonic Suppressor",
+            "Barrel",
+            "STV Precision Barrel",
+            "Ammunition",
+            "5.45 High Grain",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 117,
+        "name": "GPMG-7",
+        "game": "BO6",
+        "class": "LMG",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Reinforced Barrel",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 118,
+        "name": "AMR9",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "50 Round Mag",
+            "Stock",
+            "Wolfhound Carbine"
+        ]
+    },
+    {
+        "rank": 119,
+        "name": "BP50",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Lore-9 Heavy Barrel",
+            "Magazine",
+            "45 Round Mag",
+            "Stock",
+            "Moat-40 Stock"
+        ]
+    },
+    {
+        "rank": 120,
+        "name": "STB 556",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "FTAC FB20",
+            "Underbarrel",
+            "Paracord Grip",
+            "Magazine",
+            "42 Round Mag"
+        ]
+    },
+    {
+        "rank": 121,
+        "name": "Pulemyot 762",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "ST Pyro Heavy Barrel",
+            "Ammunition",
+            "7.62x54mmR High Velocity",
+            "Stock",
+            "Ivanov Wood Stock"
+        ]
+    },
+    {
+        "rank": 122,
+        "name": "Tempus Torrent",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Barrel",
+            "14\" Chroma LRS",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Ammunition",
+            "7.62x51MM High Grain",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 123,
+        "name": "Static-HV",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "MK. 3 Reflector",
+            "Muzzle",
+            "Bruen Pendulum",
+            "Barrel",
+            "Auger 840 Light Barrel",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Stock",
+            "SPRY 34 Light Stock"
+        ]
+    },
+    {
+        "rank": 124,
+        "name": "Striker 9",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "50 Round Drum",
+            "Rear Grip",
+            "Sakin ZX Grip"
+        ]
+    },
+    {
+        "rank": 125,
+        "name": "TANTO .22",
+        "game": "BO6",
+        "class": "SMG",
+        "attachments": [
+            "Kepler Microflex",
+            "Muzzle",
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Magazine",
+            "Extended Mag II",
+            "Rear Grip",
+            "Commando Grip"
+        ]
+    },
+    {
+        "rank": 126,
+        "name": "Lachmann Shroud",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Kimura RYL33 Laser Light",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Ammunition",
+            "9mm Sub HP",
+            "Magazine",
+            "40 Round Mag",
+            "Rear Grip",
+            "Lachmann TCG-10"
+        ]
+    },
+    {
+        "rank": 127,
+        "name": "Lockwood 680",
+        "game": "MW3",
+        "class": "Shotgun",
+        "attachments": [
+            "Bryson Hammerforged Long Barrel",
+            "Laser",
+            "Kimura RYL33 Laser Light",
+            "Bolt",
+            "Express Light Bolt",
+            "Rear Grip",
+            "FSS Ebonhawk Tactical Grip",
+            "Stock",
+            "XTEN Tactical Match"
+        ]
+    },
+    {
+        "rank": 128,
+        "name": "Lachmann-556",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "15.9\" Lachmann RAPP Barrel",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 129,
+        "name": "Minibak",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Shadowstrike Suppressor S",
+            "Laser",
+            "Schlager PEQ Box IV",
+            "Rear Grip",
+            "True-Tac Grip",
+            "Stock",
+            "Markeev R7 Stock"
+        ]
+    },
+    {
+        "rank": 130,
+        "name": "TAQ-V",
+        "game": "MW2",
+        "class": "Battle Rifle",
+        "attachments": [
+            "Casus Brake L",
+            "Barrel",
+            "18\" Precision-6 Barrel",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Ammunition",
+            "7.62x51mm Low Grain Rounds",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 131,
+        "name": "Rapp H",
+        "game": "MW2",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Ammunition",
+            "7.62x51MM High Grain",
+            "Stock",
+            "MEER Recoil-56 Factory Stock"
+        ]
+    },
+    {
+        "rank": 132,
+        "name": "XRK Stalker",
+        "game": "MW3",
+        "class": "Sniper",
+        "attachments": [
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "Fission 60 Barrel",
+            "Ammunition",
+            ".50 Cal High Grain Rounds",
+            "Bolt",
+            "XRK Stalker Light Bolt",
+            "Stock",
+            "No Stock"
+        ]
+    },
+    {
+        "rank": 133,
+        "name": "DG-58 LSW",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Wudi Long Barrel",
+            "Ammunition",
+            "5.8x42 High Velocity",
+            "Stock",
+            "Recoil Reduction Buttplate"
+        ]
+    },
+    {
+        "rank": 134,
+        "name": "TAQ Evolvere",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "LRF Righteous Long Barrel",
+            "Ammunition",
+            "7.62x51MM High Grain",
+            "Stock",
+            "Rampart Heavy Stock"
+        ]
+    },
+    {
+        "rank": 135,
+        "name": "Rival-9",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Underbarrel",
+            "JAK Slash",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "50 Round Drum",
+            "Stock",
+            "Bruen Flash V4 Stock"
+        ]
+    },
+    {
+        "rank": 136,
+        "name": "Holger 26",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Holger Factory Barrel",
+            "Underbarrel",
+            "Paracord Grip",
+            "Stock",
+            "Ascent Lord Stock"
+        ]
+    },
+    {
+        "rank": 137,
+        "name": "Stryder .22",
+        "game": "BO6",
+        "class": "Pistol",
+        "attachments": [
+            "Kepler Microflex",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Laser",
+            "Strelok Laser",
+            "Rear Grip",
+            "Quickdraw Grip",
+            "Fire Mods",
+            "Stryder .22 3-Round Burst Mod"
+        ]
+    },
+    {
+        "rank": 138,
+        "name": "Taq Eradicator",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "Casus Brake L",
+            "Barrel",
+            "Conquer-70 Long Barrel",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Ammunition",
+            "7.62x51mm High Grain Rounds",
+            "Stock",
+            "Tacverte Core Stock"
+        ]
+    },
+    {
+        "rank": 139,
+        "name": "SOA Subverter",
+        "game": "MW3",
+        "class": "Battle Rifle",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Dozer-90 Long Barrel",
+            "Underbarrel",
+            "Paracord Grip",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 140,
+        "name": "Fennec 45",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Fennec Covert Force",
+            "Underbarrel",
+            "JAK Slash",
+            "Ammunition",
+            ".45 Auto High Grain Rounds",
+            "Magazine",
+            "Fennec Mag 45",
+            "Stock",
+            "Agile Assault-7 Stock"
+        ]
+    },
+    {
+        "rank": 141,
+        "name": "Maelstrom",
+        "game": "BO6",
+        "class": "Shotgun",
+        "attachments": [
+            "Full Choke",
+            "Laser",
+            "Steady Aim Laser",
+            "Underbarrel",
+            "Vertical Foregrip",
+            "Ammunition",
+            "12 Gauge Dragon's Breath",
+            "Magazine",
+            "Extended Mag II"
+        ]
+    },
+    {
+        "rank": 142,
+        "name": "Crossbow",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Ammunition",
+            "Brightblaze 20\" Bolts",
+            "Arms",
+            "SO Momenti",
+            "Wire",
+            "28-Strand Cable"
+        ]
+    },
+    {
+        "rank": 143,
+        "name": "MCW 6.8",
+        "game": "MW3",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "MCW Crown-30 Barrel",
+            "Ammunition",
+            "6.8 Wrath High Grain Rounds",
+            "Magazine",
+            "60 Round Drum"
+        ]
+    },
+    {
+        "rank": 144,
+        "name": "9MM PM",
+        "game": "BO6",
+        "class": "Pistol",
+        "attachments": [
+            "Ported Compensator",
+            "Barrel",
+            "Reinforced Barrel",
+            "Magazine",
+            "Extended Mag II",
+            "Rear Grip",
+            "Ergonomic Grip",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 145,
+        "name": "GS45",
+        "game": "BO6",
+        "class": "Pistol",
+        "attachments": [
+            "Ported Compensator",
+            "Barrel",
+            "Reinforced Barrel",
+            "Magazine",
+            "Extended Mag II",
+            "Rear Grip",
+            "Ergonomic Grip",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 146,
+        "name": "SVD",
+        "game": "BO6",
+        "class": "Sniper",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Compensator",
+            "Laser",
+            "Strelok Laser",
+            "Comb",
+            "Quickdraw Riser",
+            "Fire Mods",
+            "SVD Full Auto Mod"
+        ]
+    },
+    {
+        "rank": 147,
+        "name": "DTIR 30-06",
+        "game": "MW3",
+        "class": "Battle Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Extnd-10 Long Barrel",
+            "Magazine",
+            "40 Round Mag",
+            "Stock",
+            "Rifleman 200 Stock"
+        ]
+    },
+    {
+        "rank": 148,
+        "name": "HCR 56",
+        "game": "MW2",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "FTAC Hornet 20\" Barrel",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Ammunition",
+            "5.56 High Velocity"
+        ]
+    },
+    {
+        "rank": 149,
+        "name": "MTZ-762",
+        "game": "MW3",
+        "class": "Battle Rifle",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "MTZ-Precision Blackthorn Barrel",
+            "Magazine",
+            "30 Round Mag",
+            "Stock",
+            "EXF Close Quarters Assault Stock"
+        ]
+    },
+    {
+        "rank": 150,
+        "name": "Sidewinder",
+        "game": "MW3",
+        "class": "Battle Rifle",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "Tempus Predator Precision Barrel",
+            "Ammunition",
+            "450 Huntsman High Grain Rounds",
+            "Magazine",
+            "30 Round Drum"
+        ]
+    },
+    {
+        "rank": 151,
+        "name": "RAAL MG",
+        "game": "MW2",
+        "class": "LMG",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "26.5\" Demo Field Pro Barrel",
+            "Underbarrel",
+            "XRK Dune Grip",
+            "Rear Grip",
+            "STIP-40 Grip"
+        ]
+    },
+    {
+        "rank": 152,
+        "name": "Bruen Mk9",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "23\" XRK Horizon V2",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Ammunition",
+            "5.56 High Velocity"
+        ]
+    },
+    {
+        "rank": 153,
+        "name": "Bas-B",
+        "game": "MW3",
+        "class": "Battle Rifle",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "Bruen Venom Long Barrel",
+            "Magazine",
+            "45 Round Mag",
+            "Stock",
+            "Ravage-20 Heavy Stock"
+        ]
+    },
+    {
+        "rank": 154,
+        "name": "556 Icarus",
+        "game": "MW2",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "FTAC Coldforge 16\" Barrel",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            "5.56 High Velocity"
+        ]
+    },
+    {
+        "rank": 155,
+        "name": "Tsarkov 7.62",
+        "game": "BO6",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Willis 3x",
+            "Muzzle",
+            "Monolithic Suppressor",
+            "Barrel",
+            "Reinforced Barrel",
+            "Underbarrel",
+            "Precision Handguard",
+            "Fire Mods",
+            "7.62x54mmR Overpressured"
+        ]
+    },
+    {
+        "rank": 156,
+        "name": "WSP Swarm",
+        "game": "MW3",
+        "class": "SMG",
+        "attachments": [
+            "Slate Reflector",
+            "Muzzle",
+            "Bruen Pendulum",
+            "Barrel",
+            "WSP Reckless-90 Long",
+            "Magazine",
+            "100 Round Drum",
+            "Rear Grip",
+            "Marauder Grip"
+        ]
+    },
+    {
+        "rank": 157,
+        "name": "TR-76 Geist",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Magazine",
+            "45 Round Mag",
+            "Rear Grip",
+            "Stip-66 Grip"
+        ]
+    },
+    {
+        "rank": 158,
+        "name": "Kastov 545",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Ammunition",
+            "5.45 High Grain",
+            "Magazine",
+            "60 Round Mag",
+            "Conversion Kit",
+            "JAK Requiem"
+        ]
+    },
+    {
+        "rank": 159,
+        "name": "Kastov 762",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Quartermaster Suppressor",
+            "Barrel",
+            "IG-K30 406mm",
+            "Underbarrel",
+            "Bruen Heavy Support Grip",
+            "Magazine",
+            "40 Round Mag"
+        ]
+    },
+    {
+        "rank": 160,
+        "name": "Lachmann Sub",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Barrel",
+            "L38 Falcon 226MM",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 161,
+        "name": "FR Avancer",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Casus Brake",
+            "Barrel",
+            "600MM FR Longbore",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Ammunition",
+            "5.56 NATO Low Grain Rounds",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 162,
+        "name": "ASG-89",
+        "game": "BO6",
+        "class": "Shotgun",
+        "attachments": [
+            "Modified Choke",
+            "Barrel",
+            "Reinforced Barrel",
+            "Laser",
+            "Target Laser",
+            "Magazine",
+            "Extended Mag II",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 163,
+        "name": "ISO 9mm",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Bruen Pendulum",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "50 Round Drum",
+            "Rear Grip",
+            "A30 Stout"
+        ]
+    },
+    {
+        "rank": 164,
+        "name": "Olympia",
+        "game": "BO6",
+        "class": "Special",
+        "attachments": [
+            "Short Barrel",
+            "Stock",
+            "Cut-Off Stock"
+        ]
+    },
+    {
+        "rank": 165,
+        "name": "WSP Stinger",
+        "game": "MW3",
+        "class": "Pistol",
+        "attachments": [
+            "Hiss Short Light Barrel",
+            "Laser",
+            "Verdant Hook Mounted Laser",
+            "Ammunition",
+            "9mm High Grain Rounds",
+            "Magazine",
+            "32 Round Mag",
+            "Rear Grip",
+            "Akimbo WSP Stinger"
+        ]
+    },
+    {
+        "rank": 166,
+        "name": "ISO 45",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "Bruen Pendulum",
+            "Underbarrel",
+            "JAK Slash",
+            "Magazine",
+            "45 round drum",
+            "Rear Grip",
+            "A30 Stout",
+            "Stock",
+            "Demo Fade Tac"
+        ]
+    },
+    {
+        "rank": 167,
+        "name": "M16",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Casus Brake",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Ammunition",
+            "5.56 NATO High Grain",
+            "Magazine",
+            "60 Round Mag",
+            "Conversion Kit",
+            "JAK Patriot"
+        ]
+    },
+    {
+        "rank": 168,
+        "name": "Kastov LSW",
+        "game": "MW3",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "Mitigator X40 Heavy Barrel",
+            "Ammunition",
+            "5.45 High Velocity",
+            "Stock",
+            "Spetsnaz S15 Stock"
+        ]
+    },
+    {
+        "rank": 169,
+        "name": "COR-45",
+        "game": "MW3",
+        "class": "Pistol",
+        "attachments": [
+            "ZEHMN35 Compensated Flash Hider",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Magazine",
+            "40 Round Drum",
+            "Stock",
+            "XRK Dynamic Precision Stock",
+            "Conversion Kit",
+            "XRK IP-V2 Conversion Kit"
+        ]
+    },
+    {
+        "rank": 170,
+        "name": "Gravemark .357",
+        "game": "BO6",
+        "class": "Pistol",
+        "attachments": [
+            "Compensator",
+            "Barrel",
+            "Long Barrel",
+            "Laser",
+            "Steady Aim Laser",
+            "Stock",
+            "Akimbo Gravemark .357",
+            "Fire Mods",
+            "Recoil Springs"
+        ]
+    },
+    {
+        "rank": 171,
+        "name": "Haymaker",
+        "game": "MW3",
+        "class": "Shotgun",
+        "attachments": [
+            "Imperator Long Barrel",
+            "Laser",
+            "SL Razorhawk Laser Light",
+            "Magazine",
+            "20 Round Drum",
+            "Stock",
+            "No Stock Mod",
+            "Fire Mods",
+            "12 Gauge Dragon's Breath"
+        ]
+    },
+    {
+        "rank": 172,
+        "name": "RPK",
+        "game": "MW2",
+        "class": "LMG",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Underbarrel",
+            "Paracord Grip",
+            "Ammunition",
+            "7.62x39mm High Grain Rounds",
+            "Stock",
+            "EXO-TAC"
+        ]
+    },
+    {
+        "rank": 173,
+        "name": "Ram-7",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "Casus Brake",
+            "Barrel",
+            "Cronen Headwind Long Barrel",
+            "Underbarrel",
+            "DR-6 Handstop",
+            "Magazine",
+            "40 Round Mag",
+            "Stock",
+            "HVS 3.4 Pad"
+        ]
+    },
+    {
+        "rank": 174,
+        "name": "Chimera",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "5.5\" EXF OP-40",
+            "Underbarrel",
+            "SL Skeletal Vertical Grip",
+            "Magazine",
+            "45 Round Mag"
+        ]
+    },
+    {
+        "rank": 175,
+        "name": "KVD Enforcer",
+        "game": "MW3",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor L",
+            "Barrel",
+            "KAS-Dworf Heavy Long",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Magazine",
+            "20 Round Mag"
+        ]
+    },
+    {
+        "rank": 176,
+        "name": "M13C",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Magazine",
+            "45 Round Mag",
+            "Stock",
+            "Bruen R90 Factory"
+        ]
+    },
+    {
+        "rank": 177,
+        "name": "SO-14",
+        "game": "MW2",
+        "class": "Battle Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Barrel",
+            "22\" Boremaster Barrel",
+            "Underbarrel",
+            "Bruen Pivot Vertical Grip",
+            "Ammunition",
+            "7.62x51MM High Grain",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 178,
+        "name": "FSS Hurricane",
+        "game": "MW2",
+        "class": "SMG",
+        "attachments": [
+            "MK. 3 Reflector",
+            "Muzzle",
+            "Shadowstrike Suppressor S",
+            "Underbarrel",
+            "JAK Slash",
+            "Rear Grip",
+            "Phantom Grip",
+            "Stock",
+            "Demo Quicksilver Stock"
+        ]
+    },
+    {
+        "rank": 179,
+        "name": "MCPR-300",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "SP-X 80 6.6X",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "22\" OMX-456",
+            "Ammunition",
+            ".300 High Velocity",
+            "Stock",
+            "FSS Merc Stock"
+        ]
+    },
+    {
+        "rank": 180,
+        "name": "X13 Auto",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "SA GF90 Flash Hider",
+            "Barrel",
+            "Impact Point",
+            "Laser",
+            "FJX DIOD-70",
+            "Magazine",
+            "50 Round Drum",
+            "Rear Grip",
+            "FTAC OL-Z Grip"
+        ]
+    },
+    {
+        "rank": 181,
+        "name": "Bryson 890",
+        "game": "MW2",
+        "class": "Shotgun",
+        "attachments": [
+            "Bryson Choke",
+            "Barrel",
+            "21.5\" Bryson TACFIRE",
+            "Laser",
+            "Point-G3P 04",
+            "Ammunition",
+            "12 Gauge Dragon's Breath",
+            "Guard",
+            "Demo X50 Tactical Pump"
+        ]
+    },
+    {
+        "rank": 182,
+        "name": "Expedite 12",
+        "game": "MW2",
+        "class": "Shotgun",
+        "attachments": [
+            "Bryson Choke",
+            "Laser",
+            "Point-G3P 04",
+            "Ammunition",
+            "12 Gauge Dragon's Breath",
+            "Bolt",
+            "Expedite L-Bolt",
+            "Rear Grip",
+            "FSS Ammo Sleeve"
+        ]
+    },
+    {
+        "rank": 183,
+        "name": "Lockwood MK2",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Crown Breaker Choke",
+            "Laser",
+            "cs15 scarlet cylindrical laser",
+            "Conversion Kit",
+            "Jak Wardens"
+        ]
+    },
+    {
+        "rank": 184,
+        "name": "Cronen Squall",
+        "game": "MW2",
+        "class": "Battle Rifle",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "HR6.8 Barrel",
+            "Underbarrel",
+            "Paracord Grip",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 185,
+        "name": "SP-X 80",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "Sonic Suppressor L",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            ".300 High Velocity",
+            "Bolt",
+            "FSS ST87 Bolt",
+            "Stock",
+            "PVZ-890 Tac Stock"
+        ]
+    },
+    {
+        "rank": 186,
+        "name": "Bryson 800",
+        "game": "MW2",
+        "class": "Shotgun",
+        "attachments": [
+            "Flash Twist-90",
+            "Barrel",
+            "29.5\" Rifled Barrel",
+            "Laser",
+            "Kimura RYL33 Laser Light",
+            "Stock",
+            "Sawed Off MOD",
+            "Guard",
+            "Demo X50 Tactical Pump"
+        ]
+    },
+    {
+        "rank": 187,
+        "name": "DM56",
+        "game": "MW3",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "Prime Lord Heavy Barrel",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Magazine",
+            "40 Round Mag"
+        ]
+    },
+    {
+        "rank": 188,
+        "name": "LA-B 330",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "Forge TAC Delta 4",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            ".300 High Velocity",
+            "Stock",
+            "ZLR T70 PAD Extension"
+        ]
+    },
+    {
+        "rank": 189,
+        "name": "LM-S",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "Tempus GH50",
+            "Underbarrel",
+            "Bruen Pivot Vertical Grip",
+            "Ammunition",
+            "7.62x51MM High Grain",
+            "Magazine",
+            "20 Round Mag"
+        ]
+    },
+    {
+        "rank": 190,
+        "name": "DG-56",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "DG-58 LS18 Heavy Barrel",
+            "Underbarrel",
+            "Bruen Heavy Support Grip",
+            "Magazine",
+            "60 Round Drum"
+        ]
+    },
+    {
+        "rank": 191,
+        "name": "Signal 50",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "Forge TAC Delta 4",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "29\" TV Kilo-50",
+            "Ammunition",
+            ".50 CAL High Velocity",
+            "Rear Grip",
+            "SA Finesse Grip"
+        ]
+    },
+    {
+        "rank": 192,
+        "name": "FTAC Recon",
+        "game": "MW2",
+        "class": "Battle Rifle",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Barrel",
+            "Bull Rider 16.5\"",
+            "Underbarrel",
+            "XRK Bowbreaker Grip",
+            "Ammunition",
+            ".458 High Velocity",
+            "Magazine",
+            "15 Round Mag"
+        ]
+    },
+    {
+        "rank": 193,
+        "name": "9mm Daemon",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "SA Longfire",
+            "Laser",
+            "1MW Pistol Laser",
+            "Magazine",
+            "26 Round Mag",
+            "Rear Grip",
+            "Akimbo 9mm Daemon",
+            "Trigger Action",
+            "Rapid 30 Trigger"
+        ]
+    },
+    {
+        "rank": 194,
+        "name": "Kastov-74U",
+        "game": "MW2",
+        "class": "AR",
+        "attachments": [
+            "Casus Brake",
+            "Barrel",
+            "KSTV-17",
+            "Underbarrel",
+            "JAK Slash",
+            "Magazine",
+            "45 Round Mag",
+            "Stock",
+            "Otrezat Stock"
+        ]
+    },
+    {
+        "rank": 195,
+        "name": "MTZ Interceptor",
+        "game": "MW3",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Corio Eagleseye 2.5x",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor L",
+            "Barrel",
+            "MTZ Blackthorn Barrel",
+            "Ammunition",
+            "7.62x51MM High Grain",
+            "Magazine",
+            "20 Round Mag"
+        ]
+    },
+    {
+        "rank": 196,
+        "name": "Renetti",
+        "game": "MW3",
+        "class": "Pistol",
+        "attachments": [
+            "Slate Reflector",
+            "Muzzle",
+            "Sonic Suppressor XS",
+            "Barrel",
+            "MK2 Renetti Long Barrel",
+            "Magazine",
+            "50 Round Drum",
+            "Trigger Action",
+            "Bruen Express"
+        ]
+    },
+    {
+        "rank": 197,
+        "name": "Longbow",
+        "game": "MW3",
+        "class": "Sniper",
+        "attachments": [
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "Pro-99 Long Barrel",
+            "Ammunition",
+            "7.62x39mm High Grain Rounds",
+            "Bolt",
+            "SA-M Quickbolt",
+            "Stock",
+            "Mane V6 Stock"
+        ]
+    },
+    {
+        "rank": 198,
+        "name": "TAQ-M",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Forge TAC Delta 4",
+            "Muzzle",
+            "Casus Brake",
+            "Barrel",
+            "LR1:7 20.5\" Barrel",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            "6.5MM High Velocity"
+        ]
+    },
+    {
+        "rank": 199,
+        "name": "FR 5.56",
+        "game": "MW3",
+        "class": "AR",
+        "attachments": [
+            "JAK Glassless Optic",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "600MM FR Longbore",
+            "Underbarrel",
+            "Bruen Tactical Vertical Grip",
+            "Magazine",
+            "60 Round Mag"
+        ]
+    },
+    {
+        "rank": 200,
+        "name": "KV Inhibitor",
+        "game": "MW3",
+        "class": "Sniper",
+        "attachments": [
+            "VT-7 Spiritfire Suppressor",
+            "Barrel",
+            "KAS-10 584mm Mod Barrel",
+            "Ammunition",
+            ".338 Magnum Spire Point Rounds",
+            "Magazine",
+            "20 Round Mag",
+            "Rear Grip",
+            "FSS Stormender Assault Grip"
+        ]
+    },
+    {
+        "rank": 201,
+        "name": "Lachmann-762",
+        "game": "MW2",
+        "class": "Battle Rifle",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "Casus Brake L",
+            "Barrel",
+            "Romeo FT 16\" Barrel",
+            "Ammunition",
+            "7.62x51mm High Grain Rounds",
+            "Magazine",
+            "50 Round Drum"
+        ]
+    },
+    {
+        "rank": 202,
+        "name": "SA-B 50",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Forge TAC Delta 4",
+            "Muzzle",
+            "ZLR Talon 5",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            ".308 High Velocity",
+            "Stock",
+            "XRK Specter MOD"
+        ]
+    },
+    {
+        "rank": 203,
+        "name": "P890",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "FT Steel Fire",
+            "Laser",
+            "1MW Pistol Laser",
+            "Magazine",
+            "12 Round Mag",
+            "Rear Grip",
+            "Akimbo P890",
+            "Trigger Action",
+            "Bruen Express"
+        ]
+    },
+    {
+        "rank": 204,
+        "name": "TYR",
+        "game": "MW3",
+        "class": "Pistol",
+        "attachments": [
+            "Nydar Model 2023",
+            "Underbarrel",
+            "SL Skeletal Vertical Grip",
+            "Rear Grip",
+            "Frigg's Embrace",
+            "Conversion Kit",
+            "JAK Beholder Rifle Kit",
+            "Trigger Action",
+            "Ullr's Fury"
+        ]
+    },
+    {
+        "rank": 205,
+        "name": "SP-R 208",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "SP-X 80 6.6X",
+            "Muzzle",
+            "Sonic Suppressor L",
+            "Laser",
+            "FSS OLE-V laser",
+            "Ammunition",
+            "7.62x51mm High Velocity",
+            "Bolt",
+            "FSS ST87 Bolt"
+        ]
+    },
+    {
+        "rank": 206,
+        "name": "Basilisk",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "10.5\" FTAC Arrow",
+            "Laser",
+            "Revo-LSD 7MW",
+            "Ammunition",
+            ".500 Snakeshot",
+            "Rear Grip",
+            "Akimbo Basilisk",
+            "Trigger Action",
+            "Bryson HTA"
+        ]
+    },
+    {
+        "rank": 207,
+        "name": "X12",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "Corvus Series-D",
+            "Barrel",
+            "XRK Sidewinder-6 Slide",
+            "Ammunition",
+            "9MM Armor Piercing",
+            "Rear Grip",
+            "Cronen LIMA-6",
+            "Trigger Action",
+            "XRK Lighting Fire"
+        ]
+    },
+    {
+        "rank": 208,
+        "name": "Carrack .300",
+        "game": "MW2",
+        "class": "Sniper",
+        "attachments": [
+            "Forge TAC Delta 4",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Laser",
+            "VLK LZR 7MW",
+            "Magazine",
+            "10 Round Mag",
+            "Stock",
+            "Lex V14"
+        ]
+    },
+    {
+        "rank": 209,
+        "name": "EBR-14",
+        "game": "MW2",
+        "class": "Marksman Rifle",
+        "attachments": [
+            "Nydar Model 2023",
+            "Muzzle",
+            "VT-7 Spiritfire Suppressor",
+            "Ammunition",
+            "7.62x51mm High Grain Rounds",
+            "Magazine",
+            "20 Round Mag",
+            "Stock",
+            "SO-90 Factory Stock"
+        ]
+    },
+    {
+        "rank": 210,
+        "name": "FTAC Siege",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "Casus Brake",
+            "Barrel",
+            "CMRN-50",
+            "Laser",
+            "1MW Pistol Laser",
+            "Magazine",
+            "72 Round Drum",
+            "Rear Grip",
+            "Akimbo FTAC Siege"
+        ]
+    },
+    {
+        "rank": 211,
+        "name": ".50 GS",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "SA Brake Barrel",
+            "Laser",
+            "FJX DIOD-70",
+            "Magazine",
+            "13 Round Mag",
+            "Rear Grip",
+            "EXF Resistance Grip",
+            "Trigger Action",
+            "SA Hare Trigger"
+        ]
+    },
+    {
+        "rank": 212,
+        "name": "GS Magna",
+        "game": "MW2",
+        "class": "Pistol",
+        "attachments": [
+            "FTAC Fifty Comp",
+            "Barrel",
+            "SA Tyrant Fifty",
+            "Underbarrel",
+            "Bruen Warrior Grip",
+            "Magazine",
+            "13 Round Mag",
+            "Rear Grip",
+            "EXF Resistance Grip"
+        ]
+    },
+    {
+        "rank": 213,
+        "name": "Lockwood 300",
+        "game": "MW2",
+        "class": "Shotgun",
+        "attachments": [
+            "Bryson Series XII Choke",
+            "Barrel",
+            "Matuzek 812 Barrel",
+            "Underbarrel",
+            "Bruen Bastion Angled Grip",
+            "Stock",
+            "Heist Stock MOD",
+            "Trigger Action",
+            "Maelstorm Dual Trigger"
+        ]
+    }
+]

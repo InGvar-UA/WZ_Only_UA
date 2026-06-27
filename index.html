@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WZ_Only_UA — Актуальна Мета Warzone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Warzone Only UA</div>
+        <p>Актуальні збірки та мета зброї Call of Duty: Warzone</p>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Пошук зброї за назвою (напр. Carbon)...">
+        </div>
+    </header>
+
+    <main class="meta-container" id="meta-grid">
+        <!-- Карточки оружия будут добавляться сюда автоматически через JavaScript -->
+        <div class="loading">Завантаження актуальної мети...</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Warzone Only UA. Дані оновлюються автоматично. t.me/cod_uah</p>
+    </footer>
+
+    <script>
+        let allWeapons = [];
+
+        async function loadMeta() {
+            try {
+                // Завантажуємо JSON, який згенерував наш парсер
+                const response = await fetch('wz_meta_ua.json');
+                allWeapons = await response.json();
+                
+                displayWeapons(allWeapons);
+            } catch (error) {
+                document.getElementById('meta-grid').innerHTML = 
+                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
+                console.error(error);
+            }
+        }
+
+        function displayWeapons(weapons) {
+            const grid = document.getElementById('meta-grid');
+            grid.innerHTML = '';
+
+            if (weapons.length === 0) {
+                grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+                return;
+            }
+
+            weapons.forEach(wpn => {
+                const card = document.createElement('div');
+                card.className = 'weapon-card';
+                
+                // Рендеримо список модулів
+                const attachmentsHtml = wpn.attachments.map(att => `<li>🔧 ${att}</li>`).join('');
+
+                card.innerHTML = `
+                    <div class="rank">#${wpn.rank}</div>
+                    <h2 class="weapon-name">${wpn.name}</h2>
+                    <div class="tags">
+                        <span class="tag game-tag">${wpn.game}</span>
+                        <span class="tag class-tag">${wpn.class}</span>
+                    </div>
+                    <ul class="attachments-list">
+                        ${attachmentsHtml}
+                    </ul>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Логіка швидкого пошуку
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().strip();
+            const filtered = allWeapons.filter(wpn => 
+                wpn.name.toLowerCase().includes(query) || 
+                wpn.class.toLowerCase().includes(query)
+            );
+            displayWeapons(filtered);
+        });
+
+        document.addEventListener('DOMContentLoaded', loadMeta);
+    </script>
+</body>
+</html>
