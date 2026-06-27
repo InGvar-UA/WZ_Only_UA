@@ -19,7 +19,6 @@ def parse_weapons(lines):
     current_weapon = None
     iterator = iter(lines)
     
-    # Список известных категорий для сверки
     known_categories = [
         "Muzzle", "Barrel", "Laser", "Optic", "Stock", "Rear Grip", 
         "Magazine", "Ammo", "Underbarrel", "Comb", "Guard", 
@@ -47,13 +46,11 @@ def parse_weapons(lines):
             except StopIteration:
                 break
         elif current_weapon and len(line) > 1:
-            # Убираем технический мусор сайта
             if line in [current_weapon["name"], current_weapon["game"], current_weapon["class"], "BO7", "BO6", "MW3"]:
                 continue
             
             clean_line = line.lstrip("- ").strip()
             
-            # Проверяем, начинается ли строка с известной категории
             matched_cat = None
             for cat in known_categories:
                 if clean_line.startswith(cat):
@@ -61,16 +58,14 @@ def parse_weapons(lines):
                     break
             
             if matched_cat:
-                # Отрезаем категорию, оставляем только название модуля
                 att_name = clean_line[len(matched_cat):].strip()
                 current_weapon["attachments"].append({
                     "category": matched_cat,
                     "name": att_name
                 })
             else:
-                # Если категория пропущена в тексте (как у Muzzle), пытаемся угадать её по ключевым словам
                 category = ""
-                lower_line = clean_line.toLowerCase() if hasattr(clean_line, 'toLowerCase') else clean_line.lower()
+                lower_line = clean_line.lower()
                 
                 if any(k in lower_line for k in ['brake', 'suppressor', 'compensator', 'silencer', 'choke']): category = "Muzzle"
                 elif 'barrel' in lower_line: category = "Barrel"
@@ -87,7 +82,6 @@ def parse_weapons(lines):
                         "name": clean_line
                     })
                 else:
-                    # Если совсем не распознали категорию, сохраняем как общий модуль
                     current_weapon["attachments"].append({
                         "category": "🔧",
                         "name": clean_line
@@ -98,7 +92,7 @@ def parse_weapons(lines):
     return weapons
 
 def main():
-    print("🚀 WZ_Only_UA: Запуск проверенного текстового парсера...")
+    print("🚀 WZ_Only_UA: Сбор чистых данных...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -111,10 +105,13 @@ def main():
     cleaned_lines = clean_text_block(raw_text)
     result_meta = parse_weapons(cleaned_lines)
     
+    # Исключаем сохранение пустых списков модулей
+    valid_meta = [w for w in result_meta if len(w["attachments"]) > 0]
+    
     with open("wz_meta_ua.json", "w", encoding="utf-8") as f:
-        json.dump(result_meta, f, indent=4, ensure_ascii=False)
+        json.dump(valid_meta, f, indent=4, ensure_ascii=False)
         
-    print(f"✅ Готово! Собрано пушек: {len(result_meta)}.")
+    print(f"✅ Успешно пересобрано! Пушек с модулями: {len(valid_meta)}.")
 
 if __name__ == "__main__":
     main()
