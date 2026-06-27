@@ -1,0 +1,36 @@
+name: Auto Update Warzone Meta
+
+on:
+  schedule:
+    # Запуск каждый день в 01:00 UTC (это ровно 04:00 утра по Киеву в летнее время)
+    - cron: '0 1 * * *'
+  workflow_dispatch: # Добавляет кнопку ручного запуска парсера на сайте GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Проверка кода репозитория
+      uses: actions/checkout@v4
+
+    - name: Настройка Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Установка зависимостей парсера
+      run: |
+        python -m pip install --upgrade pip
+        pip install playwright beautifulsoup4
+        playwright install chromium
+
+    - name: Запуск парсера мета-оружия
+      run: python parser.py
+
+    - name: Автоматический коммит и пуш обновлений на сайт
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add wz_meta_ua.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Автоматическое обновление меты оружия 🤖" && git push)
