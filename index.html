@@ -75,79 +75,79 @@
 
     // 3. Функція виведення карток з точною збіркою з 5 модулів
     function displayWeapons(weapons) {
-        const grid = document.getElementById('meta-grid');
-        grid.innerHTML = '';
+    const grid = document.getElementById('meta-grid');
+    grid.innerHTML = '';
 
-        if (weapons.length === 0) {
-            grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
-            return;
-        }
+    if (weapons.length === 0) {
+        grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+        return;
+    }
 
-        // Список категорій для точного зіставлення (включаючи ті, що з пробілами)
-        const knownCategories = [
-            "Muzzle", "Barrel", "Laser", "Optic", "Stock", 
-            "Rear Grip", "Magazine", "Ammo", "Underbarrel", 
-            "Comb", "Guard", "Fire Mods", "Conversion Kit", "Perk"
-        ];
+    weapons.forEach(wpn => {
+        const card = document.createElement('div');
+        card.className = 'weapon-card';
+        
+        const translatedClass = translations[wpn.class] || wpn.class;
+        
+        const attachmentsHtml = wpn.attachments.map(att => {
+            let category = "";
+            let name = "";
 
-        weapons.forEach(wpn => {
-            const card = document.createElement('div');
-            card.className = 'weapon-card';
-            
-            const translatedClass = translations[wpn.class] || wpn.class;
-            
-            let cleanAttachments = [];
-            let rawList = wpn.attachments;
-
-            // Очищаємо масив від випадкових дублікатів назви самої зброї
-            let filteredRaw = rawList.filter(item => item !== wpn.name && item.trim() !== "");
-
-            for (let i = 0; i < filteredRaw.length; i++) {
-                let current = filteredRaw[i].trim();
+            // Вариант 1: Строка уже содержит двоеточие (Категория: Название)
+            if (att.includes(':')) {
+                let parts = att.split(':');
+                category = parts[0].trim();
+                name = parts.slice(1).join(':').trim();
+            } 
+            // Вариант 2: Двоеточия нет, пытаемся определить категорию "Muzzle" по ключевым словам в названии
+            else {
+                name = att.trim();
+                const lowerName = name.toLowerCase();
                 
-                // Перевіряємо, чи є поточний елемент відомою категорією
-                let isCategory = knownCategories.some(cat => cat.toLowerCase() === current.toLowerCase());
-
-                if (isCategory && (i + 1 < filteredRaw.length)) {
-                    let category = current;
-                    let name = filteredRaw[i + 1];
-
-                    // Знаходимо правильний ключ для перекладу із словника
-                    let matchedKey = knownCategories.find(cat => cat.toLowerCase() === category.toLowerCase());
-                    let translatedCategory = translations[matchedKey] || category;
-
-                    cleanAttachments.push(`<span>${translatedCategory}:</span> ${name}`);
-                    i++; // Пропускаємо назву модуля, бо ми її вже об'єднали з категорією
-                } else {
-                    // Якщо рядок самостійний і не є категорією
-                    if (!knownCategories.some(cat => current.toLowerCase().includes(cat.toLowerCase()))) {
-                        cleanAttachments.push(`🔧 ${current}`);
-                    }
+                if (lowerName.includes('brake') || lowerName.includes('suppressor') || 
+                    lowerName.includes('compensator') || lowerName.includes('silencer') || 
+                    lowerName.includes('choke') || lowerName.includes('flash hider')) {
+                    category = "Muzzle";
+                } else if (lowerName.includes('barrel')) {
+                    category = "Barrel";
+                } else if (lowerName.includes('laser')) {
+                    category = "Laser";
+                } else if (lowerName.includes('optic') || lowerName.includes('sight') || lowerName.includes('scope')) {
+                    category = "Optic";
+                } else if (lowerName.includes('stock')) {
+                    category = "Stock";
+                } else if (lowerName.includes('grip')) {
+                    category = "Rear Grip";
+                } else if (lowerName.includes('mag') || lowerName.includes('drum') || lowerName.includes('round')) {
+                    category = "Magazine";
                 }
             }
 
-            // Якщо раптом масив пустий, виводимо сирі дані для безпеки
-            if (cleanAttachments.length === 0) {
-                cleanAttachments = filteredRaw.map(att => `🔧 ${att}`);
+            // Если категория определена (или была), переводим её и выводим красиво
+            if (category) {
+                let translatedCategory = translations[category] || category;
+                return `<li><span>${translatedCategory}:</span> ${name}</li>`;
             }
 
-            // Обмежуємо вивід стандартними 5 слотами модифікацій
-            const attachmentsHtml = cleanAttachments.slice(0, 5).map(att => `<li>${att}</li>`).join('');
+            // Если определить категорию не удалось, оставляем просто иконку
+            return `<li>🔧 ${name}</li>`;
+        }).join('');
 
-            card.innerHTML = `
-                <div class="rank">#${wpn.rank}</div>
-                <h2 class="weapon-name">${wpn.name}</h2>
-                <div class="tags">
-                    <span class="tag game-tag">${wpn.game}</span>
-                    <span class="tag class-tag">${translatedClass}</span>
-                </div>
-                <ul class="attachments-list">
-                    ${attachmentsHtml}
-                </ul>
-            `;
-            grid.appendChild(card);
-        });
-    }
+        card.innerHTML = `
+            <div class="rank">#${wpn.rank}</div>
+            <h2 class="weapon-name">${wpn.name}</h2>
+            <div class="tags">
+                <span class="tag game-tag">${wpn.game}</span>
+                <span class="tag class-tag">${translatedClass}</span>
+            </div>
+            <ul class="attachments-list">
+                ${attachmentsHtml}
+            </ul>
+        `;
+        grid.appendChild(card);
+    });
+}
+
 
     // 4. Логіка швидкого пошуку по сайту
     document.getElementById('search-input').addEventListener('input', (e) => {
