@@ -28,7 +28,7 @@
     <script>
     let allWeapons = [];
 
-    // 1. Загрузка данных из JSON файла
+    // 1. Завантаження даних із JSON-файлу
     async function loadMeta() {
         try {
             const response = await fetch('wz_meta_ua.json');
@@ -41,8 +41,9 @@
         }
     }
 
-    // 2. Словарь перевода категорий и классов
+    // 2. Повний словник перекладу категорій та класів
     const translations = {
+        // Категорії модулів (Attachments)
         "Muzzle": "Глушник / Дуло",
         "Barrel": "Ствол",
         "Laser": "Лазер",
@@ -58,6 +59,7 @@
         "Conversion Kit": "Набір конверсії",
         "Perk": "Перк / Уміння",
         
+        // Класи зброї (Weapon Classes)
         "SMG": "ПП (SMG)",
         "AR": "Штурмова гвинтівка",
         "Sniper": "Снайперська гвинтівка",
@@ -71,7 +73,7 @@
         "All": "Усі класи"
     };
 
-    // 3. Функция вывода карточек с переводом и правильной структурой
+    // 3. Функція виведення карток з точною збіркою з 5 модулів
     function displayWeapons(weapons) {
         const grid = document.getElementById('meta-grid');
         grid.innerHTML = '';
@@ -80,6 +82,13 @@
             grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
             return;
         }
+
+        // Список категорій для точного зіставлення (включаючи ті, що з пробілами)
+        const knownCategories = [
+            "Muzzle", "Barrel", "Laser", "Optic", "Stock", 
+            "Rear Grip", "Magazine", "Ammo", "Underbarrel", 
+            "Comb", "Guard", "Fire Mods", "Conversion Kit", "Perk"
+        ];
 
         weapons.forEach(wpn => {
             const card = document.createElement('div');
@@ -90,24 +99,40 @@
             let cleanAttachments = [];
             let rawList = wpn.attachments;
 
-            for (let i = 0; i < rawList.length; i++) {
-                if (i + 1 < rawList.length && !rawList[i].includes(' ') && rawList[i].length > 2) {
-                    let category = rawList[i];
-                    let name = rawList[i+1];
-                    
-                    if (name.includes(' ') || name.length > 10) {
-                        let translatedCategory = translations[category] || category;
-                        cleanAttachments.push(`<span>${translatedCategory}:</span> ${name}`);
-                        i++; 
+            // Очищаємо масив від випадкових дублікатів назви самої зброї
+            let filteredRaw = rawList.filter(item => item !== wpn.name && item.trim() !== "");
+
+            for (let i = 0; i < filteredRaw.length; i++) {
+                let current = filteredRaw[i].trim();
+                
+                // Перевіряємо, чи є поточний елемент відомою категорією
+                let isCategory = knownCategories.some(cat => cat.toLowerCase() === current.toLowerCase());
+
+                if (isCategory && (i + 1 < filteredRaw.length)) {
+                    let category = current;
+                    let name = filteredRaw[i + 1];
+
+                    // Знаходимо правильний ключ для перекладу із словника
+                    let matchedKey = knownCategories.find(cat => cat.toLowerCase() === category.toLowerCase());
+                    let translatedCategory = translations[matchedKey] || category;
+
+                    cleanAttachments.push(`<span>${translatedCategory}:</span> ${name}`);
+                    i++; // Пропускаємо назву модуля, бо ми її вже об'єднали з категорією
+                } else {
+                    // Якщо рядок самостійний і не є категорією
+                    if (!knownCategories.some(cat => current.toLowerCase().includes(cat.toLowerCase()))) {
+                        cleanAttachments.push(`🔧 ${current}`);
                     }
                 }
             }
 
+            // Якщо раптом масив пустий, виводимо сирі дані для безпеки
             if (cleanAttachments.length === 0) {
-                cleanAttachments = rawList.map(att => `🔧 ${att}`);
+                cleanAttachments = filteredRaw.map(att => `🔧 ${att}`);
             }
 
-            const attachmentsHtml = cleanAttachments.map(att => `<li>${att}</li>`).join('');
+            // Обмежуємо вивід стандартними 5 слотами модифікацій
+            const attachmentsHtml = cleanAttachments.slice(0, 5).map(att => `<li>${att}</li>`).join('');
 
             card.innerHTML = `
                 <div class="rank">#${wpn.rank}</div>
@@ -124,7 +149,7 @@
         });
     }
 
-    // 4. Логика быстрого поиска по сайту
+    // 4. Логіка швидкого пошуку по сайту
     document.getElementById('search-input').addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
         const filtered = allWeapons.filter(wpn => 
@@ -136,6 +161,7 @@
 
     document.addEventListener('DOMContentLoaded', loadMeta);
 </script>
+
 
 </body>
 </html>
