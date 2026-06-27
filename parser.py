@@ -19,6 +19,13 @@ def parse_weapons(lines):
     current_weapon = None
     iterator = iter(lines)
     
+    # Список известных категорий для сверки
+    known_categories = [
+        "Muzzle", "Barrel", "Laser", "Optic", "Stock", "Rear Grip", 
+        "Magazine", "Ammo", "Underbarrel", "Comb", "Guard", 
+        "Fire Mods", "Conversion Kit", "Perk", "Bolt", "Rail"
+    ]
+    
     for line in iterator:
         if re.match(r"^#?\s*\d+$", line):
             if current_weapon and current_weapon["attachments"]:
@@ -40,15 +47,58 @@ def parse_weapons(lines):
             except StopIteration:
                 break
         elif current_weapon and len(line) > 1:
-            if "BO7" not in line and "BO6" not in line and "MW3" not in line:
-                current_weapon["attachments"].append(line)
+            # Убираем технический мусор сайта
+            if line in [current_weapon["name"], current_weapon["game"], current_weapon["class"], "BO7", "BO6", "MW3"]:
+                continue
+            
+            clean_line = line.lstrip("- ").strip()
+            
+            # Проверяем, начинается ли строка с известной категории
+            matched_cat = None
+            for cat in known_categories:
+                if clean_line.startswith(cat):
+                    matched_cat = cat
+                    break
+            
+            if matched_cat:
+                # Отрезаем категорию, оставляем только название модуля
+                att_name = clean_line[len(matched_cat):].strip()
+                current_weapon["attachments"].append({
+                    "category": matched_cat,
+                    "name": att_name
+                })
+            else:
+                # Если категория пропущена в тексте (как у Muzzle), пытаемся угадать её по ключевым словам
+                category = ""
+                lower_line = clean_line.toLowerCase() if hasattr(clean_line, 'toLowerCase') else clean_line.lower()
+                
+                if any(k in lower_line for k in ['brake', 'suppressor', 'compensator', 'silencer', 'choke']): category = "Muzzle"
+                elif 'barrel' in lower_line: category = "Barrel"
+                elif 'laser' in lower_line: category = "Laser"
+                elif any(k in lower_line for k in ['optic', 'sight', 'scope']): category = "Optic"
+                elif 'stock' in lower_line: category = "Stock"
+                elif 'grip' in lower_line: category = "Rear Grip"
+                elif any(k in lower_line for k in ['mag', 'drum', 'round']): category = "Magazine"
+                elif any(k in lower_line for k in ['handstop', 'foregrip']): category = "Underbarrel"
+                
+                if category:
+                    current_weapon["attachments"].append({
+                        "category": category,
+                        "name": clean_line
+                    })
+                else:
+                    # Если совсем не распознали категорию, сохраняем как общий модуль
+                    current_weapon["attachments"].append({
+                        "category": "🔧",
+                        "name": clean_line
+                    })
                 
     if current_weapon and current_weapon["attachments"]:
         weapons.append(current_weapon)
     return weapons
 
 def main():
-    print("🚀 WZ_Only_UA: Запуск фонового браузера...")
+    print("🚀 WZ_Only_UA: Запуск проверенного текстового парсера...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
