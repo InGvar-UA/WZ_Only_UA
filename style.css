@@ -247,3 +247,21 @@ footer {
         right: 15px;
     }
 }
+/* Стиль для плашки создателя в шапке */
+.creator-badge {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.creator-badge span {
+    color: var(--accent-color); /* Подсвечиваем твой ник золотым */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Выделение автора золотым в футере */
+footer b {
+    color: var(--accent-color);
+}
