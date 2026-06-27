@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -41,6 +41,7 @@
 
     <script>
     let allWeapons = [];
+    let currentCategory = 'all';
 
     // 1. Загрузка данных из JSON файла
     async function loadMeta() {
@@ -89,7 +90,6 @@
     };
 
     // 3. Функция вывода карточек оружия на экран
-        // 3. Функция вывода карточек оружия (с жесткой очисткой дубликатов)
     function displayWeapons(weapons) {
         const grid = document.getElementById('meta-grid');
         grid.innerHTML = '';
@@ -143,7 +143,6 @@
                 });
             }
 
-            // Склеиваем очищенные модули (строго до 5 штук)
             let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
 
             card.innerHTML = `
@@ -161,16 +160,27 @@
         });
     }
 
-    // 4. Логика фильтрации по поиску и кнопкам категорий
-    let currentCategory = 'all';
-
+    // 4. ИСПРАВЛЕННАЯ логика одновременной фильтрации по поиску и кнопкам
     function filterWeapons() {
-        const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+        const searchInput = document.getElementById('search-input');
+        // Защита: если элемент поиска ещё не загрузился в DOM
+        const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
         
         const filtered = allWeapons.filter(wpn => {
-            const matchesSearch = wpn.name.toLowerCase().includes(searchQuery) || 
-                                  wpn.class.toLowerCase().includes(searchQuery);
+            const weaponName = wpn.name ? wpn.name.toLowerCase() : "";
+            const weaponClassEng = wpn.class ? wpn.class.toLowerCase() : "";
             
+            // Находим украинский перевод класса для поиска по нему
+            const translatedClassRaw = translations[wpn.class] || wpn.class;
+            const weaponClassUa = translatedClassRaw.toLowerCase();
+            
+            // Проверяем совпадение по поиску (ищет по имени, английскому или украинскому классу)
+            const matchesSearch = searchQuery === "" || 
+                                  weaponName.includes(searchQuery) || 
+                                  weaponClassEng.includes(searchQuery) ||
+                                  weaponClassUa.includes(searchQuery);
+            
+            // Проверяем совпадение по выбранной кнопке категории
             const matchesCategory = (currentCategory === 'all') || (wpn.class === currentCategory);
             
             return matchesSearch && matchesCategory;
@@ -179,21 +189,29 @@
         displayWeapons(filtered);
     }
 
-    // Слушатели событий для поиска и кнопок
-    document.getElementById('search-input').addEventListener('input', filterWeapons);
+    // Привязываем события ввода текста
+    const searchElement = document.getElementById('search-input');
+    if (searchElement) {
+        searchElement.addEventListener('input', filterWeapons);
+    }
 
-    document.getElementById('categories-tags').addEventListener('click', (e) => {
-        if (e.target.classList.contains('filter-btn')) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            e.target.classList.add('active');
-            
-            currentCategory = e.target.getAttribute('data-class');
-            filterWeapons();
-        }
-    });
+    // Привязываем события кликов по кнопкам категорий
+    const tagsElement = document.getElementById('categories-tags');
+    if (tagsElement) {
+        tagsElement.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.add ? e.target.classList.add('active') : e.target.className += ' active';
+                
+                currentCategory = e.target.getAttribute('data-class');
+                filterWeapons();
+            }
+        });
+    }
 
     document.addEventListener('DOMContentLoaded', loadMeta);
 </script>
+
 
 
 
