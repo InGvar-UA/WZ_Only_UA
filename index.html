@@ -76,46 +76,67 @@
 
     // 3. Функция вывода карточек оружия на экран
     function displayWeapons(weapons) {
-        const grid = document.getElementById('meta-grid');
-        grid.innerHTML = '';
+    const grid = document.getElementById('meta-grid');
+    grid.innerHTML = '';
 
-        if (!weapons || weapons.length === 0) {
-            grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
-            return;
-        }
-
-        weapons.forEach(wpn => {
-            const card = document.createElement('div');
-            card.className = 'weapon-card';
-            
-            const translatedClass = translations[wpn.class] || wpn.class;
-
-            // Генерируем элементы списка модулей
-            const attachmentsHtml = wpn.attachments.map(att => {
-                let category = att.category;
-                let name = att.name;
-
-                if (category && category !== "🔧") {
-                    let translatedCategory = translations[category] || category;
-                    return `<li><span>${translatedCategory}:</span> ${name}</li>`;
-                }
-                return `<li>🔧 ${name}</li>`;
-            }).join('');
-
-            card.innerHTML = `
-                <div class="rank">#${wpn.rank}</div>
-                <h2 class="weapon-name">${wpn.name}</h2>
-                <div class="tags">
-                    <span class="tag game-tag">${wpn.game}</span>
-                    <span class="tag class-tag">${translatedClass}</span>
-                </div>
-                <ul class="attachments-list">
-                    ${attachmentsHtml}
-                </ul>
-            `;
-            grid.appendChild(card);
-        });
+    if (!weapons || weapons.length === 0) {
+        grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+        return;
     }
+
+    weapons.forEach(wpn => {
+        const card = document.createElement('div');
+        card.className = 'weapon-card';
+        
+        const translatedClass = translations[wpn.class] || wpn.class;
+        let cleanAttachments = [];
+
+        // Перебираем сырые строки из JSON
+        wpn.attachments.forEach(att => {
+            let clean = typeof att === 'string' ? att.replace(/^- /, "").trim() : "";
+            if (!clean) return;
+
+            // Если это просто одиночное слово категории без названия модуля — удаляем этот дубль!
+            let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
+            if (isPureCategory) return;
+
+            let category = "";
+            let name = clean;
+
+            // Ищем, начинается ли строка с известной категории (например, "Muzzle ")
+            let foundCat = Object.keys(translations).find(cat => clean.startsWith(cat + " "));
+            
+            if (foundCat) {
+                category = foundCat;
+                name = clean.substring(foundCat.length).trim();
+            }
+
+            if (category) {
+                let translatedCategory = translations[category] || category;
+                cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+            } else {
+                cleanAttachments.push(`<li>🔧 ${name}</li>`);
+            }
+        });
+
+        // Убираем возможные дубликаты строк и берем ровно 5 модулей
+        let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+
+        card.innerHTML = `
+            <div class="rank">#${wpn.rank}</div>
+            <h2 class="weapon-name">${wpn.name}</h2>
+            <div class="tags">
+                <span class="tag game-tag">${wpn.game}</span>
+                <span class="tag class-tag">${translatedClass}</span>
+            </div>
+            <ul class="attachments-list">
+                ${uniqueList}
+            </ul>
+        `;
+        grid.appendChild(card);
+    });
+}
+
 
     // 4. Логика быстрого поиска по названию или классу
     document.getElementById('search-input').addEventListener('input', (e) => {
