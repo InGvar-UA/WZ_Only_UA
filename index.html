@@ -43,35 +43,59 @@
         }
 
         function displayWeapons(weapons) {
-            const grid = document.getElementById('meta-grid');
-            grid.innerHTML = '';
+    const grid = document.getElementById('meta-grid');
+    grid.innerHTML = '';
 
-            if (weapons.length === 0) {
-                grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
-                return;
-            }
+    if (weapons.length === 0) {
+        grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+        return;
+    }
 
-            weapons.forEach(wpn => {
-                const card = document.createElement('div');
-                card.className = 'weapon-card';
+    weapons.forEach(wpn => {
+        const card = document.createElement('div');
+        card.className = 'weapon-card';
+        
+        // 🧠 РОЗУМНА ФІЛЬТРАЦІЯ МОДУЛІВ:
+        let cleanAttachments = [];
+        let rawList = wpn.attachments;
+
+        for (let i = 0; i < rawList.length; i++) {
+            // Перевіряємо, чи поточний елемент — це категорія (напр. Muzzle, Barrel)
+            // і чи є після нього наступний елемент (сама назва модуля)
+            if (i + 1 < rawList.length && !rawList[i].includes(' ') && rawList[i].length > 2) {
+                let category = rawList[i];
+                let name = rawList[i+1];
                 
-                // Рендеримо список модулів
-                const attachmentsHtml = wpn.attachments.map(att => `<li>🔧 ${att}</li>`).join('');
-
-                card.innerHTML = `
-                    <div class="rank">#${wpn.rank}</div>
-                    <h2 class="weapon-name">${wpn.name}</h2>
-                    <div class="tags">
-                        <span class="tag game-tag">${wpn.game}</span>
-                        <span class="tag class-tag">${wpn.class}</span>
-                    </div>
-                    <ul class="attachments-list">
-                        ${attachmentsHtml}
-                    </ul>
-                `;
-                grid.appendChild(card);
-            });
+                // Перевіряємо, щоб назва не була іншою категорією
+                if (name.includes(' ') || name.length > 10) {
+                    cleanAttachments.push(`<span>${category}:</span> ${name}`);
+                    i++; // Пропускаємо наступний елемент, бо ми його вже використали
+                }
+            }
         }
+
+        // Якщо фільтр не спрацював, виводимо як було, щоб не ламати сайт
+        if (cleanAttachments.length === 0) {
+            cleanAttachments = rawList.map(att => `🔧 ${att}`);
+        }
+
+        const attachmentsHtml = cleanAttachments.map(att => `<li>${att}</li>`).join('');
+
+        card.innerHTML = `
+            <div class="rank">#${wpn.rank}</div>
+            <h2 class="weapon-name">${wpn.name}</h2>
+            <div class="tags">
+                <span class="tag game-tag">${wpn.game}</span>
+                <span class="tag class-tag">${wpn.class}</span>
+            </div>
+            <ul class="attachments-list">
+                ${attachmentsHtml}
+            </ul>
+        `;
+        grid.appendChild(card);
+    });
+}
+
 
         // Логіка швидкого пошуку
         document.getElementById('search-input').addEventListener('input', (e) => {
