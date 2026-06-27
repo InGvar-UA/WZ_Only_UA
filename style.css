@@ -53,6 +53,53 @@ header p {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
+/* СТИЛИ ДЛЯ КНОПОК КАТЕГОРИЙ ОРУЖИЯ */
+.categories-filter {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 5px 10px 15px 10px;
+    overflow-x: auto; /* Скролл пальцем в Telegram на смартфонах */
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Прячем горизонтальный скроллбар */
+.categories-filter::-webkit-scrollbar {
+    display: none;
+}
+
+/* Обычные неактивные кнопки под дизайн карточек */
+.filter-btn {
+    background-color: var(--card-bg);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 25px;       /* Красивая форма капсулы */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-color);
+    color: #ffffff;
+    background-color: #222433;
+}
+
+/* Активная кнопка: полностью золотая в цвет модулей */
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: #0f1015; /* Темный текст для идеальной читаемости на золотом */
+    border-color: var(--accent-color);
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Эффект свечения */
+    transform: scale(1.03); /* Легкое интерактивное увеличение */
+}
+
 .meta-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -148,6 +195,7 @@ footer {
     color: var(--text-muted);
     padding: 40px;
 }
+
 .attachments-list li span {
     color: var(--accent-color);
     font-weight: 600;
