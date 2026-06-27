@@ -8,14 +8,14 @@
 </head>
 <body>
 
-        <header>
+    <header>
         <div class="logo">Warzone Only UA</div>
         <p>Актуальні збірки та мета зброї Call of Duty: Warzone</p>
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Пошук зброї за назвою (напр. Carbon)...">
         </div>
         
-        <!-- НОВЫЙ БЛОК: Кнопки фильтрации категорий -->
+        <!-- Кнопки фільтрації категорій -->
         <div class="categories-filter" id="categories-tags">
             <button class="filter-btn active" data-class="all">Усі класи</button>
             <button class="filter-btn" data-class="AR">Штурмові</button>
@@ -29,192 +29,189 @@
         </div>
     </header>
 
-
     <main class="meta-container" id="meta-grid">
-        <!-- Карточки оружия будут добавляться сюда автоматически через JavaScript -->
         <div class="loading">Завантаження актуальної мети...</div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Warzone Only UA. Дані оновлюються автоматично. t.me/cod_uah</p>
+        <p>&copy; 2026 WZ_Only_UA. <span id="sync-time">Завантаження дати...</span></p>
     </footer>
 
     <script>
-    let allWeapons = [];
-    let currentCategory = 'all';
+        let allWeapons = [];
+        let currentCategory = 'all';
 
-    // 1. Загрузка данных из JSON файла
-    async function loadMeta() {
-        try {
-            const response = await fetch('wz_meta_ua.json');
-            allWeapons = await response.json();
-            displayWeapons(allWeapons);
-        } catch (error) {
-            document.getElementById('meta-grid').innerHTML = 
-                `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
-            console.error('Ошибка fetch:', error);
-        }
-    }
-
-    // 2. Словарь перевода категорий и классов оружия
-    const translations = {
-        "Muzzle": "Глушник / Дуло",
-        "Barrel": "Ствол",
-        "Laser": "Лазер",
-        "Optic": "Оптика / Приціл",
-        "Stock": "Приклад",
-        "Rear Grip": "Задня рукоятка",
-        "Magazine": "Магазин / Набої",
-        "Ammo": "Боєприпаси",
-        "Underbarrel": "Підствольна планка",
-        "Comb": "Гребінь прицілу",
-        "Guard": "Цівка / Захист",
-        "Fire Mods": "Модифікація вогню",
-        "Conversion Kit": "Набір конверсії",
-        "Perk": "Перк / Уміння",
-        "Bolt": "Затвор",
-        "Rail": "Рейка прицілу",
-        
-        "SMG": "ПП (SMG)",
-        "AR": "Штурмова гвинтівка",
-        "Sniper": "Снайперська гвинтівка",
-        "LMG": "Кулемет (LMG)",
-        "Shotgun": "Дробовик",
-        "Marksman Rifle": "Піхотна гвинтівка",
-        "Battle Rifle": "Бойова гвинтівка",
-        "Pistol": "Пістолет",
-        "Melee": "Ближній бій",
-        "Launcher": "Ракетниця",
-        "Special": "Спеціальна зброя",
-        "All": "Усі класи"
-    };
-
-    // 3. Функция вывода карточек оружия на экран
-    function displayWeapons(weapons) {
-        const grid = document.getElementById('meta-grid');
-        grid.innerHTML = '';
-
-        if (!weapons || weapons.length === 0) {
-            grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
-            return;
-        }
-
-        weapons.forEach(wpn => {
-            const card = document.createElement('div');
-            card.className = 'weapon-card';
-            
-            const translatedClass = translations[wpn.class] || wpn.class;
-            let cleanAttachments = [];
-
-            if (wpn.attachments && Array.isArray(wpn.attachments)) {
-                wpn.attachments.forEach(att => {
-                    let clean = "";
-                    
-                    if (att && typeof att === 'object' && att.name) {
-                        clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
-                    } else if (typeof att === 'string') {
-                        clean = att.replace(/^- /, "").trim();
-                    }
-
-                    if (!clean) return;
-
-                    let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
-                    if (isPureCategory) return;
-
-                    let category = "";
-                    let name = clean;
-
-                    let foundCat = Object.keys(translations).find(cat => {
-                        let regex = new RegExp("^" + cat + "\\s+", "i");
-                        return regex.test(clean);
-                    });
-                    
-                    if (foundCat) {
-                        category = foundCat;
-                        name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
-                    }
-
-                    if (category) {
-                        let translatedCategory = translations[category] || category;
-                        cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
-                    } else {
-                        cleanAttachments.push(`<li>🔧 ${name}</li>`);
-                    }
-                });
-            }
-
-            let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
-
-            card.innerHTML = `
-                <div class="rank">#${wpn.rank}</div>
-                <h2 class="weapon-name">${wpn.name}</h2>
-                <div class="tags">
-                    <span class="tag game-tag">${wpn.game}</span>
-                    <span class="tag class-tag">${translatedClass}</span>
-                </div>
-                <ul class="attachments-list">
-                    ${uniqueList}
-                </ul>
-            `;
-            grid.appendChild(card);
-        });
-    }
-
-    // 4. ИСПРАВЛЕННАЯ логика одновременной фильтрации по поиску и кнопкам
-    function filterWeapons() {
-        const searchInput = document.getElementById('search-input');
-        // Защита: если элемент поиска ещё не загрузился в DOM
-        const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
-        
-        const filtered = allWeapons.filter(wpn => {
-            const weaponName = wpn.name ? wpn.name.toLowerCase() : "";
-            const weaponClassEng = wpn.class ? wpn.class.toLowerCase() : "";
-            
-            // Находим украинский перевод класса для поиска по нему
-            const translatedClassRaw = translations[wpn.class] || wpn.class;
-            const weaponClassUa = translatedClassRaw.toLowerCase();
-            
-            // Проверяем совпадение по поиску (ищет по имени, английскому или украинскому классу)
-            const matchesSearch = searchQuery === "" || 
-                                  weaponName.includes(searchQuery) || 
-                                  weaponClassEng.includes(searchQuery) ||
-                                  weaponClassUa.includes(searchQuery);
-            
-            // Проверяем совпадение по выбранной кнопке категории
-            const matchesCategory = (currentCategory === 'all') || (wpn.class === currentCategory);
-            
-            return matchesSearch && matchesCategory;
-        });
-        
-        displayWeapons(filtered);
-    }
-
-    // Привязываем события ввода текста
-    const searchElement = document.getElementById('search-input');
-    if (searchElement) {
-        searchElement.addEventListener('input', filterWeapons);
-    }
-
-    // Привязываем события кликов по кнопкам категорий
-    const tagsElement = document.getElementById('categories-tags');
-    if (tagsElement) {
-        tagsElement.addEventListener('click', (e) => {
-            if (e.target.classList.contains('filter-btn')) {
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                e.target.add ? e.target.classList.add('active') : e.target.className += ' active';
+        // 1. Завантаження даних із новою структурою JSON
+        async function loadMeta() {
+            try {
+                const response = await fetch('wz_meta_ua.json');
+                const data = await response.json();
                 
-                currentCategory = e.target.getAttribute('data-class');
-                filterWeapons();
+                // Розподіляємо дані з об'єкта
+                allWeapons = data.weapons || [];
+                const updateTime = data.last_updated || "Невідомо";
+                
+                // Виводимо мітку часу в підвал сайту
+                document.getElementById('sync-time').innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
+                
+                displayWeapons(allWeapons);
+            } catch (error) {
+                document.getElementById('meta-grid').innerHTML = 
+                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
+                console.error('Помилка fetch:', error);
             }
-        });
-    }
+        }
 
-    document.addEventListener('DOMContentLoaded', loadMeta);
-</script>
+        // 2. Словник перекладу категорій та класів зброї
+        const translations = {
+            "Muzzle": "Глушник / Дуло",
+            "Barrel": "Ствол",
+            "Laser": "Лазер",
+            "Optic": "Оптика / Приціл",
+            "Stock": "Приклад",
+            "Rear Grip": "Задня рукоятка",
+            "Magazine": "Магазин / Набої",
+            "Ammo": "Боєприпаси",
+            "Underbarrel": "Підствольна планка",
+            "Comb": "Гребінь прицілу",
+            "Guard": "Цівка / Захист",
+            "Fire Mods": "Модифікація вогню",
+            "Conversion Kit": "Набір конверсії",
+            "Perk": "Перк / Уміння",
+            "Bolt": "Затвор",
+            "Rail": "Рейка прицілу",
+            
+            "SMG": "ПП (SMG)",
+            "AR": "Штурмова гвинтівка",
+            "Sniper": "Снайперська гвинтівка",
+            "LMG": "Кулемет (LMG)",
+            "Shotgun": "Дробовик",
+            "Marksman Rifle": "Піхотна гвинтівка",
+            "Battle Rifle": "Бойова гвинтівка",
+            "Pistol": "Пістолет",
+            "Melee": "Ближній бій",
+            "Launcher": "Ракетниця",
+            "Special": "Спеціальна зброя",
+            "All": "Усі класи"
+        };
 
+        // 3. Функція виведення карток зброї на екран
+        function displayWeapons(weapons) {
+            const grid = document.getElementById('meta-grid');
+            grid.innerHTML = '';
 
+            if (!weapons || weapons.length === 0) {
+                grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+                return;
+            }
 
+            weapons.forEach(wpn => {
+                const card = document.createElement('div');
+                card.className = 'weapon-card';
+                
+                const translatedClass = translations[wpn.class] || wpn.class;
+                let cleanAttachments = [];
 
+                if (wpn.attachments && Array.isArray(wpn.attachments)) {
+                    wpn.attachments.forEach(att => {
+                        let clean = "";
+                        
+                        if (att && typeof att === 'object' && att.name) {
+                            clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
+                        } else if (typeof att === 'string') {
+                            clean = att.replace(/^- /, "").trim();
+                        }
 
+                        if (!clean) return;
+
+                        let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
+                        if (isPureCategory) return;
+
+                        let category = "";
+                        let name = clean;
+
+                        let foundCat = Object.keys(translations).find(cat => {
+                            let regex = new RegExp("^" + cat + "\\s+", "i");
+                            return regex.test(clean);
+                        });
+                        
+                        if (foundCat) {
+                            category = foundCat;
+                            name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
+                        }
+
+                        if (category) {
+                            let translatedCategory = translations[category] || category;
+                            cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+                        } else {
+                            cleanAttachments.push(`<li>🔧 ${name}</li>`);
+                        }
+                    });
+                }
+
+                let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+
+                card.innerHTML = `
+                    <div class="rank">#${wpn.rank}</div>
+                    <h2 class="weapon-name">${wpn.name}</h2>
+                    <div class="tags">
+                        <span class="tag game-tag">${wpn.game}</span>
+                        <span class="tag class-tag">${translatedClass}</span>
+                    </div>
+                    <ul class="attachments-list">
+                        ${uniqueList}
+                    </ul>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // 4. Логіка одночасної фільтрації за пошуком та кнопками
+        function filterWeapons() {
+            const searchInput = document.getElementById('search-input');
+            const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
+            
+            const filtered = allWeapons.filter(wpn => {
+                const weaponName = wpn.name ? wpn.name.toLowerCase() : "";
+                const weaponClassEng = wpn.class ? wpn.class.toLowerCase() : "";
+                
+                const translatedClassRaw = translations[wpn.class] || wpn.class;
+                const weaponClassUa = translatedClassRaw.toLowerCase();
+                
+                const matchesSearch = searchQuery === "" || 
+                                      weaponName.includes(searchQuery) || 
+                                      weaponClassEng.includes(searchQuery) ||
+                                      weaponClassUa.includes(searchQuery);
+                
+                const matchesCategory = (currentCategory === 'all') || (wpn.class === currentCategory);
+                
+                return matchesSearch && matchesCategory;
+            });
+            
+            displayWeapons(filtered);
+        }
+
+        // Прив'язуємо події пошуку
+        const searchElement = document.getElementById('search-input');
+        if (searchElement) {
+            searchElement.addEventListener('input', filterWeapons);
+        }
+
+        // Прив'язуємо кліки по кнопках категорій
+        const tagsElement = document.getElementById('categories-tags');
+        if (tagsElement) {
+            tagsElement.addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    currentCategory = e.target.getAttribute('data-class');
+                    filterWeapons();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadMeta);
+    </script>
 </body>
 </html>

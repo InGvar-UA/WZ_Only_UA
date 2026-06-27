@@ -91,8 +91,12 @@ def parse_weapons(lines):
         weapons.append(current_weapon)
     return weapons
 
+    if current_weapon and current_weapon["attachments"]:
+        weapons.append(current_weapon)
+    return weapons
+
 def main():
-    print("🚀 WZ_Only_UA: Сбор чистых данных...")
+    print("🚀 WZ_Only_UA: Сбор чистых данных с фиксацией времени...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -105,13 +109,25 @@ def main():
     cleaned_lines = clean_text_block(raw_text)
     result_meta = parse_weapons(cleaned_lines)
     
-    # Исключаем сохранение пустых списков модулей
     valid_meta = [w for w in result_meta if len(w["attachments"]) > 0]
     
+    # 🕒 Расчет времени: берем UTC-время (сервера GitHub) и переводим на Киев (+3 часа)
+    # Используем встроенный в Python datetime (он импортируется автоматически на сервере)
+    from datetime import datetime, timedelta
+    kyiv_time = datetime.utcnow() + timedelta(hours=3)
+    last_update_string = kyiv_time.strftime("%d.%m.%Y %H:%M")
+
+    # Формируем новую структуру JSON: сохраняем и дату, и массив пушек
+    final_json_data = {
+        "last_updated": last_update_string,
+        "weapons": valid_meta
+    }
+    
     with open("wz_meta_ua.json", "w", encoding="utf-8") as f:
-        json.dump(valid_meta, f, indent=4, ensure_ascii=False)
+        json.dump(final_json_data, f, indent=4, ensure_ascii=False)
         
-    print(f"✅ Успешно пересобрано! Пушек с модулями: {len(valid_meta)}.")
+    print(f"✅ Успешно! Собрано пушек: {len(valid_meta)}. Время обновления: {last_update_string}")
 
 if __name__ == "__main__":
     main()
+
