@@ -5,6 +5,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "LTI Stentorian Brake",
             "Barrel",
             "14\" Rockleigh Barrel",
@@ -22,6 +23,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -39,6 +41,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bowen .45 Suppressor",
             "Barrel",
             "19\" EAM Horizon Barrel",
@@ -56,6 +59,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -73,6 +77,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -90,6 +95,7 @@
         "game": "BO7",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "25\" Bowen Grooved Barrel",
@@ -107,6 +113,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -124,6 +131,7 @@
         "game": "BO7",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "23.7\" Composite-11 Barrel",
@@ -141,6 +149,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Redwell Shade-X Suppressor",
@@ -158,6 +167,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Hawker Series 45",
             "Barrel",
             "14\" LTI Expedition Barrel",
@@ -175,6 +185,7 @@
         "game": "BO7",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "23\" G-Force Barrel",
@@ -192,6 +203,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -209,6 +221,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Hawker Ported Comp",
             "Barrel",
             "13.5\" Canis-05 Barrel",
@@ -226,6 +239,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Lethal Tools ELO",
             "Muzzle",
             "Hawker Series 45",
@@ -243,6 +257,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Barrel",
             "14.5\" VAS Ashe Barrel",
             "Underbarrel",
             "Flowguard Foregrip",
@@ -260,6 +275,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "EAM Ibis Suppressor",
             "Barrel",
             "19.1\" XR-Compulsion Barrel",
@@ -277,6 +293,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Redwell 30-S 2x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -294,6 +311,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Redwell Shade-X Suppressor",
@@ -311,6 +329,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Lethal Tools ELO",
             "Muzzle",
             "Bowen 9mm Suppressor",
@@ -328,6 +347,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Lethal Tools ELO",
             "Barrel",
             "12\" Vienna Barrel",
@@ -345,6 +365,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "VAS 5.56 Suppressor",
             "Underbarrel",
             "EAM Steady-90 Grip",
@@ -362,6 +383,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Barrel",
             "14.8\" Perigee Barrel",
             "Underbarrel",
             "Envoy Foregrip",
@@ -379,6 +401,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -396,6 +419,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Lethal Tools ELO",
             "Muzzle",
             "H-9mm Precision Comp",
@@ -413,6 +437,7 @@
         "game": "BO7",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -430,6 +455,7 @@
         "game": "BO7",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "LTI Triad Suppressor",
@@ -447,6 +473,7 @@
         "game": "BO7",
         "class": "Marksman Rifle",
         "attachments": [
+            "Muzzle",
             "VAS 5.56 Suppressor",
             "Barrel",
             "M8A1 Autostrike-X8 Conversion",
@@ -464,6 +491,7 @@
         "game": "BO7",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Redwell 30-S 2x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -481,6 +509,7 @@
         "game": "BO7",
         "class": "AR",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Redwell Shade-X Suppressor",
@@ -498,6 +527,7 @@
         "game": "BO6",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "Gain-Twist Barrel",
@@ -515,6 +545,7 @@
         "game": "BO7",
         "class": "Marksman Rifle",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "16.5\" Gar-xL Barrel",
@@ -532,6 +563,7 @@
         "game": "BO7",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Fang Modified Choke",
             "Barrel",
             "14\" Retriever Hunt Barrel",
@@ -549,6 +581,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -566,6 +599,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -583,6 +617,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "XTEN Intlas AS-7",
             "Muzzle",
             "VT-7 Spiritfire Suppressor XL",
@@ -600,6 +635,7 @@
         "game": "BO7",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Hawker Series 45",
             "Barrel",
             "13.6\" Mercurial Barrel",
@@ -617,6 +653,7 @@
         "game": "MW3",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "XTEN Intlas AS-7",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -634,6 +671,7 @@
         "game": "BO7",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Redwell 30-S 2x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -651,6 +689,7 @@
         "game": "BO7",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "20\" Hawker Reach Barrel",
@@ -668,6 +707,7 @@
         "game": "BO7",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "LTI-LM Brake",
@@ -685,6 +725,7 @@
         "game": "BO7",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "FANG HoverPoint ELO",
             "Muzzle",
             "Monolithic Suppressor",
@@ -702,6 +743,7 @@
         "game": "BO7",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "6.4\" Long Slide Barrel",
@@ -719,6 +761,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -736,6 +779,7 @@
         "game": "BO7",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Greaves Multi-Port Compensator",
             "Barrel",
             "4\" MFS Celeste Barrel",
@@ -753,6 +797,7 @@
         "game": "MW3",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "VT-7 Spiritfire Suppressor",
             "Barrel",
             "ZANG-34",
@@ -770,6 +815,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "SP-X 80 6.6X",
             "Muzzle",
             "Monolithic Suppressor",
@@ -787,6 +833,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Reinforced Barrel",
@@ -804,6 +851,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -821,6 +869,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -838,6 +887,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -855,6 +905,7 @@
         "game": "BO7",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "M10 CQB Choke",
             "Barrel",
             "17.4\" Redwell-5K Barrel",
@@ -872,6 +923,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -889,6 +941,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Slate Reflector",
             "Muzzle",
             "Bruen Pendulum",
@@ -906,6 +959,7 @@
         "game": "BO7",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Greaves AccuSpot 3x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -923,6 +977,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -940,6 +995,7 @@
         "game": "BO7",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Binary Echo Choke",
             "Barrel",
             "18.7\" Magellan Dual Barrel",
@@ -957,6 +1013,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Shadowstrike Suppressor",
@@ -974,6 +1031,7 @@
         "game": "BO6",
         "class": "Marksman Rifle",
         "attachments": [
+            "Underbarrel",
             "Ranger Foregrip",
             "Magazine",
             "Full-Auto Extended Mag",
@@ -991,6 +1049,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Kepler Microflex",
             "Muzzle",
             "Monolithic Suppressor",
@@ -1008,6 +1067,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -1025,6 +1085,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -1042,6 +1103,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -1059,6 +1121,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -1076,6 +1139,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -1093,6 +1157,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Kepler Microflex",
             "Muzzle",
             "Compensator",
@@ -1110,6 +1175,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Barrel",
             "KAS-1 254mm",
             "Underbarrel",
             "JAK Slash",
@@ -1127,6 +1193,7 @@
         "game": "BO6",
         "class": "Marksman Rifle",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Underbarrel",
             "Ranger Foregrip",
@@ -1144,6 +1211,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -1161,6 +1229,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "XRK Sandstorm",
             "Barrel",
             "FTAC Series IX 14.5\"",
@@ -1178,6 +1247,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Suppressor",
             "Barrel",
             "Long Barrel",
@@ -1195,6 +1265,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Barrel",
             "Thorn-90 Barrel",
@@ -1212,6 +1283,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Barrel",
             "Supressed Gain-Twist Barrel",
             "Underbarrel",
             "Vertical Foregrip",
@@ -1229,6 +1301,7 @@
         "game": "BO6",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Volzhskiy Reflex",
             "Muzzle",
             "Compensator",
@@ -1246,6 +1319,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Volzhskiy Reflex",
             "Muzzle",
             "Compensator",
@@ -1263,6 +1337,7 @@
         "game": "BO7",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "H-45 Precision Comp",
             "Barrel",
             "8.7\" EAM Voyager Barrel",
@@ -1280,6 +1355,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Jason Armory 2x",
             "Muzzle",
             "Compensator",
@@ -1297,6 +1373,7 @@
         "game": "BO7",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "22.4\" Strand Barrel",
@@ -1314,6 +1391,7 @@
         "game": "BO7",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "H-9mm Precision Comp",
             "Barrel",
             "6.3\" Greaves Halberd Barrel",
@@ -1331,6 +1409,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Underbarrel",
             "Paracord Grip",
@@ -1348,6 +1427,7 @@
         "game": "BO6",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "Long Barrel",
@@ -1365,6 +1445,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Laser",
             "VLK LZR 7MW",
@@ -1382,6 +1463,7 @@
         "game": "BO6",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "Long Barrel",
@@ -1399,6 +1481,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Jason Armory 2x",
             "Muzzle",
             "Compensator",
@@ -1416,6 +1499,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -1433,6 +1517,7 @@
         "game": "BO6",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Modified Choke",
             "Barrel",
             "Long Barrel",
@@ -1450,6 +1535,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Komodo Heavy",
@@ -1467,6 +1553,7 @@
         "game": "BO6",
         "class": "Special",
         "attachments": [
+            "Optic",
             "Iron Sight",
             "Muzzle",
             "Suppressor",
@@ -1484,6 +1571,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Barrel",
             "Bore 99 Short Barrel",
@@ -1501,6 +1589,7 @@
         "game": "BO6",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Jason Armory 2x",
             "Muzzle",
             "Compensator",
@@ -1518,6 +1607,7 @@
         "game": "BO6",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Monolithic Suppressor",
             "Barrel",
             "Long Barrel",
@@ -1535,6 +1625,7 @@
         "game": "MW3",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Flash Twist-90",
             "Barrel",
             "Discourager 900 Heavy Barrel",
@@ -1552,6 +1643,7 @@
         "game": "BO6",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -1569,6 +1661,7 @@
         "game": "BO6",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Volzhskiy Reflex",
             "Muzzle",
             "Monolithic Suppressor",
@@ -1586,6 +1679,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -1603,6 +1697,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Casus Brake",
@@ -1620,6 +1715,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -1637,6 +1733,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -1654,6 +1751,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "MK. 3 Reflector",
             "Muzzle",
             "Shadowstrike Suppressor S",
@@ -1671,6 +1769,7 @@
         "game": "MW2",
         "class": "Shotgun",
         "attachments": [
+            "Barrel",
             "MX-G Mobile",
             "Laser",
             "Kimura RYL33 Laser Light",
@@ -1688,6 +1787,7 @@
         "game": "BO6",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -1705,6 +1805,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -1722,6 +1823,7 @@
         "game": "MW3",
         "class": "Sniper",
         "attachments": [
+            "Barrel",
             "Tonne Heavy Barrel",
             "Laser",
             "Corio LAZ-44 V3",
@@ -1739,6 +1841,7 @@
         "game": "BO6",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "R&K Multizoom",
             "Muzzle",
             "Muzzle Brake",
@@ -1756,6 +1859,7 @@
         "game": "MW3",
         "class": "Shotgun",
         "attachments": [
+            "Laser",
             "SL Razorhawk Laser Light",
             "Underbarrel",
             "Paracord Grip",
@@ -1773,6 +1877,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -1790,6 +1895,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -1807,6 +1913,7 @@
         "game": "BO6",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Jason Armory 2x",
             "Barrel",
             "Reinforced Barrel",
@@ -1824,6 +1931,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "Casus Brake",
             "Barrel",
             "Crown-H3 Barrel",
@@ -1841,6 +1949,7 @@
         "game": "MW2",
         "class": "Shotgun",
         "attachments": [
+            "Barrel",
             "Range Twelve",
             "Laser",
             "Kimura RYL33 Laser Light",
@@ -1858,6 +1967,7 @@
         "game": "MW2",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -1875,6 +1985,7 @@
         "game": "BO6",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Volzhskiy Reflex",
             "Muzzle",
             "Compensator",
@@ -1892,6 +2003,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Barrel",
             "Martis Heavy Barrel",
@@ -1909,6 +2021,7 @@
         "game": "BO6",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Volzhskiy Reflex",
             "Muzzle",
             "Monolithic Suppressor",
@@ -1926,6 +2039,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Barrel",
             "Armistice Light Barrel",
@@ -1943,6 +2057,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -1960,6 +2075,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "Sonic Suppressor",
@@ -1977,6 +2093,7 @@
         "game": "BO6",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -1994,6 +2111,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2011,6 +2129,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2028,6 +2147,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2045,6 +2165,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Casus Brake",
@@ -2062,6 +2183,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Barrel",
             "14\" Chroma LRS",
@@ -2079,6 +2201,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "MK. 3 Reflector",
             "Muzzle",
             "Bruen Pendulum",
@@ -2096,6 +2219,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Ammunition",
             "9mm High Grain Rounds",
@@ -2111,6 +2235,7 @@
         "game": "BO6",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Kepler Microflex",
             "Muzzle",
             "Compensator",
@@ -2128,6 +2253,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Laser",
             "Kimura RYL33 Laser Light",
             "Underbarrel",
             "DR-6 Handstop",
@@ -2145,6 +2271,7 @@
         "game": "MW3",
         "class": "Shotgun",
         "attachments": [
+            "Barrel",
             "Bryson Hammerforged Long Barrel",
             "Laser",
             "Kimura RYL33 Laser Light",
@@ -2162,6 +2289,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2179,6 +2307,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Shadowstrike Suppressor S",
@@ -2196,6 +2325,7 @@
         "game": "MW2",
         "class": "Battle Rifle",
         "attachments": [
+            "Muzzle",
             "Casus Brake L",
             "Barrel",
             "18\" Precision-6 Barrel",
@@ -2213,6 +2343,7 @@
         "game": "MW2",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2230,6 +2361,7 @@
         "game": "MW3",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "VT-7 Spiritfire Suppressor",
             "Barrel",
             "Fission 60 Barrel",
@@ -2247,6 +2379,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Casus Brake",
@@ -2264,6 +2397,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2281,6 +2415,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Underbarrel",
             "JAK Slash",
@@ -2298,6 +2433,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2315,6 +2451,7 @@
         "game": "BO6",
         "class": "Pistol",
         "attachments": [
+            "Optic",
             "Kepler Microflex",
             "Muzzle",
             "Monolithic Suppressor",
@@ -2332,6 +2469,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Muzzle",
             "Casus Brake L",
             "Barrel",
             "Conquer-70 Long Barrel",
@@ -2349,6 +2487,7 @@
         "game": "MW3",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2366,6 +2505,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Barrel",
             "Fennec Covert Force",
             "Underbarrel",
             "JAK Slash",
@@ -2383,6 +2523,7 @@
         "game": "BO6",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Full Choke",
             "Laser",
             "Steady Aim Laser",
@@ -2400,6 +2541,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Underbarrel",
             "DR-6 Handstop",
@@ -2417,6 +2559,7 @@
         "game": "MW3",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "Casus Brake L",
@@ -2434,6 +2577,7 @@
         "game": "BO6",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Ported Compensator",
             "Barrel",
             "Reinforced Barrel",
@@ -2451,6 +2595,7 @@
         "game": "BO6",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Ported Compensator",
             "Barrel",
             "Reinforced Barrel",
@@ -2468,6 +2613,7 @@
         "game": "BO6",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Compensator",
@@ -2485,6 +2631,7 @@
         "game": "MW3",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "Casus Brake",
@@ -2502,6 +2649,7 @@
         "game": "MW2",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2519,6 +2667,7 @@
         "game": "MW3",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake L",
@@ -2536,6 +2685,7 @@
         "game": "MW3",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake L",
@@ -2553,6 +2703,7 @@
         "game": "MW2",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -2570,6 +2721,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake L",
@@ -2587,6 +2739,7 @@
         "game": "MW3",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Casus Brake L",
@@ -2604,6 +2757,7 @@
         "game": "MW2",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2621,6 +2775,7 @@
         "game": "BO6",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Willis 3x",
             "Muzzle",
             "Monolithic Suppressor",
@@ -2638,6 +2793,7 @@
         "game": "MW3",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "Slate Reflector",
             "Muzzle",
             "Bruen Pendulum",
@@ -2655,6 +2811,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2672,6 +2829,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2689,6 +2847,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Quartermaster Suppressor",
@@ -2706,6 +2865,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Barrel",
             "L38 Falcon 226MM",
@@ -2723,6 +2883,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "Casus Brake",
             "Barrel",
             "600MM FR Longbore",
@@ -2740,6 +2901,7 @@
         "game": "BO6",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Modified Choke",
             "Barrel",
             "Reinforced Barrel",
@@ -2757,6 +2919,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Bruen Pendulum",
@@ -2774,6 +2937,7 @@
         "game": "BO6",
         "class": "Special",
         "attachments": [
+            "Barrel",
             "Short Barrel",
             "Stock",
             "Cut-Off Stock"
@@ -2785,6 +2949,7 @@
         "game": "MW3",
         "class": "Pistol",
         "attachments": [
+            "Barrel",
             "Hiss Short Light Barrel",
             "Laser",
             "Verdant Hook Mounted Laser",
@@ -2802,6 +2967,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Muzzle",
             "Bruen Pendulum",
             "Underbarrel",
             "JAK Slash",
@@ -2819,6 +2985,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "Casus Brake",
             "Underbarrel",
             "Bruen Tactical Vertical Grip",
@@ -2836,6 +3003,7 @@
         "game": "MW3",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2853,6 +3021,7 @@
         "game": "MW3",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "ZEHMN35 Compensated Flash Hider",
             "Underbarrel",
             "DR-6 Handstop",
@@ -2870,6 +3039,7 @@
         "game": "BO6",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Compensator",
             "Barrel",
             "Long Barrel",
@@ -2887,6 +3057,7 @@
         "game": "MW3",
         "class": "Shotgun",
         "attachments": [
+            "Barrel",
             "Imperator Long Barrel",
             "Laser",
             "SL Razorhawk Laser Light",
@@ -2904,6 +3075,7 @@
         "game": "MW2",
         "class": "LMG",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -2921,6 +3093,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "Casus Brake",
             "Barrel",
             "Cronen Headwind Long Barrel",
@@ -2938,6 +3111,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake L",
@@ -2955,6 +3129,7 @@
         "game": "MW3",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "VT-7 Spiritfire Suppressor L",
@@ -2972,6 +3147,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -2989,6 +3165,7 @@
         "game": "MW2",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Barrel",
             "22\" Boremaster Barrel",
@@ -3006,6 +3183,7 @@
         "game": "MW2",
         "class": "SMG",
         "attachments": [
+            "Optic",
             "MK. 3 Reflector",
             "Muzzle",
             "Shadowstrike Suppressor S",
@@ -3023,6 +3201,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "SP-X 80 6.6X",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3040,6 +3219,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "SA GF90 Flash Hider",
             "Barrel",
             "Impact Point",
@@ -3057,6 +3237,7 @@
         "game": "MW2",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Bryson Choke",
             "Barrel",
             "21.5\" Bryson TACFIRE",
@@ -3074,6 +3255,7 @@
         "game": "MW2",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Bryson Choke",
             "Laser",
             "Point-G3P 04",
@@ -3091,6 +3273,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Muzzle",
             "Crown Breaker Choke",
             "Laser",
             "cs15 scarlet cylindrical laser",
@@ -3104,6 +3287,7 @@
         "game": "MW2",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "Casus Brake",
@@ -3121,6 +3305,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "Sonic Suppressor L",
             "Laser",
             "FSS OLE-V laser",
@@ -3138,6 +3323,7 @@
         "game": "MW2",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Flash Twist-90",
             "Barrel",
             "29.5\" Rifled Barrel",
@@ -3155,6 +3341,7 @@
         "game": "MW3",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3172,6 +3359,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "Forge TAC Delta 4",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3189,6 +3377,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "Tempus GH50",
@@ -3206,6 +3395,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3223,6 +3413,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "Forge TAC Delta 4",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3240,6 +3431,7 @@
         "game": "MW2",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Barrel",
             "Bull Rider 16.5\"",
@@ -3257,6 +3449,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Barrel",
             "SA Longfire",
             "Laser",
             "1MW Pistol Laser",
@@ -3274,6 +3467,7 @@
         "game": "MW2",
         "class": "AR",
         "attachments": [
+            "Muzzle",
             "Casus Brake",
             "Barrel",
             "KSTV-17",
@@ -3291,6 +3485,7 @@
         "game": "MW3",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Corio Eagleseye 2.5x",
             "Muzzle",
             "VT-7 Spiritfire Suppressor L",
@@ -3308,6 +3503,7 @@
         "game": "MW3",
         "class": "Pistol",
         "attachments": [
+            "Optic",
             "Slate Reflector",
             "Muzzle",
             "Sonic Suppressor XS",
@@ -3325,6 +3521,7 @@
         "game": "MW3",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "VT-7 Spiritfire Suppressor",
             "Barrel",
             "Pro-99 Long Barrel",
@@ -3342,6 +3539,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Forge TAC Delta 4",
             "Muzzle",
             "Casus Brake",
@@ -3359,6 +3557,7 @@
         "game": "MW3",
         "class": "AR",
         "attachments": [
+            "Optic",
             "JAK Glassless Optic",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3376,6 +3575,7 @@
         "game": "MW3",
         "class": "Sniper",
         "attachments": [
+            "Muzzle",
             "VT-7 Spiritfire Suppressor",
             "Barrel",
             "KAS-10 584mm Mod Barrel",
@@ -3393,6 +3593,7 @@
         "game": "MW2",
         "class": "Battle Rifle",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "Casus Brake L",
@@ -3410,6 +3611,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Forge TAC Delta 4",
             "Muzzle",
             "ZLR Talon 5",
@@ -3427,6 +3629,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "FT Steel Fire",
             "Laser",
             "1MW Pistol Laser",
@@ -3444,6 +3647,7 @@
         "game": "MW3",
         "class": "Pistol",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Underbarrel",
             "SL Skeletal Vertical Grip",
@@ -3461,6 +3665,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "SP-X 80 6.6X",
             "Muzzle",
             "Sonic Suppressor L",
@@ -3478,6 +3683,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Barrel",
             "10.5\" FTAC Arrow",
             "Laser",
             "Revo-LSD 7MW",
@@ -3495,6 +3701,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Corvus Series-D",
             "Barrel",
             "XRK Sidewinder-6 Slide",
@@ -3512,6 +3719,7 @@
         "game": "MW2",
         "class": "Sniper",
         "attachments": [
+            "Optic",
             "Forge TAC Delta 4",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3529,6 +3737,7 @@
         "game": "MW2",
         "class": "Marksman Rifle",
         "attachments": [
+            "Optic",
             "Nydar Model 2023",
             "Muzzle",
             "VT-7 Spiritfire Suppressor",
@@ -3546,6 +3755,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "Casus Brake",
             "Barrel",
             "CMRN-50",
@@ -3563,6 +3773,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Barrel",
             "SA Brake Barrel",
             "Laser",
             "FJX DIOD-70",
@@ -3580,6 +3791,7 @@
         "game": "MW2",
         "class": "Pistol",
         "attachments": [
+            "Muzzle",
             "FTAC Fifty Comp",
             "Barrel",
             "SA Tyrant Fifty",
@@ -3597,6 +3809,7 @@
         "game": "MW2",
         "class": "Shotgun",
         "attachments": [
+            "Muzzle",
             "Bryson Series XII Choke",
             "Barrel",
             "Matuzek 812 Barrel",
