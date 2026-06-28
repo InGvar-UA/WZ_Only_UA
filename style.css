@@ -360,3 +360,63 @@ footer b {
     color: #ffffff !important; /* Текст стає чисто білим */
     text-shadow: 0 0 10px #f5c518, 0 0 20px #f5c518; /* Золотий неон */
 }
+/* Преміум-стилі для патріотичного велком-блоку */
+.about-project-box {
+    max-width: 800px;
+    margin: 0 auto 35px auto;
+    padding: 25px;
+    background: rgba(17, 17, 17, 0.8) !important;
+    border: 1px solid #f5c518 !important; /* Наша фірмова золота рамка */
+    border-radius: 12px !important;
+    box-shadow: 0 0 15px rgba(245, 197, 24, 0.15) !important; /* М'яке неонове світіння */
+    text-align: center;
+}
+
+.about-title {
+    color: #f5c518 !important;
+    font-size: 18px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 15px !important;
+    text-shadow: 0 0 8px rgba(245, 197, 24, 0.3) !important;
+    font-weight: bold !important;
+}
+
+.about-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #cccccc !important;
+    margin-bottom: 15px !important;
+}
+
+.about-text b {
+    color: #ffffff !important; /* Робимо важливі акценти білими */
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #222222 !important;
+}
+
+.feature-item {
+    font-size: 13px !important;
+    color: #aaaaaa !important;
+}
+
+/* Ідеальна адаптація блоку під екрани смартфонів у Telegram */
+@media (max-width: 768px) {
+    .about-project-box {
+        margin: 0 15px 25px 15px !important;
+        padding: 15px !important;
+    }
+    .about-title {
+        font-size: 16px !important;
+    }
+    .about-text {
+        font-size: 13px !important;
+    }
+}
