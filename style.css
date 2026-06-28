@@ -407,10 +407,10 @@ footer b {
     color: #aaaaaa !important;
 }
 
-/* Ідеальна адаптація блоку під екрани смартфонів у Telegram */
+/* Ідеальна адаптація інформаційного блоку під екрани смартфонів у Telegram */
 @media (max-width: 768px) {
     .about-project-box {
-        margin: 20px 15px 25px 15px !important; /* Додали відступ 20px зверху для смартфонів */
+        margin: 0 15px 25px 15px !important; /* Прибрали відступ зверху, залишивши бокові для мобілок */
         padding: 15px !important;
     }
     .about-title {
@@ -421,10 +421,10 @@ footer b {
     }
 }
 
-/* Також примусово задаємо гарний відступ для великих екранів ПК */
-@media (min-width: 769px) {
-    .about-project-box {
-        margin: 30px auto 35px auto !important; /* Додали відступ 30px зверху для комп'ютерів */
-    }
+/* Робимо гарний відступ для поля пошуку, щоб воно не прилипало до кнопок категорій */
+.search-box {
+    margin-top: 30px !important;     /* Відсуває пошук від інформаційного блоку */
+    margin-bottom: 25px !important;  /* Відсуває пошук від кнопок категорій */
 }
+
 
