@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=40">
+    <link rel="stylesheet" href="style.css?v=45">
 </head>
 <body>
 
@@ -262,6 +262,29 @@
         }
 
         document.addEventListener('DOMContentLoaded', loadMeta);
+
+            // Логіка 1: Ховаємо клавіатуру при натисканні "Enter" або "Пошук" на телефоні
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                searchInput.blur(); // Знімаємо фокус, ховаємо клавіатуру
+            }
+        });
+        
+        // Додатковий перехоплювач для iPhone
+        searchInput.addEventListener('change', function() {
+            searchInput.blur();
+        });
+
+        // Логіка 2: Ховаємо клавіатуру при кліку на порожнє місце або категорії
+        document.addEventListener('click', function(event) {
+            if (event.target !== searchInput) {
+                searchInput.blur();
+            }
+        });
+    }
+
     </script>
 </body>
 </html>
