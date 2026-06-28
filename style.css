@@ -426,5 +426,14 @@ footer b {
     margin-top: 30px !important;     /* Відсуває пошук від інформаційного блоку */
     margin-bottom: 25px !important;  /* Відсуває пошук від кнопок категорій */
 }
+/* Отключение задержки клика 300мс для мгновенного отклика в Telegram */
+.filter-btn, 
+.header-top-link, 
+.about-top-link, 
+a, 
+button {
+    touch-action: manipulation !important; /* Убирает ожидание двойного клика */
+    -webkit-tap-highlight-color: transparent; /* Убирает некрасивую серую вспышку на смартфонах при нажатии */
+}
 
 
