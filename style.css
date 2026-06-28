@@ -26,6 +26,7 @@ header {
 }
 
 /* Анимированный логотип с эффектом бегущего блика */
+/* Полностью плавный логотип без застреваний */
 .logo {
     font-size: 28px;
     font-weight: 800;
@@ -33,28 +34,30 @@ header {
     margin-bottom: 8px;
     display: inline-block;
     
-    /* Создаем градиентную основу для блика */
-    background: linear-gradient(to right, #ffd700 0%, #fff 25%, #ffd700 50%, #ffd700 100%);
-    background-size: 200% auto;
+    /* Делаем градиент шире и под углом, чтобы блик шел красиво по косой */
+    background: linear-gradient(120deg, #ffd700 35%, #ffffff 50%, #ffd700 65%);
+    background-size: 300% 100%; /* Увеличили запас ширины для плавного разгона */
+    background-position: 150% 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-    /* Запускаем бесконечную анимацию длительностью 4 секунды */
-    animation: shine 4s linear infinite;
+    /* Запускаем анимацию на 4 секунды */
+    animation: smooth-shine 4s ease-in-out infinite;
 }
 
-/* Описание движения золотого блика */
-@keyframes shine {
+/* Идеальная формула движения: пролет за 1.5 секунды + 2.5 секунды отдыха текста */
+@keyframes smooth-shine {
     0% {
-        background-position: 200% center;
+        background-position: 150% 0;
     }
-    30% {
-        background-position: 0% center;
+    35% {
+        background-position: -50% 0; /* Блик полностью улетает за левый край без остановок */
     }
     100% {
-        background-position: 0% center;
+        background-position: -50% 0; /* Текст просто отдыхает золотым цветом до конца цикла */
     }
 }
+
 
 
 header p {
