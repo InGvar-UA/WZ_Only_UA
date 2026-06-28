@@ -25,13 +25,37 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Анимированный логотип с эффектом бегущего блика */
 .logo {
     font-size: 28px;
     font-weight: 800;
     letter-spacing: 1px;
     margin-bottom: 8px;
-    color: var(--accent-color);
+    display: inline-block;
+    
+    /* Создаем градиентную основу для блика */
+    background: linear-gradient(to right, #ffd700 0%, #fff 25%, #ffd700 50%, #ffd700 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Запускаем бесконечную анимацию длительностью 4 секунды */
+    animation: shine 4s linear infinite;
 }
+
+/* Описание движения золотого блика */
+@keyframes shine {
+    0% {
+        background-position: 200% center;
+    }
+    30% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 0% center;
+    }
+}
+
 
 header p {
     color: var(--text-muted);
