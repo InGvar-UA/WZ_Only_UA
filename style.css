@@ -410,7 +410,7 @@ footer b {
 /* Ідеальна адаптація блоку під екрани смартфонів у Telegram */
 @media (max-width: 768px) {
     .about-project-box {
-        margin: 0 15px 25px 15px !important;
+        margin: 20px 15px 25px 15px !important; /* Додали відступ 20px зверху для смартфонів */
         padding: 15px !important;
     }
     .about-title {
@@ -420,3 +420,11 @@ footer b {
         font-size: 13px !important;
     }
 }
+
+/* Також примусово задаємо гарний відступ для великих екранів ПК */
+@media (min-width: 769px) {
+    .about-project-box {
+        margin: 30px auto 35px auto !important; /* Додали відступ 30px зверху для комп'ютерів */
+    }
+}
+
