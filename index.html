@@ -11,22 +11,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
-            <header>
-        <div class="logo">Warzone Only UA</div>
-        <p>Актуальні збірки та мета зброї Call of Duty: Warzone</p>
+                <header class="site-header">
+        <h1 class="neon-title">Warzone Only UA</h1>
+        
+        <!-- Нові інтерактивні посилання строго під головним логотипом -->
+        <div class="header-links-block">
+            <span>Розробник проекту: <a href="https://playstation.com" target="_blank" class="header-top-link developer-name">InGvar</a></span>
+            <span class="header-separator">|</span>
+            <span>Наш канал: <a href="https://t.me" target="_blank" class="header-top-link channel-link">🔊 Приєднуйся</a></span>
+        </div>
+
+        <p class="site-subtitle">Актуальні збірки та мета зброї Call of Duty: Warzone</p>
         
         <div class="update-badge" id="sync-time-top">Завантаження дати...</div>
-        
-        <!-- НОВАЯ СТРОКА: Упоминание создателя в шапке -->
-        <div class="creator-badge">Розробник проекту: <span>InGvar</span></div>
 
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Пошук зброї за назвою (напр. Carbon)...">
         </div>
+
 
 
         
@@ -48,9 +54,7 @@
         <div class="loading">Завантаження актуальної мети...</div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 WZ_Only_UA. <span id="sync-time">Завантаження дати...</span></p>
-    </footer>
+    
 
     <script>
         let allWeapons = [];
