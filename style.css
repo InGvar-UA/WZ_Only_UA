@@ -17,13 +17,14 @@ body {
 }
 
 header {
-    /* Патріотичний градієнт у кольорах прапора УПА: зверху темно-червоний, який плавно йде в чорний фон */
-    background: linear-gradient(180deg, rgba(139, 0, 0, 0.25) 0%, rgba(15, 16, 21, 0.8) 70%, var(--bg-color) 100%);
+    /* Делаем фон сверху глубоким тёмно-серым, который мягко переходит в абсолютно чёрный цвет сайта */
+    background: linear-gradient(180deg, #14151f 0%, rgba(15, 16, 21, 0.9) 70%, var(--bg-color) 100%);
     text-align: center;
     padding: 45px 20px;
-    border-bottom: 1px solid rgba(139, 0, 0, 0.15); /* Бордова лінія знизу шапки */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--border-color); /* Возвращаем строгую тёмную линию */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
+
 
 /* Мобильная неубиваемая анимация золотого свечения */
 .logo {
