@@ -25,38 +25,40 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Анимированный логотип с эффектом бегущего блика */
-/* Полностью плавный логотип без застреваний */
+/* Мобильная неубиваемая анимация золотого свечения */
 .logo {
     font-size: 28px;
     font-weight: 800;
     letter-spacing: 1px;
     margin-bottom: 8px;
     display: inline-block;
+    color: var(--accent-color); /* Чистый золотой цвет (гарантия отображения на телефонах) */
     
-    /* Делаем градиент шире и под углом, чтобы блик шел красиво по косой */
-    background: linear-gradient(120deg, #ffd700 35%, #ffffff 50%, #ffd700 65%);
-    background-size: 300% 100%; /* Увеличили запас ширины для плавного разгона */
-    background-position: 150% 0;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    /* Запускаем анимацию на 4 секунды */
-    animation: smooth-shine 4s ease-in-out infinite;
+    /* Запускаем мягкий пульсирующий неоновый блик */
+    animation: mobile-glow 3s ease-in-out infinite;
 }
 
-/* Идеальная формула движения: пролет за 1.5 секунды + 2.5 секунды отдыха текста */
-@keyframes smooth-shine {
+/* Эффект дыхания золотого неона (идеально работает в Telegram Mini App) */
+@keyframes mobile-glow {
     0% {
-        background-position: 150% 0;
+        text-shadow: 0 0 0px rgba(255, 215, 0, 0);
+        filter: brightness(1);
     }
-    35% {
-        background-position: -50% 0; /* Блик полностью улетает за левый край без остановок */
+    40% {
+        /* В пике анимации текст плавно озаряется ярким золотым сиянием */
+        text-shadow: 0 0 12px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.3);
+        filter: brightness(1.2);
+    }
+    70% {
+        text-shadow: 0 0 0px rgba(255, 215, 0, 0);
+        filter: brightness(1);
     }
     100% {
-        background-position: -50% 0; /* Текст просто отдыхает золотым цветом до конца цикла */
+        text-shadow: 0 0 0px rgba(255, 215, 0, 0);
+        filter: brightness(1);
     }
 }
+
 
 
 
