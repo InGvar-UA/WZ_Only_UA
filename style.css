@@ -330,3 +330,33 @@ footer b {
         right: 15px;
     }
 }
+/* Фінальний преміум-стиль для блоку посилань у шапці */
+.header-links-block {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #888888; /* М'який сірий для основного тексту */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-separator {
+    color: #333333; /* Темний роздільник, щоб не муляв око */
+    font-weight: bold;
+}
+
+.header-top-link {
+    color: #f5c518 !important; /* Наше фірмове яскраве золото */
+    text-decoration: none !important; /* Повністю прибираємо синє підкреслення */
+    font-weight: bold;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Ефект розкішного сяйва при наведенні мишки або кліку */
+.header-top-link:hover {
+    color: #ffffff !important; /* Текст стає чисто білим */
+    text-shadow: 0 0 10px #f5c518, 0 0 20px #f5c518; /* Золотий неон */
+}
