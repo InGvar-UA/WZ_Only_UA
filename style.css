@@ -13,14 +13,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    -webkit-text-size-adjust: 100%; /* Фикс масштаба текста на iOS */
+    -webkit-text-size-adjust: 100%; /* Фікс масштабу тексту на iOS */
 }
 
 header {
-    background: linear-gradient(180deg, rgba(0,87,183,0.15) 0%, rgba(15,16,21,0) 100%);
+    /* Патріотичний градієнт у кольорах прапора УПА: зверху темно-червоний, який плавно йде в чорний фон */
+    background: linear-gradient(180deg, rgba(139, 0, 0, 0.25) 0%, rgba(15, 16, 21, 0.8) 70%, var(--bg-color) 100%);
     text-align: center;
-    padding: 30px 15px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 45px 20px;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.15); /* Бордова лінія знизу шапки */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -35,6 +37,38 @@ header p {
     color: var(--text-muted);
     margin-bottom: 20px;
     font-size: 14px;
+}
+
+/* Верхня плашка оновлення із легким золотим свіченням */
+.update-badge {
+    background-color: rgba(255, 215, 0, 0.05);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.05);
+}
+
+.update-badge b {
+    color: var(--accent-color);
+}
+
+/* Плашка творця */
+.creator-badge {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.creator-badge span {
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .search-box {
@@ -60,19 +94,18 @@ header p {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
-/* КАТЕГОРИИ ОРУЖИЯ */
+/* КАТЕГОРІЇ ЗБРОЇ */
 .categories-filter {
     display: flex;
-    justify-content: flex-start; /* На телефонах выравниваем по левому краю для удобства скролла */
+    justify-content: flex-start;
     gap: 10px;
     margin-top: 20px;
     padding: 5px 15px 15px 15px;
-    overflow-x: auto; /* Включает прокрутку пальцем */
+    overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
-/* На больших экранах центрируем категории */
 @media (min-width: 768px) {
     .categories-filter {
         justify-content: center;
@@ -80,16 +113,16 @@ header p {
 }
 
 .categories-filter::-webkit-scrollbar {
-    display: none; /* Прячем полосу прокрутки */
+    display: none;
 }
 
 .filter-btn {
     background-color: var(--card-bg);
     color: var(--text-muted);
     border: 1px solid var(--border-color);
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 25px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -99,6 +132,7 @@ header p {
 .filter-btn:hover {
     border-color: var(--accent-color);
     color: #ffffff;
+    background-color: #222433;
 }
 
 .filter-btn.active {
@@ -107,9 +141,10 @@ header p {
     border-color: var(--accent-color);
     font-weight: 700;
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    transform: scale(1.03);
 }
 
-/* КОНТЕЙНЕР КАРТОЧЕК */
+/* КОНТЕЙНЕР КАРТОК */
 .meta-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -131,6 +166,7 @@ header p {
 .weapon-card:hover {
     transform: translateY(-4px);
     border-color: var(--blue-color);
+    box-shadow: 0 10px 25px rgba(0, 87, 183, 0.15); /* Легке свічення при наведенні */
 }
 
 .rank {
@@ -180,8 +216,8 @@ header p {
 }
 
 .attachments-list li {
-    padding: 7px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Роздільні лінії для модулів */
     font-size: 13.5px;
     color: #e2e8f0;
 }
@@ -203,6 +239,10 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
+footer b {
+    color: var(--accent-color);
+}
+
 .loading, .error, .no-results {
     grid-column: 1 / -1;
     text-align: center;
@@ -211,10 +251,10 @@ footer {
     padding: 30px;
 }
 
-/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ (ДЛЯ TELEGRAM MINI APP) */
+/* МОБІЛЬНА АДАПТАЦІЯ */
 @media (max-width: 600px) {
     header {
-        padding: 20px 10px;
+        padding: 35px 10px;
     }
     
     .logo {
@@ -227,8 +267,7 @@ footer {
     }
 
     .meta-container {
-        /* Принудительно выстраиваем карточки строго по одной в ряд на всю ширину экрана */
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 15px;
         padding: 15px 10px;
     }
@@ -246,22 +285,4 @@ footer {
         top: 12px;
         right: 15px;
     }
-}
-/* Стиль для плашки создателя в шапке */
-.creator-badge {
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.creator-badge span {
-    color: var(--accent-color); /* Подсвечиваем твой ник золотым */
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* Выделение автора золотым в футере */
-footer b {
-    color: var(--accent-color);
 }
