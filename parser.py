@@ -235,7 +235,9 @@ def main():
     print(f"✅ Успішно збережено! Зображено пушек: {len(valid_meta)}. Час: {last_update_string}")
     
     # 🎯 ЗАПУСКАЄМО ПРЕ-РЕНДЕРИНГ ПЕРЕД ВІДПРАВКОЮ ЗВІТУ
-    pre_render_html(new_meta['weapons'] if 'new_meta' in locals() and 'weapons' in new_meta else sorted_data if 'sorted_data' in locals() else weapons_list if 'weapons_list' in locals() else [])
+        # 🎯 ІДЕАЛЬНО ТОЧНИЙ ВИКЛИК ПРЕ-РЕНДЕРИНГУ
+    pre_render_html(final_json_data.get('weapons', []) if isinstance(final_json_data, dict) else [])
+
 
     # 5. Надсилаємо сформований звіт у твій Телеграм-канал
     if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
