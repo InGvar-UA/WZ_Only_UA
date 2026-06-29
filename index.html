@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=450">
+    <link rel="stylesheet" href="style.css?v=400">
 </head>
 <body>
 
@@ -105,22 +105,31 @@
         let allWeapons = [];
         let currentCategory = 'all';
 
-                        allWeapons = data.weapons || [];
-        
-        // 🎯 ФІКС ДАТИ: Витягуємо дату оновлення з хмари та малюємо її в шапці сайту
-        const lastUpdated = data.last_updated || "Невідомо";
-        const syncBadge = document.getElementById('sync-time-top');
-        if (syncBadge) {
-            syncBadge.innerHTML = `Мета оновлена: ${lastUpdated}`;
+                // 1. Завантаження даних із примусовим скиданням кэшу
+        async function loadMeta() {
+            try {
+                // Добавляем случайный параметр времени (?_=[время]), чтобы обойти кэш Telegram
+                const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
+                const data = await response.json();
+                
+                allWeapons = data.weapons || [];
+                const updateTime = data.last_updated || "Невідомо";
+                
+                // Выводим время в подвал
+                const bottomSync = document.getElementById('sync-time');
+                if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
+                
+                // Выводим время на верхнюю плашку
+                const topSync = document.getElementById('sync-time-top');
+                if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
+                
+                displayWeapons(allWeapons);
+            } catch (error) {
+                document.getElementById('meta-grid').innerHTML = 
+                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
+                console.error('Помилка fetch:', error);
+            }
         }
-
-        // Початкова підказка на екрані замість каші з пушок
-        const grid = document.getElementById('meta-grid');
-        if (grid) {
-            grid.innerHTML = `<div class="loading" style="animation: none; color: #ffcc00; grid-column: 1/-1; padding: 40px 10px;">💡 Оберіть клас зброї вище, щоб переглянути актуальну мету</div>`;
-        }
-
-
 
 
         // 2. Словник перекладу категорій та класів зброї
@@ -160,15 +169,6 @@
         function displayWeapons(weapons) {
             const grid = document.getElementById('meta-grid');
             grid.innerHTML = '';
-    // 🎯 СОРТУВАННЯ ВІД А ДО Я: сортуємо копію масиву за назвою пушок
-    const sortedWeapons = [...weapons].sort((a, b) => {
-        const nameA = a.name || "";
-        const nameB = b.name || "";
-        return nameA.localeCompare(nameB, 'uk', { sensitivity: 'base' });
-    });
-
-    // Замість старого weapons.forEach пропиши перебір нашого сортованого списку:
-    sortedWeapons.forEach(wpn => {
 
             if (!weapons || weapons.length === 0) {
                 grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
