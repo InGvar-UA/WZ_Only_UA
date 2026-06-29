@@ -1,3 +1,47 @@
+import re
+
+def update_html_seo(weapons_list):
+    html_path = "index.html"
+    try:
+        seo_text = "<h2>Актуальний список мета-зброї Call of Duty Warzone:</h2>\n<ul>\n"
+        for wpn in weapons_list:
+            name = wpn.get('name', 'Зброя')
+            game = wpn.get('game', 'Warzone')
+            wpn_class = wpn.get('class', '')
+            
+            attachments_text = []
+            attachments = wpn.get('attachments', [])
+            if isinstance(attachments, list):
+                for att in attachments:
+                    if isinstance(att, dict) and att.get('name'):
+                        attachments_text.append(att.get('name'))
+                    elif isinstance(att, str) and att.strip():
+                        clean_att = att.strip()
+                        if clean_att.startswith("-"):
+                            clean_att = clean_att[1:].strip()
+                        attachments_text.append(clean_att)
+            
+            modules_str = ", ".join(attachments_text) if attachments_text else "кращі модулі та комплекти"
+            seo_text += f"  <li><b>Краща збірка {name} ({game})</b> — клас {wpn_class}. Актуальні мета модулі для комплекту: {modules_str}.</li>\n"
+            
+        seo_text += "</ul>"
+
+        with open(html_path, "r", encoding="utf-8") as file:
+            html_content = file.read()
+
+        pattern = r'(<div id="seo-weapons-index"[^>]*>)(.*?)(</div>)'
+        
+        if re.search(pattern, html_content, re.DOTALL):
+            updated_content = re.sub(pattern, f"\\1\n{seo_text}\n\\3", html_content, flags=re.DOTALL)
+            with open(html_path, "w", encoding="utf-8") as file:
+                file.write(updated_content)
+            print("🚀 [SEO] Текстовий індекс для Googlebot в index.html успішно оновлено!")
+        else:
+            print("⚠️ [SEO] Попередження: Блок id='seo-weapons-index' не знайдено в index.html. Контент не вшито.")
+
+    except Exception as e:
+        print(f"❌ [SEO] Помилка автогенерації тексту для пошукових роботів: {e}")
+
 import json
 import re
 import requests
@@ -122,7 +166,8 @@ def main():
         "last_updated": last_update_string,
         "weapons": valid_meta
     }
-    
+     # СЮДА ВСТАВЛЯЕМ ОДНУ ЭТУ СТРОЧКУ (сразу под закрывающей скобкой переменной):
+    update_html_seo(valid_meta)
     # =====================================================================
     # 🤖 СИСТЕМА РОЗУМНИХ ТЕЛЕГРАМ-СПОВІЩЕНЬ ПРО АУДИТ МЕТИ
     # =====================================================================
