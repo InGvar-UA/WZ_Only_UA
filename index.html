@@ -8,303 +8,229 @@
 
     <meta name="google-site-verification" content="tf37M14ShcT0J4fVPz8FEd9ihxw7Qifp4-pLVKfOjsc" />
     <script>
-    if (window.location.protocol === 'http:') {
-        window.location.href = window.location.href.replace('http:', 'https:');
+    let allWeapons = [];
+    let currentCategory = ''; // Изначально пустая, чтобы не рендерить все пушки при старте
+
+    // 1. Завантаження даних із примусовим скиданням кэшу
+    async function loadMeta() {
+        try {
+            const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
+            const data = await response.json();
+            
+            allWeapons = data.weapons || [];
+            const updateTime = data.last_updated || "Невідомо";
+            
+            // Виводим время в подвал
+            const bottomSync = document.getElementById('sync-time');
+            if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
+            
+            // Виводим время на верхнюю плашку
+            const topSync = document.getElementById('sync-time-top');
+            if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
+            
+            // Убираем активный класс со всех кнопок при старте, чтобы "Усі класи" не горела зря
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // ВАЖНО: Вместо displayWeapons() выводим стартовое приветствие
+            showWelcomeMessage();
+
+        } catch (error) {
+            document.getElementById('meta-grid').innerHTML = 
+                `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
+            console.error('Помилка fetch:', error);
+        }
     }
-</script>
 
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=400">
-</head>
-<body>
+    // Функция, которая показывает стартовую плашку-приветствие
+    function showWelcomeMessage() {
+        const grid = document.getElementById('meta-grid');
+        if (grid) {
+            grid.innerHTML = `
+                <div class="loading" style="animation: none; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,204,0,0.2); padding: 30px 20px; border-radius: 8px;">
+                    <span style="font-size: 24px; display: block; margin-bottom: 10px;">👋 Вітаємо у Meta App!</span>
+                    <p style="font-size: 14px; color: #a0a0a0; margin: 0;">Оберіть будь-який клас зброї вище або скористайтеся пошуком, щоб побачити актуальні мета-збірки.</p>
+                </div>
+            `;
+        }
+    }
 
-                        <header class="site-header">
-        <!-- Вернули оригинальный тег и класс, который отвечает за золото и анимацию -->
-        <div class="logo">Warzone Only UA</div>
+    // 2. Словник перекладу категорій та класів зброї
+    const translations = {
+        "Muzzle": "Глушник / Дуло",
+        "Barrel": "Ствол",
+        "Laser": "Лазер",
+        "Optic": "Оптика / Приціл",
+        "Stock": "Приклад",
+        "Rear Grip": "Задня рукоятка",
+        "Magazine": "Магазин / Набої",
+        "Ammo": "Боєприпаси",
+        "Underbarrel": "Підствольна планка",
+        "Comb": "Гребінь прицілу",
+        "Guard": "Цівка / Захист",
+        "Fire Mods": "Модифікація вогню",
+        "Conversion Kit": "Набір конверсії",
+        "Perk": "Перк / Уміння",
+        "Bolt": "Затвор",
+        "Rail": "Рейка прицілу",
         
-    
+        "SMG": "ПП (SMG)",
+        "AR": "Штурмова гвинтівка",
+        "Sniper": "Снайперська гвинтівка",
+        "LMG": "Кулемет (LMG)",
+        "Shotgun": "Дробовик",
+        "Marksman Rifle": "Піхотна гвинтівка",
+        "Battle Rifle": "Бойова гвинтівка",
+        "Pistol": "Пістолет",
+        "Melee": "Ближній бій",
+        "Launcher": "Ракетниця",
+        "Special": "Спеціальна зброя",
+        "All": "Усі класи"
+    };
 
-        <p class="site-subtitle">Актуальні збірки та мета зброї Call of Duty: Warzone</p>
-        
-        <div class="update-badge" id="sync-time-top">Завантаження дати...</div>
+    // 3. Функція виведення карток зброї на екран
+    function displayWeapons(weapons) {
+        const grid = document.getElementById('meta-grid');
+        grid.innerHTML = '';
 
-        
-                <!-- Головний єднальний хаб проекту Warzone Only UA -->
-    <section class="about-project-box" style="padding: 25px 20px; text-align: center;">
-        <h2 class="about-title" style="color: #ffcc00; font-size: 20px; margin-bottom: 15px; text-shadow: 0 0 10px rgba(255,204,0,0.3);">
-            🇺🇦 ПЕРШИЙ УКРАЇНСЬКИЙ ХАБ WARZONE [PS5, Xbox, PC]
-        </h2>
-        
-        <p class="about-text" style="font-size: 15px; line-height: 1.6; margin-bottom: 15px; text-align: justify; text-align-last: center;">
-            Вітаємо бійців! Незалежний проект <b>Warzone Only UA</b> створений для об'єднання всіх українських геймерів в один потужний сквад. 
-            Завдяки нашому сайту та активній Telegram-групі, ти можеш миттєво <b>знайти собі паті, надійного напарника або вірних друзів</b> для спільної гри та розбору тактик!
-        </p>
-        
-        <p class="about-text" style="font-size: 15px; line-height: 1.6; margin-bottom: 25px; text-align: justify; text-align-last: center;">
-            Прямо всередині нашої ТГ-групи працює **розумний міні-додаток (Meta App)** з актуальною мета-зброєю. 
-            Робот автоматично оновлює топ-збірки щоранку о 10:00, щоб твій сквад завжди мав перевагу на полі бою!
-        </p>
-
-        <!-- Велика неонова кнопка для вступу в ком'юніті -->
-        <a href="https://t.me/cod_uah/" target="_blank" class="tg-join-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #0088cc, #00a2ed); color: #ffffff; text-decoration: none; padding: 14px 28px; font-weight: bold; font-size: 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4); transition: all 0.3s ease; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.1);">
-            <span>💬 Вступи в Telegram-групу та знайди Паті</span>
-        </a>
-        
-        <div class="about-features" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; text-align: left; width: 100%; max-width: 620px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
-            <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
-                🔹 <b>Швидкий пошук (LFG):</b> Знаходь друзів на PS5, Xbox чи PC за пару кліків.
-            </div>
-            <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
-                🔹 <b>Консолі + ПК разом:</b> Поважаємо вибір кожного та граємо в повній синергії.
-            </div>
-            <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
-                🔹 <b>Миттєва Мета:</b> Розумний щоденний аудит та автооновлення сетапів о 10:00.
-            </div>
-        </div>
-    </section>
-
-
-
-
-<div class="search-box">
-            <input type="text" id="search-input" placeholder="Пошук зброї за назвою (напр. Carbon)...">
-        </div>
-        
-
-
-        
-
-        
-
-
-
-        
-        <!-- Кнопки фільтрації категорій -->
-        <div class="categories-filter" id="categories-tags">
-            <button class="filter-btn active" data-class="all">Усі класи</button>
-            <button class="filter-btn" data-class="AR">Штурмові</button>
-            <button class="filter-btn" data-class="SMG">ПП (SMG)</button>
-            <button class="filter-btn" data-class="Sniper">Снайперські</button>
-            <button class="filter-btn" data-class="LMG">Кулемети</button>
-            <button class="filter-btn" data-class="Marksman Rifle">Піхотні</button>
-            <button class="filter-btn" data-class="Battle Rifle">Бойові</button>
-            <button class="filter-btn" data-class="Shotgun">Дробовики</button>
-            <button class="filter-btn" data-class="Pistol">Пістолети</button>
-        </div>
-    </header>
-
-    <main class="meta-container" id="meta-grid">
-        <div class="loading">Завантаження актуальної мети...</div>
-    </main>
-
-    
-
-    <script>
-        let allWeapons = [];
-        let currentCategory = 'all';
-
-                // 1. Завантаження даних із примусовим скиданням кэшу
-        async function loadMeta() {
-            try {
-                // Добавляем случайный параметр времени (?_=[время]), чтобы обойти кэш Telegram
-                const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
-                const data = await response.json();
-                
-                allWeapons = data.weapons || [];
-                const updateTime = data.last_updated || "Невідомо";
-                
-                // Выводим время в подвал
-                const bottomSync = document.getElementById('sync-time');
-                if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
-                
-                // Выводим время на верхнюю плашку
-                const topSync = document.getElementById('sync-time-top');
-                if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
-                
-                displayWeapons(allWeapons);
-            } catch (error) {
-                document.getElementById('meta-grid').innerHTML = 
-                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
-                console.error('Помилка fetch:', error);
-            }
+        if (!weapons || weapons.length === 0) {
+            grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+            return;
         }
 
-
-        // 2. Словник перекладу категорій та класів зброї
-        const translations = {
-            "Muzzle": "Глушник / Дуло",
-            "Barrel": "Ствол",
-            "Laser": "Лазер",
-            "Optic": "Оптика / Приціл",
-            "Stock": "Приклад",
-            "Rear Grip": "Задня рукоятка",
-            "Magazine": "Магазин / Набої",
-            "Ammo": "Боєприпаси",
-            "Underbarrel": "Підствольна планка",
-            "Comb": "Гребінь прицілу",
-            "Guard": "Цівка / Захист",
-            "Fire Mods": "Модифікація вогню",
-            "Conversion Kit": "Набір конверсії",
-            "Perk": "Перк / Уміння",
-            "Bolt": "Затвор",
-            "Rail": "Рейка прицілу",
+        weapons.forEach(wpn => {
+            const card = document.createElement('div');
+            card.className = 'weapon-card';
             
-            "SMG": "ПП (SMG)",
-            "AR": "Штурмова гвинтівка",
-            "Sniper": "Снайперська гвинтівка",
-            "LMG": "Кулемет (LMG)",
-            "Shotgun": "Дробовик",
-            "Marksman Rifle": "Піхотна гвинтівка",
-            "Battle Rifle": "Бойова гвинтівка",
-            "Pistol": "Пістолет",
-            "Melee": "Ближній бій",
-            "Launcher": "Ракетниця",
-            "Special": "Спеціальна зброя",
-            "All": "Усі класи"
-        };
+            const translatedClass = translations[wpn.class] || wpn.class;
+            let cleanAttachments = [];
 
-        // 3. Функція виведення карток зброї на екран
-        function displayWeapons(weapons) {
-            const grid = document.getElementById('meta-grid');
-            grid.innerHTML = '';
-
-            if (!weapons || weapons.length === 0) {
-                grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
-                return;
-            }
-
-            weapons.forEach(wpn => {
-                const card = document.createElement('div');
-                card.className = 'weapon-card';
-                
-                const translatedClass = translations[wpn.class] || wpn.class;
-                let cleanAttachments = [];
-
-                if (wpn.attachments && Array.isArray(wpn.attachments)) {
-                    wpn.attachments.forEach(att => {
-                        let clean = "";
-                        
-                        if (att && typeof att === 'object' && att.name) {
-                            clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
-                        } else if (typeof att === 'string') {
-                            clean = att.replace(/^- /, "").trim();
-                        }
-
-                        if (!clean) return;
-
-                        let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
-                        if (isPureCategory) return;
-
-                        let category = "";
-                        let name = clean;
-
-                        let foundCat = Object.keys(translations).find(cat => {
-                            let regex = new RegExp("^" + cat + "\\s+", "i");
-                            return regex.test(clean);
-                        });
-                        
-                        if (foundCat) {
-                            category = foundCat;
-                            name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
-                        }
-
-                        if (category) {
-                            let translatedCategory = translations[category] || category;
-                            cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
-                        } else {
-                            cleanAttachments.push(`<li>🔧 ${name}</li>`);
-                        }
-                    });
-                }
-
-                let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
-
-                card.innerHTML = `
-                    <div class="rank">#${wpn.rank}</div>
-                    <h2 class="weapon-name">${wpn.name}</h2>
-                    <div class="tags">
-                        <span class="tag game-tag">${wpn.game}</span>
-                        <span class="tag class-tag">${translatedClass}</span>
-                    </div>
-                    <ul class="attachments-list">
-                        ${uniqueList}
-                    </ul>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        // 4. Логіка одночасної фільтрації за пошуком та кнопками
-        function filterWeapons() {
-            const searchInput = document.getElementById('search-input');
-            const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
-            
-            const filtered = allWeapons.filter(wpn => {
-                const weaponName = wpn.name ? wpn.name.toLowerCase() : "";
-                const weaponClassEng = wpn.class ? wpn.class.toLowerCase() : "";
-                
-                const translatedClassRaw = translations[wpn.class] || wpn.class;
-                const weaponClassUa = translatedClassRaw.toLowerCase();
-                
-                const matchesSearch = searchQuery === "" || 
-                                      weaponName.includes(searchQuery) || 
-                                      weaponClassEng.includes(searchQuery) ||
-                                      weaponClassUa.includes(searchQuery);
-                
-                const matchesCategory = (currentCategory === 'all') || (wpn.class === currentCategory);
-                
-                return matchesSearch && matchesCategory;
-            });
-            
-            displayWeapons(filtered);
-        }
-
-        // Прив'язуємо події пошуку
-        const searchElement = document.getElementById('search-input');
-        if (searchElement) {
-            searchElement.addEventListener('input', filterWeapons);
-        }
-
-        // Прив'язуємо кліки по кнопках категорій
-        const tagsElement = document.getElementById('categories-tags');
-        if (tagsElement) {
-            tagsElement.addEventListener('click', (e) => {
-                if (e.target.classList.contains('filter-btn')) {
-                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                    e.target.classList.add('active');
+            if (wpn.attachments && Array.isArray(wpn.attachments)) {
+                wpn.attachments.forEach(att => {
+                    let clean = "";
                     
-                    currentCategory = e.target.getAttribute('data-class');
-                    filterWeapons();
-                }
-            });
+                    if (att && typeof att === 'object' && att.name) {
+                        clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
+                    } else if (typeof att === 'string') {
+                        clean = att.replace(/^- /, "").trim();
+                    }
+
+                    if (!clean) return;
+
+                    let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
+                    if (isPureCategory) return;
+
+                    let category = "";
+                    let name = clean;
+
+                    let foundCat = Object.keys(translations).find(cat => {
+                        let regex = new RegExp("^" + cat + "\\s+", "i");
+                        return regex.test(clean);
+                    });
+                    
+                    if (foundCat) {
+                        category = foundCat;
+                        name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
+                    }
+
+                    if (category) {
+                        let translatedCategory = translations[category] || category;
+                        cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+                    } else {
+                        cleanAttachments.push(`<li>🔧 ${name}</li>`);
+                    }
+                });
+            }
+
+            let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+
+            card.innerHTML = `
+                <div class="rank">#${wpn.rank}</div>
+                <h2 class="weapon-name">${wpn.name}</h2>
+                <div class="tags">
+                    <span class="tag game-tag">${wpn.game}</span>
+                    <span class="tag class-tag">${translatedClass}</span>
+                </div>
+                <ul class="attachments-list">
+                    ${uniqueList}
+                </ul>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    // 4. Логіка одночасної фільтрації за пошуком та кнопками
+    function filterWeapons() {
+        const searchInput = document.getElementById('search-input');
+        const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
+        
+        // Если категория еще не выбрана и строка поиска пустая — оставляем приветствие
+        if (currentCategory === '' && searchQuery === "") {
+            showWelcomeMessage();
+            return;
         }
 
-        document.addEventListener('DOMContentLoaded', loadMeta);
+        const filtered = allWeapons.filter(wpn => {
+            const weaponName = wpn.name ? wpn.name.toLowerCase() : "";
+            const weaponClassEng = wpn.class ? wpn.class.toLowerCase() : "";
+            const translatedClassRaw = translations[wpn.class] || wpn.class;
+            const weaponClassUa = translatedClassRaw.toLowerCase();
+            
+            const matchesSearch = searchQuery === "" || 
+                                  weaponName.includes(searchQuery) || 
+                                  weaponClassEng.includes(searchQuery) ||
+                                  weaponClassUa.includes(searchQuery);
+            
+            // Если была нажата кнопка "Усі класи" (all) или класс совпадает
+            const matchesCategory = (currentCategory === 'all') || (currentCategory === '') || (wpn.class === currentCategory);
+            
+            return matchesSearch && matchesCategory;
+        });
+        
+        displayWeapons(filtered);
+    }
 
-            // Логіка 1: Ховаємо клавіатуру при натисканні "Enter" або "Пошук" на телефоні
+    // Прив'язуємо події пошуку
+    const searchElement = document.getElementById('search-input');
+    if (searchElement) {
+        searchElement.addEventListener('input', filterWeapons);
+    }
+
+    // Прив'язуємо кліки по кнопках категорій
+    const tagsElement = document.getElementById('categories-tags');
+    if (tagsElement) {
+        tagsElement.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                currentCategory = e.target.getAttribute('data-class');
+                filterWeapons();
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadMeta);
+
+    // Логіка мобільних пристроїв: ховаємо клавіатуру
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
         searchInput.addEventListener('keypress', function(event) {
             if (event.key === 'Enter' || event.keyCode === 13) {
-                searchInput.blur(); // Знімаємо фокус, ховаємо клавіатуру
+                searchInput.blur();
             }
         });
         
-        // Додатковий перехоплювач для iPhone
         searchInput.addEventListener('change', function() {
             searchInput.blur();
         });
 
-        // Логіка 2: Ховаємо клавіатуру при кліку на порожнє місце або категорії
         document.addEventListener('click', function(event) {
-            if (event.target !== searchInput) {
+            if (event.target !== searchInput && !event.target.classList.contains('filter-btn')) {
                 searchInput.blur();
             }
         });
     }
+</script>
 
-    </script>
 </body>
 </html>
