@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=410">
+    <link rel="stylesheet" href="style.css?v=420">
 </head>
 <body>
 
@@ -160,6 +160,15 @@
         function displayWeapons(weapons) {
             const grid = document.getElementById('meta-grid');
             grid.innerHTML = '';
+    // 🎯 СОРТУВАННЯ ВІД А ДО Я: сортуємо копію масиву за назвою пушок
+    const sortedWeapons = [...weapons].sort((a, b) => {
+        const nameA = a.name || "";
+        const nameB = b.name || "";
+        return nameA.localeCompare(nameB, 'uk', { sensitivity: 'base' });
+    });
+
+    // Замість старого weapons.forEach пропиши перебір нашого сортованого списку:
+    sortedWeapons.forEach(wpn => {
 
             if (!weapons || weapons.length === 0) {
                 grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
