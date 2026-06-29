@@ -111,8 +111,7 @@ def main():
     
     valid_meta = [w for w in result_meta if len(w["attachments"]) > 0]
     
-    # 🕒 Расчет времени: берем UTC-время (сервера GitHub) и переводим на Киев (+3 часа)
-    # Используем встроенный в Python datetime (он импортируется автоматически на сервере)
+        # 🕒 Расчет времени: берем UTC-время (сервера GitHub) и переводим на Киев (+3 часа)
     from datetime import datetime, timedelta
     kyiv_time = datetime.utcnow() + timedelta(hours=3)
     last_update_string = kyiv_time.strftime("%d.%m.%Y %H:%M")
@@ -123,11 +122,88 @@ def main():
         "weapons": valid_meta
     }
     
-    with open("wz_meta_ua.json", "w", encoding="utf-8") as f:
+    # =====================================================================
+    # 🤖 СИСТЕМА РОЗУМНИХ ТЕЛЕГРАМ-СПОВІЩЕНЬ ПРО АУДИТ МЕТИ
+    # =====================================================================
+    import os
+    
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+    file_path = "wz_meta_ua.json"
+    
+    # 1. Завантажуємо старі дані з файлу для порівняння
+    old_weapons_list = []
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                old_json = json.load(f)
+                # Якщо у старому файлі вже була структура зі словником, беремо масив
+                old_weapons_list = old_json.get("weapons", []) if isinstance(old_json, dict) else old_json
+        except Exception:
+            old_weapons_list = []
+
+    # Перетворюємо старі пушки на словник для швидкого порівняння модулів за ім'ям
+    old_weapons_map = {w['name']: w for w in old_weapons_list}
+    changed_weapons = []
+
+    # 2. Скануємо нові пушки та шукаємо, що саме змінилося
+    for new_w in valid_meta:
+        w_name = new_w['name']
+        if w_name in old_weapons_map:
+            old_w = old_weapons_map[w_name]
+            # Порівнюємо список модулів (attachments) символ у символ
+            if json.dumps(new_w.get('attachments')) != json.dumps(old_w.get('attachments')):
+                changed_weapons.append(w_name)
+        else:
+            # З'явилася абсолютно нова гармата в базі
+            changed_weapons.append(f"🆕 {w_name}")
+
+    # 3. Формуємо красивий текст повідомлення залежно від результату
+    if not changed_weapons:
+        # ЛОГІКА 1: Змін у балансі зброї немає
+        tg_message = (
+            "🤖 <b>Щоденний аудит Мети Warzone</b>\n\n"
+            "🔍 Хмарний парсер успішно завершив нічну перевірку серверів CoD.\n"
+            "🛑 <b>Змін у балансі зброї немає.</b>\n\n"
+            "✅ У додатку та на сайті відображаються 100% актуальні та перевірені збірки!\n\n"
+            "🌐 <b>Відкрити сайт:</b> warzone.pp.ua\n"
+            "🚀 <b>Запустити Mini App:</b> t.me/warzone_only_ua_bot/meta"
+        )
+        print("📝 Змін у балансі немає. Буде надіслано звіт про актуальність.")
+    else:
+        # ЛОГІКА 2: Мета змінилася!
+        weapons_list = ", ".join(changed_weapons)
+        tg_message = (
+            "🔥 <b>Увага! Мета Warzone змінилася!</b>\n\n"
+            "⚠️ Розробники оновили актуальні сетапи для наступної зброї:\n"
+            f"👉 <b>{weapons_list}</b>\n\n"
+            "⚡ Робот уже переписав базу даних. Усі свіжі модулі та топові класи вже доступні на наших платформах!\n\n"
+            "🌐 <b>Дивитись нові збірки:</b> warzone.pp.ua\n"
+            "🚀 <b>Відкрити в Telegram:</b> t.me/warzone_only_ua_bot/meta"
+        )
+        print(f"📝 Мета змінилася для: {weapons_list}. Готую штормове попередження!")
+
+    # 4. Фізично зберігаємо оновлений JSON-файл у проект
+    with open(file_path, "w", encoding="utf-8") as f:
         json.dump(final_json_data, f, indent=4, ensure_ascii=False)
-        
-    print(f"✅ Успешно! Собрано пушек: {len(valid_meta)}. Время обновления: {last_update_string}")
+    print(f"✅ Успішно збережено! Зображено пушек: {len(valid_meta)}. Час: {last_update_string}")
+
+    # 5. Надсилаємо сформований звіт у твій Телеграм-канал
+    if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+        url = f"https://telegram.org{TELEGRAM_BOT_TOKEN}/sendMessage"
+        payload = {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": tg_message,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True
+        }
+        try:
+            requests.post(url, json=payload, timeout=10)
+            print("📢 Звіт успішно відправлено в Телеграм-канал!")
+        except Exception as e:
+            print(f"❌ Помилка надсилання в ТГ: {e}")
+    else:
+        print("⚠️ Telegram сетинги не знайдені в GitHub Secrets. Звіт у месенджер пропущено.")
 
 if __name__ == "__main__":
     main()
-
