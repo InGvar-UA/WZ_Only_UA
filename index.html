@@ -6,11 +6,24 @@
     <meta name="description" content="Перший український хаб Call of Duty: Warzone для PS5, Xbox та PC. Актуальні мета-збірки зброї з автоматичним щоденним оновленням о 10:00 та зручний пошук паті (LFG).">
     <meta name="google-site-verification" content="tf37M14ShcT0J4fVPz8FEd9ihxw7Qifp4-pLVKfOjsc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*; connect-src 'self' https://*; window-placement 'none';">
+
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=860">
+    <link rel="stylesheet" href="style.css?v=880">
     <script>
         if (window.location.protocol === 'http:') {
             window.location.href = window.location.href.replace('http:', 'https:');
+        }
+        // 🛡️ Функция защиты от XSS-атак (Безопасное экранирование данных)
+        function safeText(str) {
+            if (!str) return '';
+            return str.toString()
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#x27;')
+                .replace(/\//g, '&#x2F;');
         }
     </script>
 </head>
