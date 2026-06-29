@@ -105,20 +105,21 @@
         let allWeapons = [];
         let currentCategory = 'all';
 
-                // 1. Завантаження даних із примусовим скиданням кэшу
-        async function loadMeta() {
-    try {
-        const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
-        const data = await response.json();
-        allWeapons = data.weapons || [];
-        // ... обновление времени ...
-        // Выводим сообщение вместо оружия:
-        document.getElementById('meta-grid').innerHTML = 
-            `<div class="loading" style="animation: none; color: #ffcc00;">💡 Оберіть клас зброї вище, щоб переглянути актуальну мету</div>`;
-    } catch (error) {
-        // ... обработка ошибки ...
-    }
-}
+                        allWeapons = data.weapons || [];
+        
+        // 🎯 ФІКС ДАТИ: Витягуємо дату оновлення з хмари та малюємо її в шапці сайту
+        const lastUpdated = data.last_updated || "Невідомо";
+        const syncBadge = document.getElementById('sync-time-top');
+        if (syncBadge) {
+            syncBadge.innerHTML = `Мета оновлена: ${lastUpdated}`;
+        }
+
+        // Початкова підказка на екрані замість каші з пушок
+        const grid = document.getElementById('meta-grid');
+        if (grid) {
+            grid.innerHTML = `<div class="loading" style="animation: none; color: #ffcc00; grid-column: 1/-1; padding: 40px 10px;">💡 Оберіть клас зброї вище, щоб переглянути актуальну мету</div>`;
+        }
+
 
 
 
