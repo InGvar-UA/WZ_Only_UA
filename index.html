@@ -166,7 +166,7 @@
             "All": "Усі класи"
         };
 
-        // 3. Функція виведення карток зброї на екран
+                // 3. Функція виведення карток зброї на екран (Оновлена без ключів та з пошуком BO6/BO7)
         function displayWeapons(weapons) {
             const grid = document.getElementById('meta-grid');
             grid.innerHTML = '';
@@ -196,24 +196,48 @@
                         let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
                         if (isPureCategory) return;
 
-                        let category = ""; let name = clean;
+                        let category = ""; 
+                        let name = clean;
+                        
+                        // ФІКС РЕГЕКСУ: Шукаємо триггери брендів у будь-якому місці рядка
                         let foundCat = Object.keys(translations).find(cat => {
-                            let regex = new RegExp("^" + cat + "\\s+", "i");
+                            let regex = new RegExp(cat, "i");
                             return regex.test(clean);
                         });
+                        
                         if (foundCat) {
                             category = foundCat;
-                            name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
+                            // Якщо це системне слово категорії, красивіше не вирізати його з назви обвесу BO6/BO7
+                            name = clean; 
                         }
 
                         if (category) {
                             let translatedCategory = translations[category] || category;
                             cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
                         } else {
-                            cleanAttachments.push(`<li>🔧 ${name}</li>`);
+                            // КРИТИЧНИЙ ФІКС: Повністю прибираємо значок "🔧", ставимо нейтральну точку
+                            cleanAttachments.push(`<li><span style="color: #ffcc00; margin-right: 5px;">•</span>${name}</li>`);
                         }
                     });
                 }
+
+                                let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+
+                card.innerHTML = `
+                    <div class="rank">#${wpn.rank}</div>
+                    <h2 class="weapon-name">${wpn.name}</h2>
+                    <div class="tags">
+                        <span class="tag game-tag">${wpn.game}</span>
+                        <span class="tag class-tag">${translatedClass}</span>
+                    </div>
+                    <ul class="attachments-list">
+                        ${uniqueList}
+                    </ul>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
 
                 let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
 
@@ -231,6 +255,8 @@
                 grid.appendChild(card);
             });
         }
+        
+
 
         // 4. Логіка одночасної фільтрації за пошуком та кнопками
         function filterWeapons() {
