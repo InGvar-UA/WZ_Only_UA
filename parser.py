@@ -209,3 +209,38 @@ def main():
 
 if __name__ == "__main__":
     main()
+def update_html_seo(weapons_list):
+    html_path = "index.html"
+    try:
+        # 1. Генерируем чистый текстовый список пушек для Google
+        seo_text = "<h2>Актуальний список мета-зброї Warzone:</h2>\n<ul>\n"
+        for wpn in weapons_list:
+            name = wpn.get('name', '')
+            game = wpn.get('game', '')
+            wpn_class = wpn.get('class', '')
+            seo_text += f"  <li>Мета збірка {name} ({game}) — клас {wpn_class}</li>\n"
+        seo_text += "</ul>"
+
+        # 2. Читаем текущий index.html
+        with open(html_path, "r", encoding="utf-8") as file:
+            html_content = file.read()
+
+        # 3. Находим наш SEO-блок и заменяем его содержимое
+        import re
+        pattern = r'(<div id="seo-weapons-index"[^>]*>)(.*?)(</div>)'
+        
+        if re.search(pattern, html_content, re.DOTALL):
+            updated_content = re.sub(pattern, f"\\1\n{seo_text}\n\\3", html_content, flags=re.DOTALL)
+            
+            # 4. Перезаписываем файл
+            with open(html_path, "w", encoding="utf-8") as file:
+                file.write(updated_content)
+            print("📝 SEO-індекс в index.html успішно оновлено!")
+        else:
+            print("⚠️ SEO-блок id='seo-weapons-index' не знайдено в index.html")
+
+    except Exception as e:
+        print(f"❌ Помилка оновлення SEO-тексту: {e}")
+
+# Вызовите эту функцию там, где скрипт успешно скачал `data.weapons`
+# update_html_seo(data_weapons)
