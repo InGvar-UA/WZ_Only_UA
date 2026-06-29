@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="tf37M14ShcT0J4fVPz8FEd9ihxw7Qifp4-pLVKfOjsc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=510">
+    <link rel="stylesheet" href="style.css?v=512">
     <script>
         if (window.location.protocol === 'http:') {
             window.location.href = window.location.href.replace('http:', 'https:');
@@ -54,7 +54,7 @@
         </div>
         
         <div class="categories-filter" id="categories-tags">
-            <button class="filter-btn" data-class="all">Усі класи</button>
+        
             <button class="filter-btn" data-class="AR">Штурмові</button>
             <button class="filter-btn" data-class="SMG">ПП (SMG)</button>
             <button class="filter-btn" data-class="Sniper">Снайперські</button>
@@ -102,18 +102,20 @@
             }
         }
 
-        // Функція відображення стартового вікна вітання
+                // Функція відображення стартового вікна з підказкою
         function showWelcomeMessage() {
             const grid = document.getElementById('meta-grid');
             if (grid) {
                 grid.innerHTML = `
-                    <div class="loading" style="animation: none; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,204,0,0.2); padding: 30px 20px; border-radius: 8px; width: 100%; text-align: center; box-sizing: border-box;">
-                        <span style="font-size: 24px; display: block; margin-bottom: 10px;">👋 Вітаємо у Meta App!</span>
-                        <p style="font-size: 14px; color: #a0a0a0; margin: 0;">Оберіть будь-який клас зброї вище або скористайтеся пошуком, щоб побачити актуальні мета-збірки.</p>
+                    <div class="loading" style="animation: none; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,204,0,0.2); padding: 35px 20px; border-radius: 8px; width: 100%; text-align: center; box-sizing: border-box;">
+                        <span style="font-size: 24px; display: block; margin-bottom: 12px; text-shadow: 0 0 10px rgba(255,204,0,0.2);">👋 Вітаємо, боєць!</span>
+                        <p style="font-size: 14.5px; color: #e0e0e0; margin: 0 0 8px 0; line-height: 1.5;">Щоб побачити актуальні мета-збірки, <b>оберіть потрібний клас зброї</b> на панелі вище.</p>
+                        <p style="font-size: 13.5px; color: #a0a0a0; margin: 0; line-height: 1.4;">Також ви можете скористатися миттєвим пошуком за назвою зброї.</p>
                     </div>
                 `;
             }
         }
+
 
         // Словник перекладу категорій та класів зброї
         const translations = {
