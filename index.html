@@ -107,29 +107,19 @@
 
                 // 1. Завантаження даних із примусовим скиданням кэшу
         async function loadMeta() {
-            try {
-                // Добавляем случайный параметр времени (?_=[время]), чтобы обойти кэш Telegram
-                const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
-                const data = await response.json();
-                
-                allWeapons = data.weapons || [];
-                const updateTime = data.last_updated || "Невідомо";
-                
-                // Выводим время в подвал
-                const bottomSync = document.getElementById('sync-time');
-                if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
-                
-                // Выводим время на верхнюю плашку
-                const topSync = document.getElementById('sync-time-top');
-                if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
-                
-                displayWeapons(allWeapons);
-            } catch (error) {
-                document.getElementById('meta-grid').innerHTML = 
-                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
-                console.error('Помилка fetch:', error);
-            }
-        }
+    try {
+        const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
+        const data = await response.json();
+        allWeapons = data.weapons || [];
+        // ... обновление времени ...
+        // Выводим сообщение вместо оружия:
+        document.getElementById('meta-grid').innerHTML = 
+            `<div class="loading" style="animation: none; color: #ffcc00;">💡 Оберіть клас зброї вище, щоб переглянути актуальну мету</div>`;
+    } catch (error) {
+        // ... обработка ошибки ...
+    }
+}
+
 
 
         // 2. Словник перекладу категорій та класів зброї
