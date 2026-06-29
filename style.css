@@ -17,13 +17,37 @@ body {
 }
 
 header {
-    /* Роскошный бесшовный дизайн: глубокий матовый чёрный фон, переходящий в общий цвет сайта */
-    background: linear-gradient(180deg, #090a0d 0%, var(--bg-color) 100%);
+    /* 🎯 УСИЛЕННЫЙ КОНТРАСТНЫЙ ГРАДИЕНТ: теперь переливы золота и космоса видны отчетливо! */
+    background: linear-gradient(-45deg, #090a0d, rgba(255, 204, 0, 0.12), #141519, rgba(18, 26, 46, 0.6), #090a0d);
+    background-size: 300% 300%;
+    animation: headerGradient 10s ease-in-out infinite;
+    
     text-align: center;
     padding: 50px 20px 40px 20px;
     border-bottom: 1px solid var(--border-color);
     position: relative;
 }
+
+/* Бесшовный плавный переход в цвет сайта */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(180deg, transparent, var(--bg-color));
+    pointer-events: none;
+}
+
+/* Ускоренная магия перелива для более живого эффекта */
+@keyframes headerGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
 
 /* Добавляем мягкое фоновое золотое свечение ЗА логотипом */
 header::before {
