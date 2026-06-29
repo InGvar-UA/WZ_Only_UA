@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="tf37M14ShcT0J4fVPz8FEd9ihxw7Qifp4-pLVKfOjsc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=515">
+    <link rel="stylesheet" href="style.css?v=516">
     <script>
         if (window.location.protocol === 'http:') {
             window.location.href = window.location.href.replace('http:', 'https:');
@@ -74,8 +74,8 @@
         Дані оновлено: <b>Завантаження...</b>
     </footer>
     <script>
-        let allWeapons = [];
-        let currentCategory = ''; 
+                let allWeapons = [];
+        let currentCategory = 'all'; // Возвращаем 'all' по умолчанию, чтобы логика фильтрации не падала
 
         // 1. Завантаження даних із примусовим скиданням кэшу
         async function loadMeta() {
@@ -84,7 +84,9 @@
                 const data = await response.json();
                 
                 allWeapons = data.weapons || [];
-                const updateTime = data.last_updated || "Невідомо";
+                
+                // Фикс чтения даты (поддерживает оба формата из парсера)
+                const updateTime = data.lastUpdated || data.last_updated || "Невідомо";
                 
                 const bottomSync = document.getElementById('sync-time');
                 if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
@@ -92,15 +94,16 @@
                 const topSync = document.getElementById('sync-time-top');
                 if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
                 
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                
+                // Показываем наше красивое приветствие для бойцов вместо текста "Завантаження..."
                 showWelcomeMessage();
+                
             } catch (error) {
                 document.getElementById('meta-grid').innerHTML = 
                     `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
                 console.error('Помилка fetch:', error);
             }
         }
+
 
                 // Функція відображення стартового вікна з підказкою
         function showWelcomeMessage() {
@@ -167,7 +170,7 @@
         };
 
                 // 3. Функція виведення карток зброї на екран (Оновлена без ключів та з пошуком BO6/BO7)
-        function displayWeapons(weapons) {
+                function displayWeapons(weapons) {
             const grid = document.getElementById('meta-grid');
             grid.innerHTML = '';
 
@@ -199,7 +202,6 @@
                         let category = ""; 
                         let name = clean;
                         
-                        // ФІКС РЕГЕКСУ: Шукаємо триггери брендів у будь-якому місці рядка
                         let foundCat = Object.keys(translations).find(cat => {
                             let regex = new RegExp(cat, "i");
                             return regex.test(clean);
@@ -207,7 +209,6 @@
                         
                         if (foundCat) {
                             category = foundCat;
-                            // Якщо це системне слово категорії, красивіше не вирізати його з назви обвесу BO6/BO7
                             name = clean; 
                         }
 
@@ -215,29 +216,12 @@
                             let translatedCategory = translations[category] || category;
                             cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
                         } else {
-                            // КРИТИЧНИЙ ФІКС: Повністю прибираємо значок "🔧", ставимо нейтральну точку
                             cleanAttachments.push(`<li><span style="color: #ffcc00; margin-right: 5px;">•</span>${name}</li>`);
                         }
                     });
                 }
 
-                                let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
-
-                card.innerHTML = `
-                    <div class="rank">#${wpn.rank}</div>
-                    <h2 class="weapon-name">${wpn.name}</h2>
-                    <div class="tags">
-                        <span class="tag game-tag">${wpn.game}</span>
-                        <span class="tag class-tag">${translatedClass}</span>
-                    </div>
-                    <ul class="attachments-list">
-                        ${uniqueList}
-                    </ul>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
+                                // ... (весь верхній код обробки обвісів залишається без змін)
 
                 let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
 
@@ -254,7 +238,12 @@
                 `;
                 grid.appendChild(card);
             });
-        }
+        } // <-- ОЦЕ КІНЕЦЬ ФУНКЦІЇ. Все, що йде нижче цього рядка і до початку "// 4. Логіка..." — ВИДАЛЯЙТЕ!
+
+
+
+
+    
         
 
 
@@ -291,18 +280,22 @@
             searchElement.addEventListener('input', filterWeapons);
         }
 
-        // Прив'язуємо кліки по кнопках категорій
+                // Прив'язуємо кліки по кнопках категорій
         const tagsElement = document.getElementById('categories-tags');
         if (tagsElement) {
             tagsElement.addEventListener('click', (e) => {
                 if (e.target.classList.contains('filter-btn')) {
+                    // Снимаем активный класс со всех кнопок и даем его той, на которую кликнули
                     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                     e.target.classList.add('active');
+                    
+                    // Меняем категорию и запускаем фильтр оружия
                     currentCategory = e.target.getAttribute('data-class');
                     filterWeapons();
                 }
             });
         }
+
 
         document.addEventListener('DOMContentLoaded', loadMeta);
 
