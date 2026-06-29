@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="tf37M14ShcT0J4fVPz8FEd9ihxw7Qifp4-pLVKfOjsc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=516">
+    <link rel="stylesheet" href="style.css?v=517">
     <script>
         if (window.location.protocol === 'http:') {
             window.location.href = window.location.href.replace('http:', 'https:');
@@ -73,56 +73,12 @@
     <footer style="text-align: center; padding: 20px; color: #a0a0a0; font-size: 13px;" id="sync-time">
         Дані оновлено: <b>Завантаження...</b>
     </footer>
-    <script>
-                let allWeapons = [];
-        let currentCategory = 'all'; // Возвращаем 'all' по умолчанию, чтобы логика фильтрации не падала
+        <script>
+        let allWeapons = [];
+        let currentCategory = 'all'; 
 
-        // 1. Завантаження даних із примусовим скиданням кэшу
-        async function loadMeta() {
-            try {
-                const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
-                const data = await response.json();
-                
-                allWeapons = data.weapons || [];
-                
-                // Фикс чтения даты (поддерживает оба формата из парсера)
-                const updateTime = data.lastUpdated || data.last_updated || "Невідомо";
-                
-                const bottomSync = document.getElementById('sync-time');
-                if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
-                
-                const topSync = document.getElementById('sync-time-top');
-                if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
-                
-                // Показываем наше красивое приветствие для бойцов вместо текста "Завантаження..."
-                showWelcomeMessage();
-                
-            } catch (error) {
-                document.getElementById('meta-grid').innerHTML = 
-                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
-                console.error('Помилка fetch:', error);
-            }
-        }
-
-
-                // Функція відображення стартового вікна з підказкою
-        function showWelcomeMessage() {
-            const grid = document.getElementById('meta-grid');
-            if (grid) {
-                grid.innerHTML = `
-                    <div class="loading" style="animation: none; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,204,0,0.2); padding: 35px 20px; border-radius: 8px; width: 100%; text-align: center; box-sizing: border-box;">
-                        <span style="font-size: 24px; display: block; margin-bottom: 12px; text-shadow: 0 0 10px rgba(255,204,0,0.2);">👋 Вітаємо, боєць!</span>
-                        <p style="font-size: 14.5px; color: #e0e0e0; margin: 0 0 8px 0; line-height: 1.5;">Щоб побачити актуальні мета-збірки, <b>оберіть потрібний клас зброї</b> на панелі вище.</p>
-                        <p style="font-size: 13.5px; color: #a0a0a0; margin: 0; line-height: 1.4;">Також ви можете скористатися миттєвим пошуком за назвою зброї.</p>
-                    </div>
-                `;
-            }
-        }
-
-
-                        // Розширений словник перекладу категорій, класів та брендів зброї BO6/BO7
+        // 1. Ваш розширений словник перекладу категорій, класів та брендів зброї BO6/BO7
         const translations = {
-            // Стандартні англійські категорії
             "Muzzle": "Глушник / Дуло",
             "Barrel": "Ствол",
             "Laser": "Лазер",
@@ -142,9 +98,6 @@
             "FANG": "Оптика / Приціл",
             "V-Last": "Приклад",
 
-
-            
-            // Нові бренди та унікальні приставки BO6/BO7 (З вашого скріншоту)
             "LTI": "Глушник / Дуло",
             "Rockleigh": "Ствол",
             "Sapper": "Підствольна планка",
@@ -154,11 +107,7 @@
             "Hawker": "Приклад / Оптика",
             "Buffer Spring": "Приклад",
             "Serpent": "Задня рукоятка",
-            "FANG": "Оптика / Приціл",
-            "V-Last": "Приклад",
 
-            
-            // Стандартні російські категорії для сумісності з парсером
             "Оптика": "Оптика / Приціл",
             "Дуло": "Глушник / Дуло",
             "Ствол": "Ствол",
@@ -171,12 +120,7 @@
             "Лазер": "Лазер",
             "Модификации": "Модифікація вогню",
             "Боеприпасы": "Боєприпаси",
-            "FANG": "Оптика / Приціл",
-            "V-Last": "Приклад",
 
-
-            
-            // Класи зброї
             "SMG": "ПП (SMG)",
             "AR": "Штурмова гвинтівка",
             "Sniper": "Снайперська гвинтівка",
@@ -188,9 +132,46 @@
             "All": "Усі класи"
         };
 
+        // 2. Завантаження даних із примусовим скиданням кэшу
+        async function loadMeta() {
+            try {
+                const response = await fetch('wz_meta_ua.json?_=' + new Date().getTime());
+                const data = await response.json();
+                
+                allWeapons = data.weapons || [];
+                const updateTime = data.lastUpdated || data.last_updated || "Невідомо";
+                
+                const bottomSync = document.getElementById('sync-time');
+                if (bottomSync) bottomSync.innerHTML = `Дані оновлено: <b>${updateTime}</b>`;
+                
+                const topSync = document.getElementById('sync-time-top');
+                if (topSync) topSync.innerHTML = `📅 Мета оновлена: <b>${updateTime}</b>`;
+                
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                
+                showWelcomeMessage();
+            } catch (error) {
+                document.getElementById('meta-grid').innerHTML = 
+                    `<div class="error">Помилка завантаження даних. Перевірте файл JSON.</div>`;
+                console.error('Помилка fetch:', error);
+            }
+        }
 
-                // 3. Функція виведення карток зброї на екран (Оновлена без ключів та з пошуком BO6/BO7)
-                function displayWeapons(weapons) {
+        // 3. Функція відображення стартового вікна з підказкою
+        function showWelcomeMessage() {
+            const grid = document.getElementById('meta-grid');
+            if (grid) {
+                grid.innerHTML = `
+                    <div class="loading" style="animation: none; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,204,0,0.2); padding: 35px 20px; border-radius: 8px; width: 100%; text-align: center; box-sizing: border-box;">
+                        <span style="font-size: 24px; display: block; margin-bottom: 12px; text-shadow: 0 0 10px rgba(255,204,0,0.2);">👋 Вітаємо, боєць!</span>
+                        <p style="font-size: 14.5px; color: #e0e0e0; margin: 0 0 8px 0; line-height: 1.5;">Щоб побачити актуальні мета-збірки, <b>оберіть потрібний клас зброї</b> на панелі вище.</p>
+                        <p style="font-size: 13.5px; color: #a0a0a0; margin: 0; line-height: 1.4;">Також ви можете скористатися миттєвим пошуком за назвою зброї.</p>
+                    </div>
+                `;
+            }
+        }
+        // 4. Функція виведення карток зброї на екран у форматі "Категорія - Назва"
+        function displayWeapons(weapons) {
             const grid = document.getElementById('meta-grid');
             grid.innerHTML = '';
 
@@ -198,6 +179,9 @@
                 grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
                 return;
             }
+
+            // Масив англійських категорій для точного пошуку та очищення назв модулів
+            const categoriesToClean = ["Muzzle", "Barrel", "Magazine", "Stock", "Rear Grip", "Laser", "Optic", "Ammo", "Underbarrel", "Comb", "Guard", "Bolt"];
 
             weapons.forEach(wpn => {
                 const card = document.createElement('div');
@@ -219,54 +203,56 @@
                         let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
                         if (isPureCategory) return;
 
-                        let category = ""; 
-                        let name = clean;
+                        let detectedCategory = ""; 
+                        let cleanName = clean;
                         
-                        let foundCat = Object.keys(translations).find(cat => {
-                            let regex = new RegExp(cat, "i");
+                        // 1. Шукаємо англійське системне слово на самому початку назви обвесу
+                        let foundPrefix = categoriesToClean.find(prefix => {
+                            let regex = new RegExp("^" + prefix + "\\b", "i");
                             return regex.test(clean);
                         });
                         
-                        if (foundCat) {
-                            category = foundCat;
-                            name = clean; 
+                        if (foundPrefix) {
+                            detectedCategory = foundPrefix;
+                            // Вирізаємо це англійське слово з назви (наприклад, "Barrel " -> "")
+                            let regex = new RegExp("^" + foundPrefix + "\\b\\s*", "i");
+                            cleanName = clean.replace(regex, "").trim();
+                        } else {
+                            // 2. Якщо на початку слова немає, шукаємо бренди з Black Ops у будь-якому місці рядка
+                            let foundBrand = Object.keys(translations).find(cat => {
+                                let regex = new RegExp(cat, "i");
+                                return regex.test(clean);
+                            });
+                            if (foundBrand) {
+                                detectedCategory = foundBrand;
+                            }
                         }
 
-                                                if (category) {
-                            let translatedCategory = translations[category] || category;
+                        // 3. Форматуємо виведення: "Категорія - Назва обвесу"
+                        if (detectedCategory) {
+                            let translatedCategory = translations[detectedCategory] || detectedCategory;
                             
-                            // КРИТИЧНИЙ ФІКС: Вирізаємо ТІЛЬКИ системне слово на початку назви, не чіпаючи сам обвес
-                            let cleanName = name;
-                            const prefixToRemove = ["Muzzle", "Barrel", "Magazine", "Stock", "Rear Grip", "Laser", "Optic", "Ammo", "Underbarrel"];
-                            
-                            prefixToRemove.forEach(prefix => {
-                                // Шукаємо точне входження слова "Category " на самому початку рядка
-                                const regex = new RegExp("^" + prefix + "\\s+", "i");
+                            // Додаткове очищення назви від випадкових дублікатів англійських слів всередині рядка
+                            categoriesToClean.forEach(word => {
+                                const regex = new RegExp("\\b" + word + "\\b\\s*", "i");
                                 cleanName = cleanName.replace(regex, "").trim();
                             });
 
-                            cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${cleanName}</li>`);
+                            cleanAttachments.push(`<li><span>${translatedCategory}</span> - ${cleanName}</li>`);
                         } else {
-                            cleanAttachments.push(`<li><span style="color: #ffcc00; margin-right: 5px;">•</span>${name}</li>`);
+                            // Якщо категорія зовсім невідома
+                            cleanAttachments.push(`<li><span style="color: #ffcc00; margin-right: 5px;">•</span>${cleanName}</li>`);
                         }
-
-
                     });
                 }
 
-                                // ... (весь верхній код обробки обвісів залишається без змін)
+                // Залізна логіка: дозаповнення до 5 слотів у новому форматі
+                let finalAttachments = [...new Set(cleanAttachments)];
+                while (finalAttachments.length < 5) {
+                    finalAttachments.push(`<li><span style="color: #444444; margin-right: 5px;">•</span><span style="color: #555555; letter-spacing: 1px; font-size: 13px;">[ слот порожній ]</span></li>`);
+                }
 
-                // 1. Очищаємо масив від можливих дублікатів
-let finalAttachments = [...new Set(cleanAttachments)];
-
-// 2. Якщо модулів менше 5, заповнюємо порожні слоти стильними ігровими заглушками
-while (finalAttachments.length < 5) {
-    finalAttachments.push(`<li><span style="color: #555555;">•</span> <span style="color: #666666; font-style: italic;">Вільний слот під модуль</span></li>`);
-}
-
-// 3. Беремо точно перші 5 елементів (на випадок, якщо десь проскочив 6-й)
-let uniqueList = finalAttachments.slice(0, 5).join('');
-
+                let uniqueList = finalAttachments.slice(0, 5).join('');
 
                 card.innerHTML = `
                     <div class="rank">#${wpn.rank}</div>
@@ -281,16 +267,9 @@ let uniqueList = finalAttachments.slice(0, 5).join('');
                 `;
                 grid.appendChild(card);
             });
-        } // <-- ОЦЕ КІНЕЦЬ ФУНКЦІЇ. Все, що йде нижче цього рядка і до початку "// 4. Логіка..." — ВИДАЛЯЙТЕ!
+        }
 
-
-
-
-    
-        
-
-
-        // 4. Логіка одночасної фільтрації за пошуком та кнопками
+        // 5. Логіка одночасної фільтрації за пошуком та кнопками
         function filterWeapons() {
             const searchInput = document.getElementById('search-input');
             const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
@@ -317,32 +296,27 @@ let uniqueList = finalAttachments.slice(0, 5).join('');
             displayWeapons(filtered);
         }
 
-        // Прив'язуємо події пошуку
+        // Прив'язуємо події пошуку та категорій
         const searchElement = document.getElementById('search-input');
         if (searchElement) {
             searchElement.addEventListener('input', filterWeapons);
         }
 
-                // Прив'язуємо кліки по кнопках категорій
         const tagsElement = document.getElementById('categories-tags');
         if (tagsElement) {
             tagsElement.addEventListener('click', (e) => {
                 if (e.target.classList.contains('filter-btn')) {
-                    // Снимаем активный класс со всех кнопок и даем его той, на которую кликнули
                     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                     e.target.classList.add('active');
-                    
-                    // Меняем категорию и запускаем фильтр оружия
                     currentCategory = e.target.getAttribute('data-class');
                     filterWeapons();
                 }
             });
         }
 
-
         document.addEventListener('DOMContentLoaded', loadMeta);
 
-        // Мобільна логіка: приховування клавіатури смартфона
+        // Мобільна логіка: приховування клавіатуры смартфона
         const searchInput = document.getElementById('search-input');
         if (searchInput) {
             searchInput.addEventListener('keypress', function(event) {
@@ -356,9 +330,5 @@ let uniqueList = finalAttachments.slice(0, 5).join('');
             });
         }
     </script>
-    <!-- SEO Блок для пошукових роботів Google (прихований від користувачів) -->
-<div id="seo-weapons-index" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;">
-    <!-- Сюди Python автоматично запише всі назви пушок -->
-</div>
 </body>
 </html>
