@@ -435,5 +435,31 @@ button {
     touch-action: manipulation !important; /* Убирает ожидание двойного клика */
     -webkit-tap-highlight-color: transparent; /* Убирает некрасивую серую вспышку на смартфонах при нажатии */
 }
+/* 📱 Компактна адаптивна сітка для мобільних пристроїв */
+#weapons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    #weapons-container {
+        grid-template-columns: repeat(2, 1fr) !important; /* Дві картки в ряд на смартфонах! */
+        gap: 10px !important;
+        padding: 5px !important;
+    }
+    .weapon-card {
+        padding: 10px !important;
+    }
+    .weapon-name {
+        font-size: 14px !important; /* Оптимальний шрифт для телефону */
+    }
+    .att-name {
+        font-size: 11px !important;
+    }
+}
 
 
