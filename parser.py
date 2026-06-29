@@ -190,9 +190,10 @@ def main():
 
     # 5. Надсилаємо сформований звіт у твій Телеграм-канал
     if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
-        url = f"https://telegram.org{TELEGRAM_BOT_TOKEN}/sendMessage"
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
         payload = {
             "chat_id": TELEGRAM_CHAT_ID,
+            "message_thread_id": 175, # 🎯 ОБОВ'ЯЗКОВО ПОСТАВИЛИ КОМУ В КІНЦІ РЯДКА!
             "text": tg_message,
             "parse_mode": "HTML",
             "disable_web_page_preview": True
