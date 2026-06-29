@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warzone Only UA — Актуальна Мета Warzone</title>
-    <link rel="stylesheet" href="style.css?v=300">
+    <link rel="stylesheet" href="style.css?v=400">
 </head>
 <body>
 
@@ -167,53 +167,57 @@
 
         // 3. Функція виведення карток зброї на екран
         function displayWeapons(weapons) {
-    const container = document.getElementById("weapons-container");
-    if (!container) return;
-    container.innerHTML = "";
+            const grid = document.getElementById('meta-grid');
+            grid.innerHTML = '';
 
-    if (!weapons || weapons.length === 0) {
-        container.innerHTML = "<div class='no-results'>🔍 Гармат не знайдено...</div>";
-        return;
-    }
+            if (!weapons || weapons.length === 0) {
+                grid.innerHTML = `<div class="no-results">Нічого не знайдено</div>`;
+                return;
+            }
 
-    // 🎯 СОРТУВАННЯ ЗА АЛФАВІТОМ: сортуємо зброю від А до Я за назвою
-    const sortedWeapons = [...weapons].sort((a, b) => a.name.localeCompare(b.name, 'uk', { sensitivity: 'base' }));
+            weapons.forEach(wpn => {
+                const card = document.createElement('div');
+                card.className = 'weapon-card';
+                
+                const translatedClass = translations[wpn.class] || wpn.class;
+                let cleanAttachments = [];
 
-    // Малюємо картки у строгому алфавітному порядку
-    sortedWeapons.forEach((weapon) => {
-        const card = document.createElement("div");
-        card.className = "weapon-card";
-        
-        let attachmentsHTML = "";
-        if (weapon.attachments && weapon.attachments.length > 0) {
-            weapon.attachments.forEach(att => {
-                attachmentsHTML += `
-                    <div class="attachment-item">
-                        <span class="att-cat">${att.category}:</span>
-                        <span class="att-name">${att.name}</span>
-                    </div>`;
-            });
-        } else {
-            attachmentsHTML = "<div class='no-att'>🔧 Збірка уточнюється...</div>";
-        }
+                if (wpn.attachments && Array.isArray(wpn.attachments)) {
+                    wpn.attachments.forEach(att => {
+                        let clean = "";
+                        
+                        if (att && typeof att === 'object' && att.name) {
+                            clean = (att.category && att.category !== "🔧" ? att.category + " " : "") + att.name;
+                        } else if (typeof att === 'string') {
+                            clean = att.replace(/^- /, "").trim();
+                        }
 
-        card.innerHTML = `
-            <div class="card-header">
-                <h3 class="weapon-name">${weapon.name}</h3>
-                <span class="weapon-rank">#${weapon.rank || ''}</span>
-            </div>
-            <div class="weapon-meta">
-                <span class="game-badge">${weapon.game || 'BO6'}</span>
-                <span class="class-badge">${weapon.class || 'Зброя'}</span>
-            </div>
-            <div class="attachments-list">
-                ${attachmentsHTML}
-            </div>
-        `;
-        container.appendChild(card);
-    });
-}
+                        if (!clean) return;
 
+                        let isPureCategory = Object.keys(translations).some(cat => cat.toLowerCase() === clean.toLowerCase());
+                        if (isPureCategory) return;
+
+                        let category = "";
+                        let name = clean;
+
+                        let foundCat = Object.keys(translations).find(cat => {
+                            let regex = new RegExp("^" + cat + "\\s+", "i");
+                            return regex.test(clean);
+                        });
+                        
+                        if (foundCat) {
+                            category = foundCat;
+                            name = clean.replace(new RegExp("^" + foundCat + "\\s+", "i"), "").trim();
+                        }
+
+                        if (category) {
+                            let translatedCategory = translations[category] || category;
+                            cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+                        } else {
+                            cleanAttachments.push(`<li>🔧 ${name}</li>`);
+                        }
+                    });
+                }
 
                 let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
 
