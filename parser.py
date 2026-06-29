@@ -233,6 +233,9 @@ def main():
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(final_json_data, f, indent=4, ensure_ascii=False)
     print(f"✅ Успішно збережено! Зображено пушек: {len(valid_meta)}. Час: {last_update_string}")
+    
+    # 🎯 ЗАПУСКАЄМО ПРЕ-РЕНДЕРИНГ ПЕРЕД ВІДПРАВКОЮ ЗВІТУ
+    pre_render_html(new_meta['weapons'] if 'new_meta' in locals() and 'weapons' in new_meta else sorted_data if 'sorted_data' in locals() else weapons_list if 'weapons_list' in locals() else [])
 
     # 5. Надсилаємо сформований звіт у твій Телеграм-канал
     if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
@@ -289,3 +292,100 @@ def update_html_seo(weapons_list):
 
 # Вызовите эту функцию там, где скрипт успешно скачал `data.weapons`
 # update_html_seo(data_weapons)
+def pre_render_html(weapons_data):
+    """Автоматически генерирует карточки оружия и вшивает их в index.html перед публикацией"""
+    try:
+        # Сортируем оружие по алфавиту прямо на сервере
+        sorted_weapons = sorted(weapons_data, key=lambda x: x.get('name', ''))
+        
+        cards_html = ""
+        for wpn in sorted_weapons:
+            attachments_li = ""
+            for att in wpn.get('attachments', []):
+                cat = f"<span class='att-cat'>{att['category']}:</span> " if att.get('category') else ""
+                attachments_li += f"<li class='attachment-item'>{cat}<span class='att-name'>{att['name']}</span></li>"
+            
+            if not attachments_li:
+                attachments_li = "<li class='no-att'>🔧 Збірка уточнюється...</li>"
+
+            # Карточки изначально скрыты (display: none), пока игрок не нажмет категорию
+            cards_html += f"""
+            <div class="weapon-card" data-class="{wpn.get('class', '')}" data-game="{wpn.get('game', '')}" style="display: none;">
+                <div class="rank">#{wpn.get('rank', '')}</div>
+                <h2 class="weapon-name">{wpn.get('name', 'Без назви')}</h2>
+                <div class="tags">
+                    <span class="tag game-tag">{wpn.get('game', 'BO6')}</span>
+                    <span class="tag class-tag">{wpn.get('class', 'Зброя')}</span>
+                </div>
+                <ul class="attachments-list">
+                    {attachments_li}
+                </ul>
+            </div>"""
+        
+        # Читаем шаблон index.html
+        with open("index.html", "r", encoding="utf-8") as f:
+            html_content = f.read()
+            
+        # Заменяем маркер на готовый сгенерированный HTML
+        if "<!-- PRE_RENDERED_WEAPONS_PLACEHOLDER -->" in html_content:
+            updated_html = html_content.replace("<!-- PRE_RENDERED_WEAPONS_PLACEHOLDER -->", cards_html)
+            with open("index.html", "w", encoding="utf-8") as f:
+                f.write(updated_html)
+            print("🎯 Пре-рендеринг HTML успешно завершен!")
+        else:
+            print("⚠️ Маркер PRE_RENDERED_WEAPONS_PLACEHOLDER не найден в файле index.html")
+    except Exception as e:
+        print(f"❌ Ошибка пре-рендеринга: {e}")
+def pre_render_html(weapons_data):
+    """Автоматически генерирует карточки оружия и вшивает их в index.html перед публикацией"""
+    try:
+        if not weapons_data:
+            print("⚠️ Нет данных о пушках для пре-рендеринга!")
+            return
+            
+        # Сортируем оружие по алфавиту прямо на сервере
+        sorted_weapons = sorted(weapons_data, key=lambda x: x.get('name', ''))
+        
+        cards_html = ""
+        for wpn in sorted_weapons:
+            attachments_li = ""
+            for att in wpn.get('attachments', []):
+                cat = f"<span class='att-cat'>{att['category']}:</span> " if att.get('category') else ""
+                attachments_li += f"<li class='attachment-item'>{cat}<span class='att-name'>{att['name']}</span></li>"
+            
+            if not attachments_li:
+                attachments_li = "<li class='no-att'>🔧 Збірка уточнюється...</li>"
+
+            # Карточки изначально скрыты (display: none), пока игрок не нажмет категорию
+            cards_html += f"""
+            <div class="weapon-card" data-class="{wpn.get('class', '')}" data-game="{wpn.get('game', '')}" style="display: none;">
+                <div class="rank">#{wpn.get('rank', '')}</div>
+                <h2 class="weapon-name">{wpn.get('name', 'Без назви')}</h2>
+                <div class="tags">
+                    <span class="tag game-tag">{wpn.get('game', 'BO6')}</span>
+                    <span class="tag class-tag">{wpn.get('class', 'Зброя')}</span>
+                </div>
+                <ul class="attachments-list">
+                    {attachments_li}
+                </ul>
+            </div>"""
+        
+        # Читаем шаблон index.html
+        import os
+        if not os.path.exists("index.html"):
+            print("❌ Файл index.html не найден!")
+            return
+            
+        with open("index.html", "r", encoding="utf-8") as f:
+            html_content = f.read()
+            
+        # Заменяем маркер на готовый сгенерированный HTML
+        if "<!-- PRE_RENDERED_WEAPONS_PLACEHOLDER -->" in html_content:
+            updated_html = html_content.replace("<!-- PRE_RENDERED_WEAPONS_PLACEHOLDER -->", cards_html)
+            with open("index.html", "w", encoding="utf-8") as f:
+                f.write(updated_html)
+            print("🎯 Пре-рендеринг HTML успешно завершен!")
+        else:
+            print("⚠️ Маркер PRE_RENDERED_WEAPONS_PLACEHOLDER не найден в файле index.html")
+    except Exception as e:
+        print(f"❌ Ошибка пре-рендеринга: {e}")
