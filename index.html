@@ -120,9 +120,9 @@
         }
 
 
-                // Розширений словник перекладу категорій, класів та російських назв обвесів
+                        // Розширений словник перекладу категорій, класів та брендів зброї BO6/BO7
         const translations = {
-            // Англійські категорії
+            // Стандартні англійські категорії
             "Muzzle": "Глушник / Дуло",
             "Barrel": "Ствол",
             "Laser": "Лазер",
@@ -139,8 +139,26 @@
             "Perk": "Перк / Уміння",
             "Bolt": "Затвор",
             "Rail": "Рейка прицілу",
+            "FANG": "Оптика / Приціл",
+            "V-Last": "Приклад",
+
+
             
-            // Російські категорії (дублікати зі скріншоту для сумісності з парсером)
+            // Нові бренди та унікальні приставки BO6/BO7 (З вашого скріншоту)
+            "LTI": "Глушник / Дуло",
+            "Rockleigh": "Ствол",
+            "Sapper": "Підствольна планка",
+            "MFS": "Магазин / Набої",
+            "Accelerated Recoil": "Модифікація вогню",
+            "Lethal Tools": "Оптика / Приціл",
+            "Hawker": "Приклад / Оптика",
+            "Buffer Spring": "Приклад",
+            "Serpent": "Задня рукоятка",
+            "FANG": "Оптика / Приціл",
+            "V-Last": "Приклад",
+
+            
+            // Стандартні російські категорії для сумісності з парсером
             "Оптика": "Оптика / Приціл",
             "Дуло": "Глушник / Дуло",
             "Ствол": "Ствол",
@@ -153,6 +171,10 @@
             "Лазер": "Лазер",
             "Модификации": "Модифікація вогню",
             "Боеприпасы": "Боєприпаси",
+            "FANG": "Оптика / Приціл",
+            "V-Last": "Приклад",
+
+
             
             // Класи зброї
             "SMG": "ПП (SMG)",
@@ -163,11 +185,9 @@
             "Marksman Rifle": "Піхотна гвинтівка",
             "Battle Rifle": "Бойова гвинтівка",
             "Pistol": "Пістолет",
-            "Melee": "Ближній бій",
-            "Launcher": "Ракетниця",
-            "Special": "Спеціальна зброя",
             "All": "Усі класи"
         };
+
 
                 // 3. Функція виведення карток зброї на екран (Оновлена без ключів та з пошуком BO6/BO7)
                 function displayWeapons(weapons) {
@@ -212,18 +232,41 @@
                             name = clean; 
                         }
 
-                        if (category) {
+                                                if (category) {
                             let translatedCategory = translations[category] || category;
-                            cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${name}</li>`);
+                            
+                            // КРИТИЧНИЙ ФІКС: Вирізаємо ТІЛЬКИ системне слово на початку назви, не чіпаючи сам обвес
+                            let cleanName = name;
+                            const prefixToRemove = ["Muzzle", "Barrel", "Magazine", "Stock", "Rear Grip", "Laser", "Optic", "Ammo", "Underbarrel"];
+                            
+                            prefixToRemove.forEach(prefix => {
+                                // Шукаємо точне входження слова "Category " на самому початку рядка
+                                const regex = new RegExp("^" + prefix + "\\s+", "i");
+                                cleanName = cleanName.replace(regex, "").trim();
+                            });
+
+                            cleanAttachments.push(`<li><span>${translatedCategory}:</span> ${cleanName}</li>`);
                         } else {
                             cleanAttachments.push(`<li><span style="color: #ffcc00; margin-right: 5px;">•</span>${name}</li>`);
                         }
+
+
                     });
                 }
 
                                 // ... (весь верхній код обробки обвісів залишається без змін)
 
-                let uniqueList = [...new Set(cleanAttachments)].slice(0, 5).join('');
+                // 1. Очищаємо масив від можливих дублікатів
+let finalAttachments = [...new Set(cleanAttachments)];
+
+// 2. Якщо модулів менше 5, заповнюємо порожні слоти стильними ігровими заглушками
+while (finalAttachments.length < 5) {
+    finalAttachments.push(`<li><span style="color: #555555;">•</span> <span style="color: #666666; font-style: italic;">Вільний слот під модуль</span></li>`);
+}
+
+// 3. Беремо точно перші 5 елементів (на випадок, якщо десь проскочив 6-й)
+let uniqueList = finalAttachments.slice(0, 5).join('');
+
 
                 card.innerHTML = `
                     <div class="rank">#${wpn.rank}</div>
