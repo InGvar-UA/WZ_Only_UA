@@ -1,5 +1,5 @@
 {
-    "last_updated": "28.06.2026 02:53",
+    "last_updated": "29.06.2026 11:24",
     "weapons": [
         {
             "rank": 1,
@@ -99,54 +99,6 @@
         },
         {
             "rank": 3,
-            "name": "Dravec 45",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Bowen .45 Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "19\" EAM Horizon Barrel"
-                },
-                {
-                    "category": "Laser",
-                    "name": ""
-                },
-                {
-                    "category": "Laser",
-                    "name": "MFS Agile Laser Pro"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Gator Extended Mag"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "Bolt",
-                    "name": "Carrier Group"
-                }
-            ]
-        },
-        {
-            "rank": 4,
             "name": "MXR-17",
             "game": "BO7",
             "class": "AR",
@@ -190,6 +142,54 @@
                 {
                     "category": "Stock",
                     "name": "Winch Stock"
+                }
+            ]
+        },
+        {
+            "rank": 4,
+            "name": "Dravec 45",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Bowen .45 Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "19\" EAM Horizon Barrel"
+                },
+                {
+                    "category": "Laser",
+                    "name": ""
+                },
+                {
+                    "category": "Laser",
+                    "name": "MFS Agile Laser Pro"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Gator Extended Mag"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "Bolt",
+                    "name": "Carrier Group"
                 }
             ]
         },
@@ -627,54 +627,6 @@
         },
         {
             "rank": 14,
-            "name": "REV-46",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Lethal Tools ELO"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Hawker Series 45"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Caudal Target Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Komodo Drum Mag"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Recoil Sync Unit"
-                }
-            ]
-        },
-        {
-            "rank": 15,
             "name": "MPC-25",
             "game": "BO7",
             "class": "SMG",
@@ -722,7 +674,7 @@
             ]
         },
         {
-            "rank": 16,
+            "rank": 15,
             "name": "EGRT-17",
             "game": "BO7",
             "class": "AR",
@@ -766,6 +718,54 @@
                 {
                     "category": "🔧",
                     "name": "Buffer Springs"
+                }
+            ]
+        },
+        {
+            "rank": 16,
+            "name": "Peacekeeper Mk1",
+            "game": "BO7",
+            "class": "AR",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "FANG HoverPoint ELO"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Redwell Shade-X Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "19.4\" Stimulus Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Vulcan Reach Extension"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "MFS Counterforce-C1 Stock"
                 }
             ]
         },
@@ -819,54 +819,6 @@
         },
         {
             "rank": 18,
-            "name": "Peacekeeper Mk1",
-            "game": "BO7",
-            "class": "AR",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "FANG HoverPoint ELO"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Redwell Shade-X Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "19.4\" Stimulus Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Vulcan Reach Extension"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "MFS Counterforce-C1 Stock"
-                }
-            ]
-        },
-        {
-            "rank": 19,
             "name": "CBRS-3",
             "game": "BO7",
             "class": "SMG",
@@ -910,6 +862,54 @@
                 {
                     "category": "Stock",
                     "name": "Slipway Stock"
+                }
+            ]
+        },
+        {
+            "rank": 19,
+            "name": "REV-46",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Lethal Tools ELO"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Hawker Series 45"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Caudal Target Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Komodo Drum Mag"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Recoil Sync Unit"
                 }
             ]
         },
