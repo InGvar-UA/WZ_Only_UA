@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # Дозволяє запускати робота вручну кнопкою з сайту GitHub
 
 permissions:
-  contents: write # ДАЄМО РОБОТУ ЗАЛІЗОБЕТОННЕ ПРАВО НА ЗАПИС ФАЙЛІВ
+  contents: write # Даємо роботу залізобетонне право на запис файлів у репозиторій
 
 jobs:
   build:
@@ -28,6 +28,9 @@ jobs:
           playwright install chromium
 
       - name: Запуск парсера мета-оружия
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python parser.py
 
       - name: Автоматический коммит и пуш обновлений на сайт
