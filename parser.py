@@ -136,9 +136,59 @@ def parse_weapons(lines):
         weapons.append(current_weapon)
     return weapons
 
-    if current_weapon and current_weapon["attachments"]:
-        weapons.append(current_weapon)
-    return weapons
+def pre_render_html(weapons_data):
+    """Автоматически генерирует карточки оружия и вшивает их в index.html перед публикацией"""
+    try:
+        if not weapons_data:
+            print("⚠️ Нет данных о пушках для пре-рендеринга!")
+            return
+            
+        sorted_weapons = sorted(weapons_data, key=lambda x: x.get('name', ''))
+        cards_html = ""
+        
+        for wpn in sorted_weapons:
+            attachments_li = ""
+            for att in wpn.get('attachments', []):
+                cat = f"<span class='att-cat'>{att['category']}:</span> " if att.get('category') else ""
+                attachments_li += f"<li class='attachment-item'>{cat}<span class='att-name'>{att['name']}</span></li>"
+            
+            if not attachments_li:
+                attachments_li = "<li class='no-att'>🔧 Збірка уточнюється...</li>"
+
+            cards_html += f"""
+            <div class="weapon-card" data-class="{wpn.get('class', '')}" data-game="{wpn.get('game', '')}" style="display: none;">
+                <div class="rank">#{wpn.get('rank', '')}</div>
+                <h2 class="weapon-name">{wpn.get('name', 'Без назви')}</h2>
+                <div class="tags">
+                    <span class="tag game-tag">{wpn.get('game', 'BO6')}</span>
+                    <span class="tag class-tag">{wpn.get('class', 'Зброя')}</span>
+                </div>
+                <ul class="attachments-list">
+                    {attachments_li}
+                </ul>
+            </div>"""
+
+        
+        import os
+        if not os.path.exists("index.html"):
+            print("❌ Файл index.html не найден для пре-рендеринга!")
+            return
+            
+        with open("index.html", "r", encoding="utf-8") as f:
+            html_content = f.read()
+            
+        if "<!-- PRE_RENDERED_WEAPONS_PLACEHOLDER -->" in html_content:
+            updated_html = html_content.replace("<!-- PRE_RENDERED_WEAPONS_PLACEHOLDER -->", cards_html)
+            with open("index.html", "w", encoding="utf-8") as f:
+                f.write(updated_html)
+            print("🎯 Пре-рендеринг HTML успешно завершен!")
+        else:
+            print("⚠️ Маркер PRE_RENDERED_WEAPONS_PLACEHOLDER не найден в файле index.html")
+    except Exception as e:
+        print(f"❌ Ошибка пре-рендеринга: {e}")
+
+
+    
 
 def main():
     print("🚀 WZ_Only_UA: Сбор чистых данных с фиксацией времени...")
