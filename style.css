@@ -485,5 +485,25 @@ button {
         font-size: 11px !important;
     }
 }
+/* 🎯 Стильне верхнє розміщення Банки Monobank */
+.mono-widget-top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 10px 25px 10px; /* Акуратні відступи: зверху менше, знизу більше */
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.mono-jar-iframe {
+    width: 100%;
+    max-width: 340px; /* Ідеально під будь-які екрани смартфонів */
+    height: 120px;    /* Точна фіксована висота віджета Monobank */
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Об'ємна геймерська тінь */
+    background: #ffffff; /* Білий матовий фон для чіткості тексту Моно */
+}
 
 
