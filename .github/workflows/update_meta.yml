@@ -4,11 +4,10 @@ on:
   schedule:
     # 🎯 Робот САМОСТІЙНО прокидатиметься щодня о 06:35 UTC, що дорівнює 09:35 ранку за Києвом!
     - cron: '35 6 * * *'
-  workflow_dispatch: # Залишаємо кнопку ручного запуску на сайті
-
+  workflow_dispatch: # Дозволяє запускати робота вручну кнопкою з сайту GitHub
 
 permissions:
-  contents: write # Даємо роботу залізобетонне право на запис файлів у репозиторій
+  contents: write # Даємо роботу право на автоматичний запис файлів у репозиторій
 
 jobs:
   build:
@@ -39,10 +38,13 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git add wz_meta_ua.json
+          
+          # 🎯 Універсальне додавання всіх змінених файлів (і бази, і сайту з пре-рендерингом)
+          git add .
+          
           if git diff --cached --quiet; then
             echo "No changes in meta-data today."
           else
-            git commit -m "Auto-update: Свіжі мета-збірки зброї від робота"
+            git commit -m "Auto-update: Свіжі мета-збірки зброї та пре-рендеринг сайту від робота"
             git push origin main
           fi
