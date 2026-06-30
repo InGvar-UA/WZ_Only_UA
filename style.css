@@ -519,6 +519,73 @@ button {
 .jar-icon {
     font-size: 17px;
 }
+/* 🎯 Контейнер для ідеального вертикального вирівнювання кнопок */
+.welcome-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px; /* Красивий відступ між кнопками */
+    width: 100%;
+    max-width: 420px; /* Стримує ширину на ПК, ідеально для телефонів */
+    margin: 20px auto 0 auto;
+    box-sizing: border-box;
+}
+
+/* 📱 Твоя фірмова кнопка Telegram */
+.tg-join-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100% !important; /* На всю ширину контейнера! */
+    background: linear-gradient(135deg, #0088cc, #00a2ed) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 14px 20px !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    border-radius: 12px !important; /* Красиві скруглені кути */
+    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box;
+}
+
+.tg-join-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5) !important;
+}
+
+/* 💰 Преміальна кнопка Банки Monobank */
+.btn-mono-jar {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100% !important; /* Точно така ж ширина, як у ТГ! */
+    background: linear-gradient(135deg, #a31545 0%, #3d144f 100%) !important; /* Благородний глибокий матовий градієнт Моно під палітру сайту */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 14px 20px !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(163, 21, 69, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box;
+}
+
+.btn-mono-jar:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(163, 21, 69, 0.45) !important;
+    background: linear-gradient(135deg, #be1952 0%, #4f1b66 100%) !important; /* М'яке підсвічування при наведенні */
+}
+
+.btn-mono-jar:active, .tg-join-btn:active {
+    transform: translateY(1px) !important;
+}
 
 
 
