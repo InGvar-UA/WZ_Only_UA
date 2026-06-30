@@ -485,25 +485,40 @@ button {
         font-size: 11px !important;
     }
 }
-/* 🎯 Стильне верхнє розміщення Банки Monobank */
-.mono-widget-top-container {
-    display: flex;
-    justify-content: center;
+/* 💰 Преміальна кнопка Банки Monobank */
+.btn-mono-jar {
+    display: inline-flex;
     align-items: center;
-    width: 100%;
-    padding: 15px 10px 25px 10px; /* Акуратні відступи: зверху менше, знизу більше */
-    box-sizing: border-box;
-    background: transparent;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #e5195e 0%, #63227b 100%) !important; /* Фірмовий неоновий градієнт Моно */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 12px 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(229, 25, 94, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
 }
 
-.mono-jar-iframe {
-    width: 100%;
-    max-width: 340px; /* Ідеально під будь-які екрани смартфонів */
-    height: 120px;    /* Точна фіксована висота віджета Monobank */
-    border: none;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Об'ємна геймерська тінь */
-    background: #ffffff; /* Білий матовий фон для чіткості тексту Моно */
+.btn-mono-jar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(229, 25, 94, 0.6);
+    background: linear-gradient(135deg, #ff236c 0%, #7c269b 100%) !important;
 }
+
+.btn-mono-jar:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(229, 25, 94, 0.4);
+}
+
+.jar-icon {
+    font-size: 17px;
+}
+
 
 
