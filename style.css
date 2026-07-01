@@ -732,6 +732,10 @@ button {
         max-width: 100% !important;
     }
 }
+/* 🔥 УЛЬТРА-ФІКС: Повністю ховаємо номери з решітками в картках зброї */
+.weapon-card .rank {
+    display: none !important;
+}
 
 
 
