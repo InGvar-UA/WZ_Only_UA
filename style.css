@@ -9,6 +9,8 @@
 }
 
 body {
+    width: 100% !important;
+    overflow-x: hidden !important;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
@@ -586,6 +588,152 @@ button {
 .btn-mono-jar:active, .tg-join-btn:active {
     transform: translateY(1px) !important;
 }
+/* 📱 Адаптація під смартфони (Броньований захист від розтягування екрану) */
+@media (max-width: 767px) {
+    .app-footer-actions {
+        padding: 25px 10px 90px 10px !important; /* Мікро-відступи по боках, щоб не тиснуло на краї */
+        width: 100% !important;
+        overflow: hidden;
+        box-sizing: border-box !important;
+    }
+    
+    .footer-buttons-container {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto 15px auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    .footer-btn {
+        max-width: 100% !important;
+        width: 100% !important; /* Кнопка строго тримається в межах екрану */
+        font-size: 13px !important; /* Трохи менший шрифт, щоб довгий текст не ламав кнопку */
+        padding: 14px 10px !important;
+        margin: 0 !important; /* Прибираємо будь-які зміщення */
+        box-sizing: border-box !important;
+    }
+}
+/* ==========================================================================
+   🎮 ПРЕМІУМНИЙ ГЕЙМЕРСЬКИЙ ФУТЕР (FOOTER РЕДИЗАЙН)
+   ========================================================================== */
+.app-footer-modern {
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 20px 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Красива темна картка під кнопки з золотим контуром */
+.footer-neon-card {
+    background: #11141a !important;
+    border: 1px solid rgba(255, 204, 0, 0.4) !important;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.05) !important;
+    border-radius: 16px !important;
+    padding: 30px !important;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    box-sizing: border-box;
+}
+
+.footer-card-title {
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    color: #ffcc00 !important;
+    margin: 0 0 8px 0 !important;
+    letter-spacing: 1px;
+}
+
+.footer-card-text {
+    font-size: 13.5px !important;
+    color: #7e8494 !important;
+    margin: 0 0 25px 0 !important;
+    line-height: 1.5;
+}
+
+/* 🎯 РОЗКІШНИЙ РЯД КНОПОК (Рівняються ідеально 1-в-1 поруч на ПК) */
+.footer-buttons-flex {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.footer-action-btn {
+    flex: 1; /* Примусово робить кнопки ідентичними міліметр-в-міліметр */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 15px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+}
+
+.btn-tg-luxury {
+    background: linear-gradient(135deg, #0088cc 0%, #00a2ed 100%) !important;
+    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.25) !important;
+}
+.btn-tg-luxury:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 136, 204, 0.45) !important;
+}
+
+.btn-mono-luxury {
+    background: linear-gradient(135deg, #b5154b 0%, #451359 100%) !important;
+    box-shadow: 0 4px 15px rgba(181, 21, 75, 0.2) !important;
+}
+.btn-mono-luxury:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(181, 21, 75, 0.4) !important;
+}
+
+/* Юридичний нижній блок */
+.footer-legal-bar {
+    text-align: center;
+}
+
+.footer-legal-bar p {
+    font-size: 12px;
+    color: #4f5462;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.legal-subtext {
+    font-size: 11px !important;
+    opacity: 0.6;
+}
+
+/* 📱 АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ (Перебудова під макет Mini App) */
+@media (max-width: 767px) {
+    .app-footer-modern {
+        padding: 0 10px 90px 10px !important; /* Відступ знизу, щоб меню не перекривало текст */
+    }
+    .footer-neon-card {
+        padding: 20px 15px !important;
+    }
+    .footer-buttons-flex {
+        flex-direction: column !important; /* На телефонах кнопки лягають одна під одну */
+        gap: 10px;
+    }
+    .footer-action-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
 
 
 
