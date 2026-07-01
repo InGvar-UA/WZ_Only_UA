@@ -363,7 +363,7 @@ def pre_render_html(weapons_data):
             # Карточки изначально скрыты (display: none), пока игрок не нажмет категорию
             cards_html += f"""
             <div class="weapon-card" data-class="{wpn.get('class', '')}" data-game="{wpn.get('game', '')}" style="display: none;">
-                <div class="rank">#{wpn.get('rank', '')}</div>
+                
                 <h2 class="weapon-name">{wpn.get('name', 'Без назви')}</h2>
                 <div class="tags">
                     <span class="tag game-tag">{wpn.get('game', 'BO6')}</span>
