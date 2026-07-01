@@ -29,7 +29,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
     <title>Warzone Only UA — Актуальна Мета Warzone та пошук паті</title>
-    <link rel="stylesheet" href="style.css?v=2600">
+    <link rel="stylesheet" href="style.css?v=2860">
     <script>
         if (window.location.protocol === 'http:') {
             window.location.href = window.location.href.replace('http:', 'https:');
@@ -89,7 +89,7 @@
 
 
         <section class="about-project-box" style="padding: 25px 20px; text-align: center;">
-            <h2 class="about-title" style="color: #ffcc00; font-size: 20px; margin-bottom: 15px; text-shadow: 0 0 10px rgba(255,204,0,0.3);">
+            <!--<h2 class="about-title" style="color: #ffcc00; font-size: 20px; margin-bottom: 15px; text-shadow: 0 0 10px rgba(255,204,0,0.3);">
                 🇺🇦 ПЕРШИЙ УКРАЇНСЬКИЙ ХАБ WARZONE [PS5 / Xbox]
             </h2>
             <p class="about-text" style="font-size: 15px; line-height: 1.6; margin-bottom: 15px; text-align: justify; text-align-last: center;">
@@ -98,11 +98,11 @@
             </p>
             <p class="about-text" style="font-size: 15px; line-height: 1.6; margin-bottom: 25px; text-align: justify; text-align-last: center;">
                 Прямо всередині нашої ТГ-групи працює **розумний міні-додаток (Meta App)** з актуальною мета-зброєю. 
-                Робот автоматично оновлює топ-збірки щоранку о 10:00, щоб твій сквад завжди мав перевагу на полі бою!
+                Робот автоматично оновлює топ-збірки щоранку о 10:00, щоб твій сквад завжди мав перевагу на полі бою!-->
         
             <div class="about-features" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; text-align: left; width: 100%; max-width: 620px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
                 <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
-                    🔹 <b>Швидкий пошук (LFG):</b> Знаходь друзів на PS5, Xbox за пару кліків.
+                    🔹 <b>Швидкий пошук паті (LFG):</b> Знаходь друзів на PS5, Xbox за пару кліків.
                 </div>
                 <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
                     🔹 <b>Спільнота створена виключно для гравців на PS5 та Xbox:</b> 
@@ -110,6 +110,13 @@
                 <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
                     🔹 <b>Миттєва Мета:</b> Розумний щоденний аудит та автооновлення сетапів о 10:00.
                 </div>
+                <div class="feature-item" style="font-size: 13.5px; line-height: 1.5; color: #e0e0e0;">
+                    🔹 <b>Щоб побачити актуальні мета-збірки, оберіть потрібний клас зброї на панелі нижче.</b>
+                </div>
+                <!-- 📅 Перенесли дату у шапку сайту для максимальної зручності -->
+            <div class="meta-date-badge">
+                <span class="calendar-icon">🔹</span> Дані оновлено: <span id="sync-date">30.06.2026 12:09</span>
+            </div>
             </div>
         </section>
 
@@ -4824,9 +4831,7 @@
     </main>
 
 
-    <footer style="text-align: center; padding: 20px; color: #a0a0a0; font-size: 13px;" id="sync-time">
-        Дані оновлено: <b>Завантаження...</b>
-    </footer>
+    
         <script>
         let allWeapons = [];
         let currentCategory = 'all'; 
@@ -4916,11 +4921,7 @@
             const grid = document.getElementById('meta-grid');
             if (grid) {
                 grid.innerHTML = `
-                    <div class="loading" style="animation: none; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,204,0,0.2); padding: 35px 20px; border-radius: 8px; width: 100%; text-align: center; box-sizing: border-box;">
-                        <span style="font-size: 24px; display: block; margin-bottom: 12px; text-shadow: 0 0 10px rgba(255,204,0,0.2);">👋 Вітаємо, боєць!</span>
-                        <p style="font-size: 14.5px; color: #e0e0e0; margin: 0 0 8px 0; line-height: 1.5;">Щоб побачити актуальні мета-збірки, <b>оберіть потрібний клас зброї</b> на панелі вище.</p>
-                        <p style="font-size: 13.5px; color: #a0a0a0; margin: 0; line-height: 1.4;">Також ви можете скористатися миттєвим пошуком за назвою зброї.</p>
-                    </div>
+                    
                 `;
             }
         }
@@ -5307,7 +5308,7 @@
     <!-- 🎯 Новий преміальний кіберспортивний підвал хабу (Footer) -->
     <footer class="app-footer-modern">
         <div class="footer-neon-card">
-            <h3 class="footer-card-title">ПРИЄДНУЙСЯ ДО СКЛАДУ</h3>
+            <h3 class="footer-card-title">ПРИЄДНУЙСЯ ДО СКВАДУ</h3>
             <p class="footer-card-text">Вступай у групу для швидкого пошуку напарників через PSN/Xbox Live або підтримай розвиток хабу!</p>
             
             <div class="footer-buttons-flex">
@@ -5320,11 +5321,14 @@
                 </a>
             </div>
         </div>
-        
+        <footer style="text-align: center; padding: 20px; color: #a0a0a0; font-size: 13px;" id="sync-time">
+        Дані оновлено: <b>Завантаження...</b>
+    </footer>
         <div class="footer-legal-bar">
             <p>© 2026 Warzone Only UA. Всі права захищені.</p>
             <p class="legal-subtext">Ексклюзивний простір для гравців на PlayStation 5 & Xbox</p>
         </div>
+        
     </footer>
 
 </body>
