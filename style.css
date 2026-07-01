@@ -736,6 +736,59 @@ button {
 .weapon-card .rank {
     display: none !important;
 }
+/* ==========================================================================
+   📱 УЛЬТРА-ВИТОНЧЕНА ВЕРХНЯ КНОПКА TELEGRAM
+   ========================================================================== */
+.tg-top-btn {
+    display: flex !important;
+    clear: both !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    /* 🔥 ГОЛОВНИЙ ФІКС: Зменшили висоту до 5px для максимальної витонченості! */
+    padding: 5px 16px !important; 
+    background: rgba(0, 136, 204, 0.12) !important; /* Напівпрозорий благородний фон */
+    border: 1px solid rgba(0, 136, 204, 0.7) !important; /* Тонка рамка */
+    box-shadow: 0 0 12px rgba(0, 136, 204, 0.15) !important;
+    border-radius: 30px !important;
+    font-size: 12.5px !important; /* Трохи компактніший акуратний шрифт */
+    font-weight: 600 !important; /* Полегшений, акуратний текст */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease !important;
+    margin: 12px auto !important; 
+    width: max-content !important;
+}
+
+.tg-top-btn:hover {
+    background: #0088cc !important;
+    box-shadow: 0 0 20px rgba(0, 136, 204, 0.4) !important;
+    transform: translateY(-1px);
+}
+/* ==========================================================================
+   👑 ВЕЛИКИЙ ТА ПОТУЖНИЙ ГЕЙМЕРСЬКИЙ ЛОГОТИП ХАБУ
+   ========================================================================== */
+.site-header .logo, .app-header h1, .main-title {
+    font-size: 42px !important; /* 🔥 ГОЛОВНИЙ ФІКС: Збільшили розмір до епічного геймерського рівня! */
+    font-weight: 900 !important; /* Максимальна жирність букв */
+    color: #ffcc00 !important; /* Чистий золотий колір Мети */
+    text-transform: uppercase !important; /* Строгий кіберспортивний Капс */
+    letter-spacing: 1.5px !important; /* Гарна відстань між літерами */
+    margin: 0 0 10px 0 !important;
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.7) !important; /* Подвійна тінь для солідності */
+    text-align: center !important;
+    line-height: 1.2 !important;
+}
+
+/* 📱 Адаптація під мобільні екрани (щоб на смартфонах текст не ламався в потворні рядки) */
+@media (max-width: 767px) {
+    .site-header .logo, .app-header h1, .main-title {
+        font-size: 32px !important; /* Ідеальний великий розмір для екрану телефону */
+        letter-spacing: 1px !important;
+    }
+}
 
 
 
