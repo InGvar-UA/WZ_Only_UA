@@ -849,6 +849,19 @@ button {
     text-align: left !important;
 }
 /* WZ_ONLY_UA_STABLE_RELOOT */
+/* 📰 ФІКС ГЕОМЕТРІЇ БЛОКУ НОВИН ТА ТАБЛИЦЬ */
+.news-container, .analytics-section, .table-wrapper, table {
+    width: 100% !important;
+    max-width: 800px !important; /* 🔥 Сжимаем блок, чтобы он не расползался */
+    margin: 0 auto 20px auto !important; /* Выравниваем строго по центру */
+    box-sizing: border-box;
+}
+
+th, td {
+    padding: 10px !important; /* Делаем отступы в таблице компактными */
+    font-size: 14px !important;
+}
+
 
 
 
