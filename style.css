@@ -789,6 +789,65 @@ button {
         letter-spacing: 1px !important;
     }
 }
+/* ==========================================================================
+   📰 СТИЛЬНА СТРІЧКА ГЕЙМЕРСЬКИХ НОВИН ДЛЯ СТОРІНКИ NEWS
+   ========================================================================== */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 620px;
+    margin: 30px auto !important;
+}
+
+.news-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    text-align: left;
+    transition: all 0.25s ease;
+}
+
+.news-card:hover {
+    border-color: rgba(0, 136, 204, 0.4) !important; /* Легкий неон Telegram при наведенні */
+    background: rgba(0, 136, 204, 0.02) !important;
+    transform: translateY(-1px);
+}
+
+.news-meta {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: #a3a8b4;
+    margin-bottom: 12px !important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.news-badge {
+    color: #0088cc; /* Блакитний колір фічі */
+    font-weight: 700;
+}
+
+.news-title {
+    font-size: 18px !important;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    margin: 0 0 10px 0 !important;
+    text-align: left !important;
+}
+
+.news-content {
+    font-size: 13.5px !important;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left !important;
+}
 
 
 
