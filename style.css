@@ -849,18 +849,27 @@ button {
     text-align: left !important;
 }
 /* WZ_ONLY_UA_STABLE_RELOOT */
-/* 📰 ФІКС ГЕОМЕТРІЇ БЛОКУ НОВИН ТА ТАБЛИЦЬ */
-.news-container, .analytics-section, .table-wrapper, table {
+/* 📰 УЛЬТИМАТИВНИЙ ФІКС ГЕОМЕТРІЇ СТОРІНКИ НОВИН */
+.news-container, 
+.analytics-section, 
+.table-wrapper, 
+main.news-container,
+.news-wrapper,
+article,
+table {
     width: 100% !important;
-    max-width: 800px !important; /* 🔥 Сжимаем блок, чтобы он не расползался */
-    margin: 0 auto 20px auto !important; /* Выравниваем строго по центру */
-    box-sizing: border-box;
+    max-width: 900px !important; /* 🔥 Жорстко обмежуємо ширину на ПК */
+    margin: 0 auto 20px auto !important; /* Центруємо сторінку по горизонталі */
+    box-sizing: border-box !important;
 }
 
-th, td {
-    padding: 10px !important; /* Делаем отступы в таблице компактными */
-    font-size: 14px !important;
+/* Робимо так, щоб тексти всередині блоків не липли до країв */
+.news-container p, 
+.analytics-section div, 
+article p {
+    padding: 0 15px !important;
 }
+
 
 
 
