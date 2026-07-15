@@ -1,5 +1,5 @@
 {
-    "last_updated": "14.07.2026 14:51",
+    "last_updated": "15.07.2026 15:03",
     "weapons": [
         {
             "rank": 1,
@@ -21,15 +21,15 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "14\" Rockleigh Barrel"
+                    "name": "8.6\" Orbital Light Barrel"
                 },
                 {
                     "category": "Underbarrel",
                     "name": ""
                 },
                 {
-                    "category": "Underbarrel",
-                    "name": "Sapper Guard Handstop"
+                    "category": "Rear Grip",
+                    "name": "VAS Convergence Foregrip"
                 },
                 {
                     "category": "Magazine",
@@ -40,65 +40,17 @@
                     "name": "MFS Renown Plus Mag"
                 },
                 {
-                    "category": "Fire Mods",
+                    "category": "Stock",
                     "name": ""
                 },
                 {
                     "category": "🔧",
-                    "name": "Accelerated Recoil System"
+                    "name": "Hammer Platoon Pad"
                 }
             ]
         },
         {
             "rank": 2,
-            "name": "AK-27",
-            "game": "BO7",
-            "class": "AR",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "FANG HoverPoint ELO"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Monolithic Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "17.6\" Vandal Heavy Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Saber Pack Heavy Drum"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Pugil Heavy Stock"
-                }
-            ]
-        },
-        {
-            "rank": 3,
             "name": "MXR-17",
             "game": "BO7",
             "class": "AR",
@@ -146,56 +98,8 @@
             ]
         },
         {
-            "rank": 4,
-            "name": "Dravec 45",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Bowen .45 Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "19\" EAM Horizon Barrel"
-                },
-                {
-                    "category": "Laser",
-                    "name": ""
-                },
-                {
-                    "category": "Laser",
-                    "name": "MFS Agile Laser Pro"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Gator Extended Mag"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "Bolt",
-                    "name": "Carrier Group"
-                }
-            ]
-        },
-        {
-            "rank": 5,
-            "name": "DS20 Mirage",
+            "rank": 3,
+            "name": "AK-27",
             "game": "BO7",
             "class": "AR",
             "attachments": [
@@ -221,15 +125,15 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "17.1\" Abdicator Barrel"
+                    "name": "17.6\" Vandal Heavy Barrel"
                 },
                 {
                     "category": "Magazine",
                     "name": ""
                 },
                 {
-                    "category": "🔧",
-                    "name": "Griffon Reserve Extended Ii"
+                    "category": "Magazine",
+                    "name": "Saber Pack Heavy Drum"
                 },
                 {
                     "category": "Stock",
@@ -237,12 +141,60 @@
                 },
                 {
                     "category": "Stock",
-                    "name": "Weighted Stock"
+                    "name": "Pugil Heavy Stock"
                 }
             ]
         },
         {
-            "rank": 6,
+            "rank": 4,
+            "name": "Dravec 45",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "LTI Stentorian Brake"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "12\" Cloud Barrel"
+                },
+                {
+                    "category": "Laser",
+                    "name": ""
+                },
+                {
+                    "category": "Laser",
+                    "name": "MFS Agile Laser Pro"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Gator Extended Mag"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "EAM Heritage Stock"
+                }
+            ]
+        },
+        {
+            "rank": 5,
             "name": "Strider 300",
             "game": "BO7",
             "class": "Sniper",
@@ -290,8 +242,8 @@
             ]
         },
         {
-            "rank": 7,
-            "name": "MK35 ISR",
+            "rank": 6,
+            "name": "VX Compact",
             "game": "BO7",
             "class": "AR",
             "attachments": [
@@ -309,23 +261,15 @@
                 },
                 {
                     "category": "Muzzle",
-                    "name": "Monolithic Suppressor"
+                    "name": "Redwell Shade-X Suppressor"
                 },
                 {
                     "category": "Barrel",
                     "name": ""
                 },
                 {
-                    "category": "Barrel",
-                    "name": "16.5\" Greaves Bellum Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "VAS Convergence Foregrip"
+                    "category": "🔧",
+                    "name": "14.3\" Redwell Ascent"
                 },
                 {
                     "category": "Magazine",
@@ -333,7 +277,63 @@
                 },
                 {
                     "category": "Magazine",
-                    "name": "Bowen Siren Drum"
+                    "name": "Inclination Extended Mag"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "Lactic Light Stock"
+                }
+            ]
+        },
+        {
+            "rank": 7,
+            "name": "DS20 Mirage",
+            "game": "BO7",
+            "class": "AR",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "FANG HoverPoint ELO"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "VAS 5.56 Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "18.9\" Westerlies Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Andean Extended Mag"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "Assault Division Stock"
                 }
             ]
         },
@@ -387,55 +387,55 @@
         },
         {
             "rank": 9,
-            "name": "VX Compact",
+            "name": "VST",
             "game": "BO7",
-            "class": "AR",
+            "class": "SMG",
             "attachments": [
                 {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "FANG HoverPoint ELO"
-                },
-                {
                     "category": "Muzzle",
                     "name": ""
                 },
                 {
                     "category": "Muzzle",
-                    "name": "Redwell Shade-X Suppressor"
+                    "name": "LTI Stentorian Brake"
                 },
                 {
                     "category": "Barrel",
                     "name": ""
                 },
                 {
+                    "category": "Barrel",
+                    "name": "14\" LTI Expedition Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "VAS Convergence Foregrip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Amplify Extended Mag I"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
                     "category": "🔧",
-                    "name": "14.3\" Redwell Ascent"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Inclination Extended Mag"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Lactic Light Stock"
+                    "name": "Hawker Cub-55 Pad"
                 }
             ]
         },
         {
             "rank": 10,
-            "name": "AN-94",
+            "name": "MK35 ISR",
             "game": "BO7",
             "class": "AR",
             "attachments": [
@@ -461,7 +461,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "15\" Benthic Barrel"
+                    "name": "16.5\" Greaves Bellum Barrel"
                 },
                 {
                     "category": "Underbarrel",
@@ -476,24 +476,32 @@
                     "name": ""
                 },
                 {
-                    "category": "🔧",
-                    "name": "Rexford Extended II"
+                    "category": "Magazine",
+                    "name": "Bowen Siren Drum"
                 }
             ]
         },
         {
             "rank": 11,
-            "name": "VST",
+            "name": "X9 Maverick",
             "game": "BO7",
-            "class": "SMG",
+            "class": "AR",
             "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "FANG HoverPoint ELO"
+                },
                 {
                     "category": "Muzzle",
                     "name": ""
                 },
                 {
-                    "category": "🔧",
-                    "name": "Hawker Series 45"
+                    "category": "Muzzle",
+                    "name": "Monolithic Suppressor"
                 },
                 {
                     "category": "Barrel",
@@ -501,7 +509,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "14\" LTI Expedition Barrel"
+                    "name": "16\" OS-Density Barrel"
                 },
                 {
                     "category": "Underbarrel",
@@ -512,20 +520,12 @@
                     "name": "VAS Convergence Foregrip"
                 },
                 {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Avarice Extended Mag II"
-                },
-                {
-                    "category": "Stock",
+                    "category": "Fire Mods",
                     "name": ""
                 },
                 {
                     "category": "🔧",
-                    "name": "Hawker Cub-55 Pad"
+                    "name": "4.73 Caseless FMJ"
                 }
             ]
         },
@@ -579,7 +579,7 @@
         },
         {
             "rank": 13,
-            "name": "Kogot-7",
+            "name": "MPC-25",
             "game": "BO7",
             "class": "SMG",
             "attachments": [
@@ -588,49 +588,9 @@
                     "name": ""
                 },
                 {
-                    "category": "🔧",
-                    "name": "Hawker Ported Comp"
+                    "category": "Muzzle",
+                    "name": "LTI Stentorian Brake"
                 },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "13.5\" Canis-05 Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "EAM Steady-90 Grip"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Vex Expanse Mag"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Buffer Spring"
-                }
-            ]
-        },
-        {
-            "rank": 14,
-            "name": "MPC-25",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
                 {
                     "category": "Barrel",
                     "name": ""
@@ -653,111 +613,7 @@
                 },
                 {
                     "category": "Magazine",
-                    "name": "MPC Overload Drum"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Magnate Grip"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Viper Wire Stock"
-                }
-            ]
-        },
-        {
-            "rank": 15,
-            "name": "EGRT-17",
-            "game": "BO7",
-            "class": "AR",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "EAM Ibis Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "19.1\" XR-Compulsion Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "EAM Acute Mag"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Nanite Grip"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Buffer Springs"
-                }
-            ]
-        },
-        {
-            "rank": 16,
-            "name": "REV-46",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Lethal Tools ELO"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Hawker Series 45"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Caudal Target Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Komodo Drum Mag"
+                    "name": "Sustain-25 Extended Mag"
                 },
                 {
                     "category": "Fire Mods",
@@ -770,7 +626,55 @@
             ]
         },
         {
-            "rank": 17,
+            "rank": 14,
+            "name": "REV-46",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "LTI Mini"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "LTI Stentorian Brake"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "14.9\" Caudal Target Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Cawdor Extended Mag"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Recoil Sync Unit"
+                }
+            ]
+        },
+        {
+            "rank": 15,
             "name": "Peacekeeper Mk1",
             "game": "BO7",
             "class": "AR",
@@ -818,56 +722,56 @@
             ]
         },
         {
-            "rank": 18,
-            "name": "Ryden 45K",
+            "rank": 16,
+            "name": "EGRT-17",
             "game": "BO7",
-            "class": "SMG",
+            "class": "AR",
             "attachments": [
                 {
-                    "category": "Optic",
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "EAM Ibis Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "19.1\" XR-Compulsion Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "EAM Acute Mag"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Nanite Grip"
+                },
+                {
+                    "category": "Fire Mods",
                     "name": ""
                 },
                 {
                     "category": "🔧",
-                    "name": "Lethal Tools ELO"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "12\" Vienna Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Forward Breach Mag"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Eruption Grip"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "MFS Full Stock+"
+                    "name": "Buffer Springs"
                 }
             ]
         },
         {
-            "rank": 19,
-            "name": "Voyak KT-3",
+            "rank": 17,
+            "name": "AN-94",
             "game": "BO7",
             "class": "AR",
             "attachments": [
@@ -877,7 +781,7 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "Redwell 30-S 2x"
+                    "name": "FANG HoverPoint ELO"
                 },
                 {
                     "category": "Muzzle",
@@ -893,39 +797,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "17.6\" LTI Grav-4 Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "SK-Garrison Drum"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "V-Last Control Pad"
-                }
-            ]
-        },
-        {
-            "rank": 20,
-            "name": "Sturmwolf 45",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "14.8\" Perigee Barrel"
+                    "name": "15\" Benthic Barrel"
                 },
                 {
                     "category": "Underbarrel",
@@ -933,39 +805,23 @@
                 },
                 {
                     "category": "Rear Grip",
-                    "name": "Envoy Foregrip"
+                    "name": "VAS Convergence Foregrip"
                 },
                 {
                     "category": "Magazine",
                     "name": ""
                 },
                 {
-                    "category": "Magazine",
-                    "name": "B-45 Roar Drum"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Selene Rover Grip"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Itinerant Light Stock"
+                    "category": "🔧",
+                    "name": "Rexford Extended II"
                 }
             ]
         },
         {
-            "rank": 21,
-            "name": "CBRS-3",
+            "rank": 18,
+            "name": "Voyak KT-3",
             "game": "BO7",
-            "class": "SMG",
+            "class": "AR",
             "attachments": [
                 {
                     "category": "Optic",
@@ -973,7 +829,7 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "Lethal Tools ELO"
+                    "name": "FANG HoverPoint ELO"
                 },
                 {
                     "category": "Muzzle",
@@ -981,7 +837,7 @@
                 },
                 {
                     "category": "Muzzle",
-                    "name": "Bowen 9mm Suppressor"
+                    "name": "Redwell Shade-X Suppressor"
                 },
                 {
                     "category": "Barrel",
@@ -989,7 +845,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "15\" Redwell Parlay Barrel"
+                    "name": "19.2\" Greaves-C5 Barrel"
                 },
                 {
                     "category": "Magazine",
@@ -997,20 +853,68 @@
                 },
                 {
                     "category": "Magazine",
-                    "name": "MFS Carrousel Fast Mag"
+                    "name": "Lineguard Casket Mag"
                 },
                 {
                     "category": "Stock",
                     "name": ""
                 },
                 {
-                    "category": "Stock",
-                    "name": "Slipway Stock"
+                    "category": "🔧",
+                    "name": "Bowen Tread Pad"
                 }
             ]
         },
         {
-            "rank": 22,
+            "rank": 19,
+            "name": "Kogot-7",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "LTI Stentorian Brake"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "13.5\" Canis-05 Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "EAM Steady-90 Grip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Vex Expanse Mag"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Buffer Spring"
+                }
+            ]
+        },
+        {
+            "rank": 20,
             "name": "M15 Mod 0",
             "game": "BO7",
             "class": "AR",
@@ -1058,10 +962,10 @@
             ]
         },
         {
-            "rank": 23,
-            "name": "X9 Maverick",
+            "rank": 21,
+            "name": "CBRS-3",
             "game": "BO7",
-            "class": "AR",
+            "class": "SMG",
             "attachments": [
                 {
                     "category": "Optic",
@@ -1085,15 +989,15 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "16\" OS-Density Barrel"
+                    "name": "15\" Redwell Parlay Barrel"
                 },
                 {
-                    "category": "Rear Grip",
+                    "category": "Magazine",
                     "name": ""
                 },
                 {
-                    "category": "Rear Grip",
-                    "name": "Pillory Grip"
+                    "category": "Magazine",
+                    "name": "MFS Carrousel Fast Mag"
                 },
                 {
                     "category": "Fire Mods",
@@ -1101,13 +1005,13 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "4.73 Caseless Overpressured"
+                    "name": "9mm Parabellum FMJ"
                 }
             ]
         },
         {
-            "rank": 24,
-            "name": "Razor 9mm",
+            "rank": 22,
+            "name": "Sturmwolf 45",
             "game": "BO7",
             "class": "SMG",
             "attachments": [
@@ -1117,15 +1021,63 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "Lethal Tools ELO"
+                    "name": "FANG HoverPoint ELO"
                 },
                 {
                     "category": "Muzzle",
                     "name": ""
                 },
                 {
+                    "category": "Muzzle",
+                    "name": "Bowen .45 Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "15\" Regnant Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "B-45 Roar Drum"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
                     "category": "🔧",
-                    "name": "H-9mm Precision Comp"
+                    "name": "Recoil Spring Assembly"
+                }
+            ]
+        },
+        {
+            "rank": 23,
+            "name": "Ryden 45K",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "FANG HoverPoint ELO"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Monolithic Suppressor"
                 },
                 {
                     "category": "Barrel",
@@ -1133,7 +1085,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "12\" MFS Sidewinder Barrel"
+                    "name": "12\" Vienna Barrel"
                 },
                 {
                     "category": "Magazine",
@@ -1141,15 +1093,63 @@
                 },
                 {
                     "category": "Magazine",
-                    "name": "Zealot Extended Mag II"
+                    "name": "Forward Breach Mag"
                 },
                 {
                     "category": "Stock",
                     "name": ""
                 },
                 {
+                    "category": "Stock",
+                    "name": "VAS Interlock Stock"
+                }
+            ]
+        },
+        {
+            "rank": 24,
+            "name": "XR-3 Ion",
+            "game": "BO7",
+            "class": "Sniper",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
                     "category": "🔧",
-                    "name": "Serpent Pad"
+                    "name": "FANG HoverPoint ELO"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "LTI Triad Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "20\" Ion Trinity Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Zero-S Handguard"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "7.62 NATO Overpressured"
                 }
             ]
         },
@@ -1203,102 +1203,6 @@
         },
         {
             "rank": 26,
-            "name": "XR-3 Ion",
-            "game": "BO7",
-            "class": "Sniper",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "FANG HoverPoint ELO"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "LTI Triad Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "20\" Ion Trinity Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Zero-S Handguard"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "7.62 NATO Overpressured"
-                }
-            ]
-        },
-        {
-            "rank": 27,
-            "name": "MK.78",
-            "game": "BO7",
-            "class": "LMG",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Redwell 30-S 2x"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Monolithic Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "22\" Impulse HB-762 Barrel"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Shock Shield Stock"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "7.62 NATO Overpressured"
-                }
-            ]
-        },
-        {
-            "rank": 28,
             "name": "Maddox RFB",
             "game": "BO7",
             "class": "AR",
@@ -1346,7 +1250,55 @@
             ]
         },
         {
-            "rank": 29,
+            "rank": 27,
+            "name": "HDR",
+            "game": "BO6",
+            "class": "Sniper",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Monolithic Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Gain-Twist Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Lighweight Bipod"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Quickdraw Grip"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "108mm Overpressured"
+                }
+            ]
+        },
+        {
+            "rank": 28,
             "name": "M8A1",
             "game": "BO7",
             "class": "Marksman Rifle",
@@ -1394,11 +1346,19 @@
             ]
         },
         {
-            "rank": 30,
-            "name": "HDR",
-            "game": "BO6",
-            "class": "Sniper",
+            "rank": 29,
+            "name": "Razor 9mm",
+            "game": "BO7",
+            "class": "SMG",
             "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "FANG HoverPoint ELO"
+                },
                 {
                     "category": "Muzzle",
                     "name": ""
@@ -1413,23 +1373,63 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "Gain-Twist Barrel"
+                    "name": "12\" MFS Sidewinder Barrel"
                 },
                 {
                     "category": "Underbarrel",
                     "name": ""
                 },
                 {
-                    "category": "🔧",
-                    "name": "Lighweight Bipod"
+                    "category": "Rear Grip",
+                    "name": "Lateral Precision Grip"
                 },
                 {
-                    "category": "Rear Grip",
+                    "category": "Magazine",
                     "name": ""
                 },
                 {
-                    "category": "Rear Grip",
-                    "name": "Quickdraw Grip"
+                    "category": "Magazine",
+                    "name": "Zealot Extended Mag II"
+                }
+            ]
+        },
+        {
+            "rank": 30,
+            "name": "MK.78",
+            "game": "BO7",
+            "class": "LMG",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Redwell 30-S 2x"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Monolithic Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "22\" Impulse HB-762 Barrel"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "Shock Shield Stock"
                 },
                 {
                     "category": "Fire Mods",
@@ -1437,7 +1437,7 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "108mm Overpressured"
+                    "name": "7.62 NATO Overpressured"
                 }
             ]
         },
@@ -1491,54 +1491,6 @@
         },
         {
             "rank": 32,
-            "name": "Akita",
-            "game": "BO7",
-            "class": "Shotgun",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Fang Modified Choke"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "14\" Retriever Hunt Barrel"
-                },
-                {
-                    "category": "Laser",
-                    "name": ""
-                },
-                {
-                    "category": "Laser",
-                    "name": "EAM ScatterLine Laser"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Bulk Feed Extended II"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Paradise Gen-4 Grip"
-                }
-            ]
-        },
-        {
-            "rank": 33,
             "name": "KILO 141",
             "game": "BO6",
             "class": "AR",
@@ -1586,7 +1538,7 @@
             ]
         },
         {
-            "rank": 34,
+            "rank": 33,
             "name": "Merrick 556",
             "game": "BO6",
             "class": "AR",
@@ -1634,7 +1586,7 @@
             ]
         },
         {
-            "rank": 35,
+            "rank": 34,
             "name": "Victus XMR",
             "game": "MW2",
             "class": "Sniper",
@@ -1682,103 +1634,7 @@
             ]
         },
         {
-            "rank": 36,
-            "name": "RK-9",
-            "game": "BO7",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Hawker Series 45"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "13.6\" Mercurial Barrel"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Ascot Drum Mag"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Raft Ready Grip"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Accelerated Recoil System"
-                }
-            ]
-        },
-        {
-            "rank": 37,
-            "name": "Kar98k",
-            "game": "MW3",
-            "class": "Marksman Rifle",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "XTEN Intlas AS-7"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "VT-7 Spiritfire Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Präzisionsgewehr 762 Long Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": "DR-6 Handstop"
-                },
-                {
-                    "category": "🔧",
-                    "name": "Ammunition"
-                },
-                {
-                    "category": "Magazine",
-                    "name": "7.92 High Grain Rounds"
-                }
-            ]
-        },
-        {
-            "rank": 38,
+            "rank": 35,
             "name": "KRS-762",
             "game": "BO7",
             "class": "Marksman Rifle",
@@ -1826,8 +1682,104 @@
             ]
         },
         {
-            "rank": 39,
-            "name": "SG-12",
+            "rank": 36,
+            "name": "Kar98k",
+            "game": "MW3",
+            "class": "Marksman Rifle",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "XTEN Intlas AS-7"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "VT-7 Spiritfire Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Präzisionsgewehr 762 Long Barrel"
+                },
+                {
+                    "category": "🔧",
+                    "name": "Ammunition"
+                },
+                {
+                    "category": "Magazine",
+                    "name": "7.92 High Grain Rounds"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "Repeller Tac Stock"
+                }
+            ]
+        },
+        {
+            "rank": 37,
+            "name": "RK-9",
+            "game": "BO7",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Hawker Series 45"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "13.6\" Mercurial Barrel"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Ascot Drum Mag"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Raft Ready Grip"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Accelerated Recoil System"
+                }
+            ]
+        },
+        {
+            "rank": 38,
+            "name": "Akita",
             "game": "BO7",
             "class": "Shotgun",
             "attachments": [
@@ -1837,7 +1789,7 @@
                 },
                 {
                     "category": "Muzzle",
-                    "name": "Monolithic Suppressor"
+                    "name": "Fang Modified Choke"
                 },
                 {
                     "category": "Barrel",
@@ -1845,7 +1797,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "20\" Hawker Reach Barrel"
+                    "name": "14\" Retriever Hunt Barrel"
                 },
                 {
                     "category": "Laser",
@@ -1853,28 +1805,28 @@
                 },
                 {
                     "category": "Laser",
-                    "name": "Convergence Box Laser"
+                    "name": "EAM ScatterLine Laser"
                 },
                 {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "LTI DawnVoid Grip"
-                },
-                {
-                    "category": "Fire Mods",
+                    "category": "Magazine",
                     "name": ""
                 },
                 {
                     "category": "🔧",
-                    "name": "LW Trigger"
+                    "name": "Bulk Feed Extended II"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Paradise Gen-4 Grip"
                 }
             ]
         },
         {
-            "rank": 40,
+            "rank": 39,
             "name": "Warden 308",
             "game": "BO7",
             "class": "Marksman Rifle",
@@ -1922,55 +1874,7 @@
             ]
         },
         {
-            "rank": 41,
-            "name": "XM325",
-            "game": "BO7",
-            "class": "LMG",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "FANG HoverPoint ELO"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Monolithic Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "19.3\" R-556 Chief Barrel"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "L1-Command Grip"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "RX-7 Shock Stock"
-                }
-            ]
-        },
-        {
-            "rank": 42,
+            "rank": 40,
             "name": "1911",
             "game": "BO7",
             "class": "Pistol",
@@ -2018,11 +1922,115 @@
             ]
         },
         {
-            "rank": 43,
-            "name": "LC10",
-            "game": "BO6",
-            "class": "SMG",
+            "rank": 41,
+            "name": "SG-12",
+            "game": "BO7",
+            "class": "Shotgun",
             "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Monolithic Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "20\" Hawker Reach Barrel"
+                },
+                {
+                    "category": "Laser",
+                    "name": ""
+                },
+                {
+                    "category": "Laser",
+                    "name": "Convergence Box Laser"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "LTI DawnVoid Grip"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "LW Trigger"
+                }
+            ]
+        },
+        {
+            "rank": 42,
+            "name": "XM325",
+            "game": "BO7",
+            "class": "LMG",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "FANG HoverPoint ELO"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Monolithic Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "19.3\" R-556 Chief Barrel"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "L1-Command Grip"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "RX-7 Shock Stock"
+                }
+            ]
+        },
+        {
+            "rank": 43,
+            "name": "CR-56 Amax",
+            "game": "BO6",
+            "class": "AR",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Willis 3x"
+                },
                 {
                     "category": "Muzzle",
                     "name": ""
@@ -2037,7 +2045,7 @@
                 },
                 {
                     "category": "Barrel",
-                    "name": "Long Barrel"
+                    "name": "Gain-Twist Barrel"
                 },
                 {
                     "category": "Underbarrel",
@@ -2054,67 +2062,11 @@
                 {
                     "category": "Magazine",
                     "name": "Extended Mag II"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "9x19mm Parabellum Overpressured"
                 }
             ]
         },
         {
             "rank": 44,
-            "name": "Velox 5.7",
-            "game": "BO7",
-            "class": "Pistol",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Greaves Multi-Port Compensator"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "4\" MFS Celeste Barrel"
-                },
-                {
-                    "category": "Laser",
-                    "name": ""
-                },
-                {
-                    "category": "Laser",
-                    "name": "Vector Sync Laser"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Draco Reserve Extended II"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Akimbo Velox 5.7"
-                }
-            ]
-        },
-        {
-            "rank": 45,
             "name": "KATT-AMR",
             "game": "MW3",
             "class": "Sniper",
@@ -2158,6 +2110,54 @@
                 {
                     "category": "Stock",
                     "name": "Tactical Stock Pad"
+                }
+            ]
+        },
+        {
+            "rank": 45,
+            "name": "Velox 5.7",
+            "game": "BO7",
+            "class": "Pistol",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Greaves Multi-Port Compensator"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "4\" MFS Celeste Barrel"
+                },
+                {
+                    "category": "Laser",
+                    "name": ""
+                },
+                {
+                    "category": "Laser",
+                    "name": "Vector Sync Laser"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Draco Reserve Extended II"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Akimbo Velox 5.7"
                 }
             ]
         },
@@ -2211,102 +2211,6 @@
         },
         {
             "rank": 47,
-            "name": "KSV",
-            "game": "BO6",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Compensator"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Reinforced Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Ranger Foregrip"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Extended Mag II"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Balanced Stock"
-                }
-            ]
-        },
-        {
-            "rank": 48,
-            "name": "CR-56 Amax",
-            "game": "BO6",
-            "class": "AR",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Willis 3x"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Compensator"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Gain-Twist Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Vertical Foregrip"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Extended Mag II"
-                }
-            ]
-        },
-        {
-            "rank": 49,
             "name": "GPR 91",
             "game": "BO6",
             "class": "AR",
@@ -2354,8 +2258,56 @@
             ]
         },
         {
-            "rank": 50,
-            "name": "KOMPAKT 92",
+            "rank": 48,
+            "name": "KSV",
+            "game": "BO6",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Compensator"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Reinforced Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Ranger Foregrip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Extended Mag II"
+                },
+                {
+                    "category": "Stock",
+                    "name": ""
+                },
+                {
+                    "category": "Stock",
+                    "name": "Balanced Stock"
+                }
+            ]
+        },
+        {
+            "rank": 49,
+            "name": "LC10",
             "game": "BO6",
             "class": "SMG",
             "attachments": [
@@ -2389,7 +2341,7 @@
                 },
                 {
                     "category": "Magazine",
-                    "name": "Extended Mag III"
+                    "name": "Extended Mag II"
                 },
                 {
                     "category": "Fire Mods",
@@ -2397,12 +2349,12 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "Recoil Springs"
+                    "name": "9x19mm Parabellum Overpressured"
                 }
             ]
         },
         {
-            "rank": 51,
+            "rank": 50,
             "name": "M10 Breacher",
             "game": "BO7",
             "class": "Shotgun",
@@ -2450,7 +2402,7 @@
             ]
         },
         {
-            "rank": 52,
+            "rank": 51,
             "name": "JACKAL PDW",
             "game": "BO6",
             "class": "SMG",
@@ -2498,55 +2450,55 @@
             ]
         },
         {
-            "rank": 53,
-            "name": "Striker",
-            "game": "MW3",
+            "rank": 52,
+            "name": "KOMPAKT 92",
+            "game": "BO6",
             "class": "SMG",
             "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Slate Reflector"
-                },
                 {
                     "category": "Muzzle",
                     "name": ""
                 },
                 {
-                    "category": "🔧",
-                    "name": "Bruen Pendulum"
+                    "category": "Muzzle",
+                    "name": "Compensator"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Long Barrel"
                 },
                 {
                     "category": "Underbarrel",
                     "name": ""
                 },
                 {
+                    "category": "Rear Grip",
+                    "name": "Vertical Foregrip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Extended Mag III"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
                     "category": "🔧",
-                    "name": "XRK Bowbreaker"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "48 Round Mag"
-                },
-                {
-                    "category": "Stock",
-                    "name": ""
-                },
-                {
-                    "category": "Stock",
-                    "name": "Lachmann MK2 Light Stock"
+                    "name": "Recoil Springs"
                 }
             ]
         },
         {
-            "rank": 54,
+            "rank": 53,
             "name": "M34 Novaline",
             "game": "BO7",
             "class": "Marksman Rifle",
@@ -2594,7 +2546,7 @@
             ]
         },
         {
-            "rank": 55,
+            "rank": 54,
             "name": "AMES 85",
             "game": "BO6",
             "class": "AR",
@@ -2638,6 +2590,54 @@
                 {
                     "category": "Magazine",
                     "name": "Extended Mag II"
+                }
+            ]
+        },
+        {
+            "rank": 55,
+            "name": "MX9",
+            "game": "MW2",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Nydar Model 2023"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Shadowstrike Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "16.5\" Bruen S901"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Extended Mag"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Bruen Q900 Grip"
                 }
             ]
         },
@@ -2691,8 +2691,8 @@
         },
         {
             "rank": 57,
-            "name": "MX9",
-            "game": "MW2",
+            "name": "Striker",
+            "game": "MW3",
             "class": "SMG",
             "attachments": [
                 {
@@ -2701,23 +2701,23 @@
                 },
                 {
                     "category": "🔧",
-                    "name": "Nydar Model 2023"
+                    "name": "Slate Reflector"
                 },
                 {
                     "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Shadowstrike Suppressor"
-                },
-                {
-                    "category": "Barrel",
                     "name": ""
                 },
                 {
                     "category": "🔧",
-                    "name": "16.5\" Bruen S901"
+                    "name": "Bruen Pendulum"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "XRK Bowbreaker"
                 },
                 {
                     "category": "Magazine",
@@ -2725,15 +2725,15 @@
                 },
                 {
                     "category": "Magazine",
-                    "name": "Extended Mag"
+                    "name": "48 Round Mag"
                 },
                 {
-                    "category": "Rear Grip",
+                    "category": "Stock",
                     "name": ""
                 },
                 {
-                    "category": "Rear Grip",
-                    "name": "Bruen Q900 Grip"
+                    "category": "Stock",
+                    "name": "Lachmann MK2 Light Stock"
                 }
             ]
         },
@@ -2787,6 +2787,54 @@
         },
         {
             "rank": 59,
+            "name": "Cypher 091",
+            "game": "BO6",
+            "class": "AR",
+            "attachments": [
+                {
+                    "category": "Optic",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Willis 3x"
+                },
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Compensator"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Gain-Twist Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Vertical Foregrip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Extended Mag II"
+                }
+            ]
+        },
+        {
+            "rank": 60,
             "name": "Dresden 9mm",
             "game": "BO6",
             "class": "SMG",
@@ -2834,7 +2882,7 @@
             ]
         },
         {
-            "rank": 60,
+            "rank": 61,
             "name": "C9",
             "game": "BO6",
             "class": "SMG",
@@ -2878,54 +2926,6 @@
                 {
                     "category": "Stock",
                     "name": "Balanced Stock"
-                }
-            ]
-        },
-        {
-            "rank": 61,
-            "name": "Cypher 091",
-            "game": "BO6",
-            "class": "AR",
-            "attachments": [
-                {
-                    "category": "Optic",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Willis 3x"
-                },
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Compensator"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Gain-Twist Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Vertical Foregrip"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Extended Mag II"
                 }
             ]
         },
@@ -3171,54 +3171,6 @@
         },
         {
             "rank": 67,
-            "name": "TR2",
-            "game": "BO6",
-            "class": "Marksman Rifle",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Compensator"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Ranger Foregrip"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Full-Auto Extended Mag"
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Ergonomic Grip"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "TR2 CQB Auto Conversion"
-                }
-            ]
-        },
-        {
-            "rank": 68,
             "name": "SAUG",
             "game": "BO6",
             "class": "SMG",
@@ -3266,7 +3218,7 @@
             ]
         },
         {
-            "rank": 69,
+            "rank": 68,
             "name": "PDSW 528",
             "game": "MW2",
             "class": "SMG",
@@ -3314,55 +3266,7 @@
             ]
         },
         {
-            "rank": 70,
-            "name": "PPSh-41",
-            "game": "BO6",
-            "class": "SMG",
-            "attachments": [
-                {
-                    "category": "Muzzle",
-                    "name": ""
-                },
-                {
-                    "category": "Muzzle",
-                    "name": "Suppressor"
-                },
-                {
-                    "category": "Barrel",
-                    "name": ""
-                },
-                {
-                    "category": "Barrel",
-                    "name": "Long Barrel"
-                },
-                {
-                    "category": "Underbarrel",
-                    "name": ""
-                },
-                {
-                    "category": "Rear Grip",
-                    "name": "Vertical Foregrip"
-                },
-                {
-                    "category": "Magazine",
-                    "name": ""
-                },
-                {
-                    "category": "Magazine",
-                    "name": "Extended Mag II"
-                },
-                {
-                    "category": "Fire Mods",
-                    "name": ""
-                },
-                {
-                    "category": "🔧",
-                    "name": "Recoil Springs"
-                }
-            ]
-        },
-        {
-            "rank": 71,
+            "rank": 69,
             "name": "HRM-9",
             "game": "MW3",
             "class": "SMG",
@@ -3406,6 +3310,102 @@
                 {
                     "category": "Stock",
                     "name": "Folding Stock"
+                }
+            ]
+        },
+        {
+            "rank": 70,
+            "name": "TR2",
+            "game": "BO6",
+            "class": "Marksman Rifle",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Compensator"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Ranger Foregrip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Full-Auto Extended Mag"
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Ergonomic Grip"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "TR2 CQB Auto Conversion"
+                }
+            ]
+        },
+        {
+            "rank": 71,
+            "name": "PPSh-41",
+            "game": "BO6",
+            "class": "SMG",
+            "attachments": [
+                {
+                    "category": "Muzzle",
+                    "name": ""
+                },
+                {
+                    "category": "Muzzle",
+                    "name": "Suppressor"
+                },
+                {
+                    "category": "Barrel",
+                    "name": ""
+                },
+                {
+                    "category": "Barrel",
+                    "name": "Long Barrel"
+                },
+                {
+                    "category": "Underbarrel",
+                    "name": ""
+                },
+                {
+                    "category": "Rear Grip",
+                    "name": "Vertical Foregrip"
+                },
+                {
+                    "category": "Magazine",
+                    "name": ""
+                },
+                {
+                    "category": "Magazine",
+                    "name": "Extended Mag II"
+                },
+                {
+                    "category": "Fire Mods",
+                    "name": ""
+                },
+                {
+                    "category": "🔧",
+                    "name": "Recoil Springs"
                 }
             ]
         },
